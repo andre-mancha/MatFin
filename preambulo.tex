@@ -1,0 +1,139 @@
+% ============================================================
+%  preambulo.tex  --  Matemática Financeira (Graduação Economia)
+%  Referência: Bueno, Rangel, Santos -- Matemática Financeira Moderna
+% ============================================================
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+\babelprovide[main, import]{portuguese}
+\usepackage{lmodern}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools}
+
+% ─── Gráficos ──────────────────────────────────────────────────────────────────
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, calc, patterns,
+                decorations.pathreplacing, intersections}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ─── Caixas e ambientes ────────────────────────────────────────────────────────
+\usepackage[most, breakable]{tcolorbox}
+\tcbuselibrary{theorems, skins, breakable}
+
+% ─── Tabelas ──────────────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+
+% ─── Layout ───────────────────────────────────────────────────────────────────
+\usepackage[margin=2.5cm, top=3cm, bottom=3cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue!60!black,
+            urlcolor=blue!70!black, citecolor=green!50!black}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+
+% ─── Cores ────────────────────────────────────────────────────────────────────
+\definecolor{azul}     {RGB}{  0,  70, 127}
+\definecolor{verde}    {RGB}{  0, 100,  60}
+\definecolor{laranja}  {RGB}{180,  80,   0}
+\definecolor{vermelho} {RGB}{160,  20,  20}
+\definecolor{cinzaclaro}{RGB}{248, 248, 248}
+\definecolor{azulclaro}{RGB}{220, 235, 252}
+
+% ─── Ambientes tcolorbox ──────────────────────────────────────────────────────
+
+% Exemplo numerado por capítulo
+\newtcolorbox[auto counter, number within=chapter]{exemplo}[2][]{%
+  enhanced, breakable,
+  title={\textbf{Exemplo~\thetcbcounter}\quad\textmd{#2}},
+  colback      = cinzaclaro,
+  colframe     = azul,
+  colbacktitle = azul,
+  coltitle     = white,
+  fonttitle    = \small,
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={sharp corners, colback=azul},
+  #1
+}
+
+% Definição
+\newtcolorbox{definicao}[1][]{%
+  enhanced,
+  title        = {Definição},
+  colback      = azulclaro,
+  colframe     = azul!80,
+  colbacktitle = azul!80,
+  coltitle     = white,
+  fonttitle    = \bfseries\small,
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={sharp corners},
+  #1
+}
+
+% Resultado / fórmula-chave
+\newtcolorbox{resultado}[1][]{%
+  enhanced,
+  colback  = green!6,
+  colframe = verde!80,
+  boxrule  = 1.2pt,
+  #1
+}
+
+% Nota / observação
+\newtcolorbox{nota}[1][]{%
+  enhanced, breakable,
+  title        = {Nota},
+  colback      = orange!6,
+  colframe     = laranja!70,
+  colbacktitle = laranja!70,
+  coltitle     = white,
+  fonttitle    = \bfseries\small,
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={sharp corners},
+  #1
+}
+
+% Destaque moderno
+\newtcolorbox{moderno}[1][]{%
+  enhanced, breakable,
+  title        = {Exemplo moderno},
+  colback      = green!5,
+  colframe     = verde!70,
+  colbacktitle = verde!70,
+  coltitle     = white,
+  fonttitle    = \bfseries\small,
+  attach boxed title to top left={yshift=-2mm, xshift=3mm},
+  boxed title style={sharp corners},
+  #1
+}
+
+% ─── Teoremas ─────────────────────────────────────────────────────────────────
+\theoremstyle{definition}
+\newtheorem{obs}{Observação}[chapter]
+\newtheorem{prop}{Proposição}[chapter]
+
+% ─── Comandos matemáticos ─────────────────────────────────────────────────────
+\newcommand{\VP}{\mathrm{VP}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\TIR}{\mathrm{TIR}}
+\newcommand{\VPL}{\mathrm{VPL}}
+\newcommand{\TIRM}{\mathrm{TIRM}}
+\newcommand{\FAC}{\mathrm{FAC}}
+\newcommand{\YTM}{\mathrm{YTM}}
+
+% Linha do tempo genérica (uso interno nos caps)
+% \fluxtimeline{n}{payment}{top_label}{top_val}
+% (cada capítulo define seu próprio tikzpicture para flexibilidade)
+
+% ─── Estilo TikZ para linhas do tempo ─────────────────────────────────────────
+\tikzset{
+  timeline axis/.style={->, >=Stealth, line width=0.6pt},
+  tick/.style={line width=0.5pt},
+  arrow down/.style={->, >=Stealth, line width=1.4pt, color=azul},
+  arrow up/.style={->, >=Stealth, line width=1.4pt, color=vermelho},
+  cash label/.style={font=\small},
+}

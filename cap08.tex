@@ -1,0 +1,321 @@
+% ============================================================
+%  cap08.tex  --  Capítulo 8: Títulos Públicos
+%  Baseado em: Notas de Aula 8 (Cap. 8) -- dados Brasil 2024
+%  Referência: Bueno, Rangel & Santos, Cap. 8
+% ============================================================
+
+\chapter{Títulos Públicos}
+
+\section{Motivação: Como o Governo se Financia}
+
+Os governos financiam seus déficits primordialmente de duas formas:
+\begin{itemize}
+  \item \textbf{Impostos}: receita compulsória.
+  \item \textbf{Dívida pública}: emissão de títulos vendidos ao mercado.
+\end{itemize}
+
+\subsection*{Dados Brasil 2024}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lll}
+\toprule
+\textbf{Indicador} & \textbf{Valor} & \textbf{Referência} \\
+\midrule
+Estoque da dívida (DPF) & $\approx$ R\$\,7 trilhões & Tesouro Nacional, dez/2024 \\
+Custo médio             & $\approx$ 11\% a.a.        & \\
+PIB                     & $\approx$ R\$\,11,7 trilhões & IBGE, 2024 \\
+\midrule
+\multicolumn{3}{l}{\textit{Composição por tipo de indexador:}} \\
+Pós-fixados (SELIC)     & $\approx$ 46,3\%           & \\
+Pré-fixados             & $\approx$ 22\%             & \\
+IPCA+                   & $\approx$ 27\%             & \\
+\midrule
+\multicolumn{3}{l}{\textit{Composição por detentor:}} \\
+Instituições Financeiras & $\approx$ 30\%            & \\
+Fundos de Investimento   & $\approx$ 22\%            & \\
+Previdência              & $\approx$ 24\%            & \\
+Estrangeiros             & $\approx$ 10\%            & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Tesouro Direto -- Visão Geral}
+
+O \textbf{Tesouro Direto} é o programa do governo federal para venda de títulos públicos
+diretamente ao investidor pessoa física, criado em 2002.
+
+\subsection{Requisitos e operacionalização}
+
+\begin{itemize}
+  \item CPF e conta em uma corretora habilitada pelo Tesouro Nacional.
+  \item Negociação disponível nos dias úteis das 9h30 às 18h.
+  \item \textbf{Liquidez diária}: o Tesouro recompra os títulos a preço de mercado a qualquer dia útil.
+\end{itemize}
+
+\subsection{Liquidação}
+
+\begin{itemize}
+  \item \textbf{Compra}: a partir das 18h do dia útil posterior.
+  \item \textbf{Resgate}: até 13h $\Rightarrow$ mesmo D.U.; entre 13h--18h $\Rightarrow$ D.U.\ seguinte.
+\end{itemize}
+
+\subsection{Imposto de renda}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{ll}
+\toprule
+\textbf{Prazo da aplicação} & \textbf{Alíquota IR} \\
+\midrule
+Até 180 dias        & 22,5\% \\
+181 a 360 dias      & 20,0\% \\
+361 a 720 dias      & 17,5\% \\
+Acima de 720 dias   & 15,0\% \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{nota}
+Para resgates em menos de 30 dias, há incidência adicional de IOF (Imposto sobre
+Operações Financeiras), regressivo de 96\% a 0\% do rendimento.
+\end{nota}
+
+\subsection{Títulos disponíveis}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{llll}
+\toprule
+\textbf{Título} & \textbf{Indexador} & \textbf{Cupom} & \textbf{Vencimento típico} \\
+\midrule
+LTN (Tesouro Prefixado)        & Pré  & Não  & 1--5 anos \\
+NTN-F (Tesouro Prefixado c/ juros) & Pré  & Semestral & 5--15 anos \\
+\midrule
+LFT (Tesouro Selic)            & SELIC & Não & 1--6 anos \\
+NTN-B Principal (Tesouro IPCA+) & IPCA & Não  & 5--35 anos \\
+NTN-B (Tesouro IPCA+ c/ juros) & IPCA & Semestral & 5--40 anos \\
+EDUCA+ (NTN-B1)                & IPCA & Não (acumula) & 20 anos \\
+RENDA+ (NTN-B2)                & IPCA & Mensal (renda)& 30--40 anos \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Limites}
+
+\begin{itemize}
+  \item Negociação mínima: $0{,}01\%$ do valor de face (ou um título).
+  \item Máximo: R\$\,1 milhão por mês por pessoa.
+\end{itemize}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Tesouro Selic (LFT)}
+
+A LFT (\textit{Letra Financeira do Tesouro}) é o título \textbf{pós-fixado} referenciado
+na taxa SELIC acumulada.
+
+\subsection{Fluxo de caixa e valor de resgate}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.95]
+  \draw[timeline axis] (-0.5,0)--(8.5,0) node[right]{$t$ (d.u.)};
+  \foreach \x/\lab in {0/0, 1/1, 2/2, 3/3, 7/\ensuremath{n}}{
+    \draw[tick] (\x,0.12)--(\x,-0.12);
+    \node[below=4pt] at (\x,0) {\lab};
+  }
+  \node at (5.5,-0.35) {$\cdots$};
+  \draw[arrow up]   (0,0)--(0,1.4);
+  \node[above=2pt, color=vermelho] at (0,1.4) {$P$};
+  \draw[arrow down] (7,-0.65)--(7,-1.5);
+  \node[below=2pt] at (7,-1.45) {$VR$};
+\end{tikzpicture}
+\end{center}
+
+O valor de resgate $VR$ é o valor de face atualizado pela taxa SELIC diária (base 252 d.u.):
+\[
+  VR = P_0\,(1 + \bar{i}_{\text{SELIC}})^{n/252},
+\]
+onde $\bar{i}_{\text{SELIC}}$ é a taxa SELIC acumulada no período.
+
+\begin{nota}
+Os juros são computados pela SELIC \textbf{diária} (dias úteis). O investidor recebe exatamente
+a SELIC do período, salvo se negociar com \textbf{ágio} ou \textbf{deságio}:
+\begin{itemize}[leftmargin=1.8em, nosep]
+  \item \textbf{Ágio} ($d > 0$): rentabilidade menor que a SELIC (e.g.\ SELIC$-0{,}02\%$).
+  \item \textbf{Deságio} ($d < 0$): rentabilidade maior (e.g.\ SELIC$+0{,}02\%$).
+\end{itemize}
+Decomposição: $(1+\bar{i}_m) = (1+d)(1+\bar{i}_{\text{SELIC}})$, portanto:
+\[
+  d = \frac{1+\bar{i}_m}{1+\bar{i}_{\text{SELIC}}} - 1.
+\]
+\end{nota}
+
+\begin{exemplo}{LFT -- Exemplo 7 das notas}
+\begin{itemize}[leftmargin=1.8em, nosep]
+  \item Valor de face (par): R\$\,1.000
+  \item Valor de compra (cotação): R\$\,990
+  \item Valor de resgate: R\$\,1.182,17 (após $n = 189$ d.u.)
+\end{itemize}
+
+\medskip
+\textbf{Taxa negociada} (pela qual o mercado precificou):
+\[
+  1{.}182{,}17 = 1{.}000\,(1+\bar{i})^{189/252}
+  \quad\Rightarrow\quad \bar{i} = 25\% \text{ a.a.}
+\]
+
+\textbf{Taxa efetiva} (para o comprador ao preço de R\$\,990):
+\[
+  1{.}182{,}17 = 990\,(1+\YTM)^{189/252}
+  \quad\Rightarrow\quad \YTM \approx 26{,}69\% \text{ a.a.}
+\]
+
+\textbf{Deságio} (comprou abaixo do par $\Rightarrow$ rende mais que a SELIC):
+\[
+  d = \frac{1{,}2669}{1{,}25} - 1 \approx +1{,}35\% \text{ a.a.}
+\]
+\end{exemplo}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{LTN (Tesouro Prefixado)}
+
+A LTN é um título \textbf{zero-cupom} prefixado: o investidor paga o preço $P$ hoje e recebe
+exatamente R\$\,1.000 no vencimento (valor de resgate fixo):
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.95]
+  \draw[timeline axis] (-0.5,0)--(8.5,0) node[right]{$t$ (d.u.)};
+  \foreach \x/\lab in {0/0, 7/\ensuremath{n}}{
+    \draw[tick] (\x,0.12)--(\x,-0.12);
+    \node[below=4pt] at (\x,0) {\lab};
+  }
+  \draw[arrow up] (0,0)--(0,1.4);
+  \node[above=2pt, color=vermelho] at (0,1.4) {$P$};
+  \draw[arrow down] (7,-0.65)--(7,-1.5);
+  \node[below=2pt] at (7,-1.45) {R\$\,1.000};
+\end{tikzpicture}
+\end{center}
+
+A relação preço--taxa (base 252 d.u.):
+\[
+  1{.}000 = P\,(1+\YTM)^{n/252}
+  \quad\Rightarrow\quad
+  P = \frac{1{.}000}{(1+\YTM)^{n/252}}.
+\]
+
+\begin{exemplo}{LTN -- cálculo de cotação (Exemplo 6.5 das notas)}
+$n = 26$ d.u., cotação $VC = \text{R\$\,}985{,}65$, $VR = \text{R\$\,}1.000$:
+\[
+  1{.}000 = 985{,}65\,(1+\YTM)^{26/252}
+  \quad\Rightarrow\quad
+  \YTM \approx 15{,}34\% \text{ a.a.}
+\]
+\end{exemplo}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{NTN-F (Tesouro Prefixado com Juros Semestrais)}
+
+A NTN-F é um título prefixado com \textbf{cupons semestrais} de $10\%$ a.a.\ ($\approx 4{,}881\%$ ao semestre)
+sobre o valor de face de R\$\,1.000, mais devolução do principal no vencimento:
+
+\[
+  P = \sum_{j=1}^{n} \frac{C_j}{(1+\YTM)^{j/2}}
+    + \frac{1{.}000}{(1+\YTM)^n}.
+\]
+onde $C_j = 1000 \times 4{,}881\%$ e os expoentes usam semestres.
+
+\begin{nota}
+O cupom semestral de $10\%$ a.a.\ equivale a $(1{,}10)^{1/2}-1 \approx 4{,}881\%$ ao semestre.
+A NTN-F é precificada como um \emph{bond} clássico (similar ao T-Note americano).
+\end{nota}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{NTN-B (Tesouro IPCA+)}
+
+A NTN-B combina dois componentes:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{Correção pelo IPCA}: protege o poder de compra do principal.
+  \item \textbf{Taxa de juros real} pré-fixada (cupom semestral de $6\%$ a.a.\ $\approx 2{,}956\%$ ao semestre).
+\end{enumerate}
+
+\subsection{Cálculo do VNA (Valor Nominal Atualizado)}
+
+\[
+  \text{VNA} = 1{.}000 \times \frac{\text{IPCA}_{\text{hoje}}}{\text{IPCA}_{\text{base}}}
+             = \text{VNA}_{t-1} \times (1 + \text{IPCA}_{\text{acum. no mês}}).
+\]
+
+\subsection{Cotação e Preço}
+
+\[
+  \text{Cotação} = \frac{100}{(1+\text{taxa})^{d_u/252}},
+\]
+\[
+  \text{Preço} = \text{VNA}_{\text{projetado}} \times \text{Cotação}.
+\]
+
+Para a NTN-B com cupons semestrais, o preço inclui o valor presente de todos os cupons
+futuros mais o principal atualizado pelo IPCA:
+\[
+  P = \text{VNA} \times \left[\sum_{i=1}^{n}
+      \frac{c}{(1+\text{taxa})^{d_{u,i}/252}}
+      + \frac{100}{(1+\text{taxa})^{d_{u,n}/252}}\right],
+\]
+onde $c = 100 \times[(1{,}06)^{1/2}-1] \approx 2{,}9563$ é o cupom percentual semestral
+sobre o valor par ajustado.
+
+\begin{nota}
+A NTN-B + Principal é idêntica à NTN-B, mas \textbf{sem cupons}: o investidor recebe tudo
+no vencimento (VNA final + juros acumulados). Ideal para acumulação de longo prazo.
+\end{nota}
+
+\begin{moderno}[title={NTN-B -- precificação em 2025}]
+Título: NTN-B com vencimento em 15/08/2035 ($n \approx 10$ anos = 20 semestres).
+
+\begin{itemize}[leftmargin=1.8em, nosep]
+  \item VNA (15/01/2025): R\$\,4.587,40 (valor do índice IPCA na data base, atualizado diariamente).
+  \item Taxa de mercado (ANBIMA): $6{,}28\%$ a.a.\ real.
+  \item Cupom: $6\%$ a.a.\ $\Rightarrow$ $2{,}9563\%$ por semestre.
+\end{itemize}
+
+\[
+  \text{Cotação} = \sum_{k=1}^{20} \frac{2{,}9563}{(1{,}0628)^{k/2}}
+                 + \frac{100}{(1{,}0628)^{10}}
+                 \approx 97{,}23.
+\]
+\[
+  P = 4{.}587{,}40 \times \frac{97{,}23}{100} \approx \textbf{R\$\,4.460{,}00.}
+\]
+
+Interpretação: comprar a R\$\,4.460 hoje garante ao investidor o IPCA mais $6{,}28\%$ reais ao ano
+até 2035 -- proteção contra inflação com rentabilidade real positiva.
+\end{moderno}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{\textit{Yield to Maturity} (YTM) e YTM Modificada}
+
+\begin{definicao}
+O \textbf{Yield to Maturity (YTM)} de um título é a TIR do fluxo de caixa do investimento,
+ou seja, a taxa que iguala o preço pago ao valor presente de todos os fluxos futuros.
+\[
+  P = \sum_{t=1}^{n}\frac{C_t}{(1+\YTM)^t} + \frac{M}{(1+\YTM)^n}.
+\]
+\end{definicao}
+
+Para a NTN-F (bond clássico com cupom $R$ e valor de face $M = 1{.}000$):
+\[
+  P = R\left[\frac{(1+\YTM)^n-1}{\YTM}\right]\frac{1}{(1+\YTM)^n}
+    + \frac{1{.}000}{(1+\YTM)^n}.
+\]
+
+A \textbf{YTM modificada} considera o reinvestimento dos cupons à taxa de mercado $i$
+(em vez da própria YTM):
+\[
+  P\,(1+\YTM_m)^n = R\left[\frac{(1+i)^n-1}{i}\right] + 1{.}000.
+\]
+
+\begin{nota}
+A YTM modificada é menor que a YTM quando a taxa de mercado $i <$ YTM, pois considera
+o reinvestimento dos cupons a uma taxa inferior -- cenário mais realista.
+\end{nota}

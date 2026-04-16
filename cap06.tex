@@ -1,0 +1,235 @@
+% ============================================================
+%  cap06.tex  --  Capítulo 6: Formas de Cotar a Taxa de Juros
+%  Baseado em: Notas de Aula 7 (Cap. 7)
+%  Referência: Bueno, Rangel & Santos, Cap. 7
+% ============================================================
+
+\chapter{Formas de Cotar a Taxa de Juros}
+
+\section{Objetivo}
+
+Este capítulo tem dois objetivos complementares:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item Distinguir \textbf{taxa nominal} de \textbf{taxa efetiva}.
+  \item Introduzir o conceito de \textbf{taxa real} (descontada a inflação).
+\end{enumerate}
+
+Confundir essas cotações é fonte frequente de erro em contratos, projeções financeiras e análise de investimentos.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Convenções de Contagem de Dias}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{lll}
+\toprule
+\textbf{Convenção} & \textbf{Ano-base} & \textbf{Mês-base} \\
+\midrule
+Dias corridos & 360 dias & 30 dias \\
+Dias úteis    & 252 dias úteis & 21 dias úteis \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{nota}
+Na prática, devido a feriados, nem todos os meses têm o mesmo número de dias úteis.
+A estratégia correta é sempre utilizar os dias \emph{exatos} do período.
+
+\smallskip
+\textbf{Ferramentas:}
+\begin{itemize}[leftmargin=1.5em, nosep]
+  \item \textbf{HP 12C}: calcula dias efetivos entre duas datas (\texttt{g\;$\Delta$DYS}),
+        base 360 ou 365 dias.
+  \item \textbf{Excel}: \texttt{DIAS360} (corridos) ou \texttt{DIATRABALHOTOTAL}
+        (úteis, requer tabela de feriados inserida pelo usuário).
+\end{itemize}
+\end{nota}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Taxa Nominal vs.\ Taxa Efetiva}
+
+\begin{definicao}
+A \textbf{taxa nominal} é uma taxa anunciada para um período de referência que \emph{não}
+corresponde diretamente à capitalização efetiva. Por convenção, ela é proporcional à
+subperiodização.
+
+A \textbf{taxa efetiva} é a taxa que de fato remunera o capital levando em conta a capitalização
+real no período analisado.
+\end{definicao}
+
+Se a taxa nominal anual é $j$ com capitalização $m$ vezes por ano, a taxa efetiva anual é:
+\[
+  i_{\text{ef}} = \left(1 + \frac{j}{m}\right)^m - 1.
+\]
+
+\begin{exemplo}{Selic e taxa efetiva (exemplo brasileiro)}
+A taxa Selic-meta é anunciada como uma taxa \emph{anual} mas capitaliza diariamente
+(base 252 dias úteis). Uma taxa anual de $6\%$ com capitalização diária em base 252:
+\[
+  i_m = (1 + 0{,}06/252)^{21} - 1 \approx 0{,}502\% \text{ a.m.}
+\]
+Já a taxa de $0{,}5\%$ a.m.\ anunciada como nominal (taxa proporcional):
+\[
+  i_{\text{ef}} = (1{,}005)^{12} - 1 \approx 6{,}17\% \text{ a.a.}
+\]
+\end{exemplo}
+
+\subsection{Equivalência de taxas}
+
+O princípio de equivalência (visto no Cap.~1) aplica-se diretamente:
+\[
+  (1 + i_1)^{n_1/360} = (1 + i_2)^{n_2/360}
+\]
+Para converter entre dias corridos e dias úteis, usa-se o número real de dias do período.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Taxa de Juros Real}
+
+\subsection{Motivação}
+
+Até aqui ignoramos a inflação (variação geral do nível de preços). Uma taxa de juros nominal
+de $12\%$ com inflação de $8\%$ não rende $12\%$ em termos de poder de compra real.
+
+\subsection{Derivação da Equação de Fisher}
+
+Considere um ativo de preço $P_0$ hoje e $P_1 = P_0(1+\pi)$ no próximo período
+(onde $\pi$ é a inflação). Um investimento $V_0$ cresce para $V_1 = V_0(1+i)$ em termos nominais.
+O poder de compra real ao final é:
+\[
+  \frac{V_1}{P_1} = \frac{V_0(1+i)}{P_0(1+\pi)}
+                  = \frac{V_0}{P_0} \cdot \frac{1+i}{1+\pi}.
+\]
+Definindo a taxa de retorno real $r$ como:
+\[
+  1 + r = \frac{1+i}{1+\pi}
+\]
+
+\begin{resultado}
+\[
+  \boxed{1 + r = \frac{1+i}{1+\pi}}
+  \qquad\Leftrightarrow\qquad
+  r = \frac{i - \pi}{1 + \pi}.
+\]
+Esta é a \textbf{Equação de Fisher}.
+\end{resultado}
+
+\paragraph{Aproximação (para $i$ e $\pi$ pequenos):}
+\[
+  r \approx i - \pi.
+\]
+
+\begin{exemplo}{Taxa real -- referência brasileira 2024}
+Taxa Selic: $i = 10{,}5\%$ a.a. \quad IPCA: $\pi = 4{,}62\%$ a.a.
+\[
+  r = \frac{1{,}105 - 1{,}0462}{1{,}0462} - 1
+    = \frac{1{,}105}{1{,}0462} - 1
+    \approx 5{,}62\% \text{ a.a. (real).}
+\]
+Pela aproximação: $r \approx 10{,}5\% - 4{,}62\% = 5{,}88\%$ (ligeiramente acima do valor exato).
+\end{exemplo}
+
+\subsection{Taxa real com capitalização contínua}
+
+No regime contínuo, com taxas nominais $r_{\text{nom}}$ e inflação $\pi_c$ (ambas contínuas):
+\[
+  r_{\text{real}} = r_{\text{nom}} - \pi_c.
+\]
+A subtração simples é exata em tempo contínuo -- não há o termo $r\pi$ de correção.
+
+\subsection{Caso mais realista: inflação variável}
+
+Se a inflação $\pi_t$ varia a cada período $t = 1, \ldots, n$:
+\[
+  (1+r)^n = \frac{(1+i)^n}{\prod_{t=1}^n(1+\pi_t)}.
+\]
+A taxa real ``média geométrica'' é:
+\[
+  1 + r = \frac{(1+i)}{\left[\prod_{t=1}^n(1+\pi_t)\right]^{1/n}}.
+\]
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Fluxo de Caixa Real}
+
+Ao avaliar um projeto com fluxos em termos \textbf{nominais} $R_t$ usando a TIR nominal,
+os resultados podem ser enganosos se não considerarmos a inflação. A alternativa é
+trabalhar em \textbf{termos reais}:
+
+\[
+  R_t^{\text{real}} = \frac{R_t}{(1+\pi_1)(1+\pi_2)\cdots(1+\pi_t)}
+                     \approx \frac{R_t}{(1+\bar\pi)^t},
+\]
+
+e descontar pela taxa real $r$:
+
+\[
+  P = \sum_{t=1}^n \frac{R_t^{\text{real}}}{(1+r)^t}.
+\]
+
+\begin{nota}
+Em geral usamos o IPCA/FGV como índice de reajuste $\pi_t$.
+O resultado é o mesmo se descontarmos o fluxo nominal pela taxa nominal $i$,
+\emph{desde que} a taxa $i$ e os fluxos $R_t$ sejam consistentes (ambos nominais ou ambos reais).
+\end{nota}
+
+\begin{center}
+\begin{tikzpicture}[>=Stealth, font=\small, scale=0.95]
+  \draw[timeline axis] (-0.5,0)--(8.5,0) node[right]{$t$};
+  % Ticks
+  \foreach \x/\lab in {0/0,1/1,2/2,3/3,7/$n$}{
+    \draw[tick] (\x,0.12)--(\x,-0.12);
+    \node[below=4pt] at (\x,0) {\lab};
+  }
+  \node at (5.5,-0.35) {$\cdots$};
+  % P/p_0 (upward)
+  \draw[arrow up] (0,0)--(0,1.4);
+    \node[above=2pt,color=red!70!black] at (0,1.4) {$P_0/p_0$};
+  % Fluxos reais R_t/p_t (downward)
+  \draw[arrow down] (1,-0.65)--(1,-1.4);
+    \node[cash label,below=2pt] at (1,-1.45) {$\frac{R_1}{p_1}$};
+  \draw[arrow down] (2,-0.65)--(2,-1.4);
+    \node[cash label,below=2pt] at (2,-1.45) {$\frac{R_2}{p_2}$};
+  \draw[arrow down] (3,-0.65)--(3,-1.4);
+    \node[cash label,below=2pt] at (3,-1.45) {$\frac{R_3}{p_3}$};
+  \draw[arrow down] (7,-0.65)--(7,-1.4);
+    \node[cash label,below=2pt] at (7,-1.45) {$\frac{R_n}{p_n}$};
+\end{tikzpicture}
+\end{center}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Perpetuidade com Inflação (Fisher + Gordon)}
+
+Para uma perpetuidade cujos pagamentos crescem pela inflação $\pi$ (série geométrica
+com $\alpha = \pi$):
+\[
+  R_1^{\text{nominal}} = R_1^{\text{real}} \cdot (1+\pi).
+\]
+Usando a fórmula de Gordon:
+\[
+  P = \frac{R_1}{i - \pi}.
+\]
+Pela equação de Fisher, $i - \pi \approx r(1+\pi)$, logo:
+\[
+  P \approx \frac{R_1}{r(1+\pi)} = \frac{R_1^{\text{real}}}{r}.
+\]
+
+\begin{resultado}
+A perpetuidade nominal crescente à inflação $\pi$ vale o mesmo que a perpetuidade
+real uniforme com fluxo $R^{\text{real}}$ descontada pela taxa real $r$.
+\[
+  P = \frac{R_1}{i-\pi} = \frac{R^{\text{real}}}{r}.
+\]
+\end{resultado}
+
+\newpage
+
+\begin{moderno}[title={Tesouro IPCA+ como perpetuidade real (2025)}]
+O título NTN-B paga cupom semestral de $6\%$ a.a.\ mais correção pelo IPCA.
+Para uma NTN-B de prazo muito longo (``NTN-B Perpétua'' -- hipotética), com
+taxa real demandada $r = 6\%$ a.a.\ e cupom semestral $c = 3\%$ ($\approx 6\%/2$) sobre
+o valor de face de R\$\,1.000 (corrigido pelo IPCA):
+\[
+  P \approx \frac{30}{0{,}03} = \text{R\$\,}1{.}000
+  \qquad\text{(à par, quando a taxa de mercado = cupom).}
+\]
+Se o mercado exige $r = 7\%$ a.a., o preço cai para $\approx$ R\$\,857 (abaixo do par).
+\end{moderno}

@@ -1,0 +1,56 @@
+% ============================================================
+%  main.tex  --  Matemática Financeira
+%  Graduação em Economia
+%  Referência: Bueno, Rangel, Santos (ISBN 9788522109838)
+% ============================================================
+
+\documentclass[12pt, a4paper]{report}
+\input{preambulo}
+
+% ─── Cabeçalho / rodapé ───────────────────────────────────────────────────────
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textit{Matemática Financeira -- Graduação em Economia}}
+\fancyhead[R]{\small\thepage}
+\fancyfoot[C]{\small\textit{Baseado em Bueno, Rangel \& Santos (2009)}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% ─── Página de título ─────────────────────────────────────────────────────────
+\title{%
+  \vspace{-1cm}
+  {\Huge\bfseries\color{azul} Matemática Financeira}\\[0.8em]
+  {\large Notas de Aula}\\[0.5em]
+  {\normalsize Graduação em Economia}\\[1em]
+  \rule{10cm}{0.5pt}\\[0.5em]
+  {\small Referência principal:\\[0.3em]
+  Bueno, R.; Rangel, A.; Santos, J.\\
+  \textit{Matemática Financeira Moderna}\\
+  ISBN: 978-85-221-0983-8}
+}
+\author{}
+\date{2025}
+
+% ─── Documento ────────────────────────────────────────────────────────────────
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+% ─── Sumário ──────────────────────────────────────────────────────────────────
+\tableofcontents
+\clearpage
+
+% ─── Capítulos ────────────────────────────────────────────────────────────────
+\input{cap01}   % Regimes de Capitalização
+\input{cap02}   % Séries Finitas -- Capitalização Periódica
+\input{cap03}   % Séries Finitas -- Capitalização Instantânea
+\input{cap04}   % Séries Infinitas (Perpetuidades)
+\input{cap05}   % Amortização de Dívidas
+\input{cap06}   % Formas de Cotar a Taxa de Juros
+\input{cap07}   % Análise de Investimentos
+\input{cap08}   % Títulos Públicos
+
+\end{document}

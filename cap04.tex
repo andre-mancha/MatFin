@@ -1,0 +1,201 @@
+% ============================================================
+%  cap04.tex  --  Capítulo 4: Séries Infinitas (Perpetuidades)
+%  Baseado em: Notas de Aula 3 (Aula 4) + Notas de Aula 4 (complemento)
+%  Referência: Bueno, Rangel & Santos, Cap. 4
+% ============================================================
+
+\chapter{Séries Infinitas -- Perpetuidades}
+
+\section{Motivação}
+
+\begin{definicao}
+Uma \textbf{perpetuidade} é uma série de pagamentos que se estende indefinidamente no tempo
+($n \to \infty$). O problema central é: quanto vale \emph{hoje} uma renda que dura para sempre?
+\end{definicao}
+
+Perpetuidades surgem na avaliação de ações (Modelo de Gordon), fundos de endowment, rendas
+vitalícias e na análise de dívidas soberanas (consols britânicos).
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Séries Discretas}
+
+\subsection{Perpetuidade Uniforme}
+
+Partindo do valor presente de uma série vencida com $n$ períodos:
+\[
+  P = R\left[\frac{(1+i)^n-1}{i}\right]\frac{1}{(1+i)^n}
+    = \frac{R}{i}\left[1 - \frac{1}{(1+i)^n}\right].
+\]
+Tomando o limite $n \to \infty$ (e como $(1+i)^n \to \infty$ para $i>0$):
+
+\begin{resultado}
+\[
+  \boxed{P = \frac{R}{i}.}
+  \qquad\text{Equivalentemente: } R = P\cdot i.
+\]
+A lógica é direta: os juros $P \cdot i$ gerados pelo capital $P$ a cada período são exatamente
+retirados sem jamais tocar no principal.
+\end{resultado}
+
+\begin{exemplo}{Renda perpétua de R\$\,1.500/mês}
+\label{ex:perpetuidade-uniforme}
+Com taxa de $0{,}5\%$ a.m., o capital necessário para gerar R\$\,1.500/mês para sempre:
+\[
+  P = \frac{1{.}500}{0{,}005} = \textbf{R\$\,300.000.}
+\]
+\end{exemplo}
+
+\subsection{Perpetuidade em PA (Gradiente Crescente)}
+
+Quando os pagamentos crescem em PA -- $\{R, 2R, 3R, \ldots\}$ -- o valor presente finito é:
+\[
+  P_n = \frac{R}{i}\left\{(1+i)\left[\frac{(1+i)^n-1}{i}\right]\cdot\frac{1}{(1+i)^n}
+        - \frac{n}{(1+i)^n}\right\}.
+\]
+Usando a Regra de L'Hôpital para calcular os limites quando $n\to\infty$
+(ambas as parcelas $\to (1+i)/i$ e $0$ respectivamente):
+
+\begin{resultado}
+\[
+  P = \frac{R\,(1+i)}{i^2}.
+\]
+\end{resultado}
+
+\begin{exemplo}{Perpetuidade em PA}
+$R = 100$, $\Delta = 100$ (gradiente), $i = 2\%$ a.m.:
+\[
+  P = \frac{100 \times 1{,}02}{(0{,}02)^2} = \frac{102}{0{,}0004}
+    = \textbf{R\$\,255.000.}
+\]
+Interpretação: pagar hoje R\$\,255.000 equivale a receber R\$\,100 no mês~1, R\$\,200 no mês~2, e assim por diante, sem fim.
+\end{exemplo}
+
+\begin{nota}
+\textbf{Nota 4.1 -- Séries decrescentes não convergem.}
+Para uma série em PA \emph{decrescente} os pagamentos eventualmente se tornam negativos;
+a série não possui sentido econômico como perpetuidade.
+Para séries em PG decrescentes ($\alpha < 0$), a convergência requer $|\alpha| < i$ (ver Seção~\ref{sec:pgperp}).
+\end{nota}
+
+\subsection{Perpetuidade em PG}
+\label{sec:pgperp}
+
+Para pagamentos em PG com crescimento $\alpha$ por período:
+\[
+  P_n = R\left[\frac{1-\left(\frac{1+\alpha}{1+i}\right)^n}{i-\alpha}\right].
+\]
+Para convergência é necessário $\alpha < i$. Tomando $n \to \infty$:
+
+\begin{resultado}
+\[
+  \boxed{P = \frac{R}{i - \alpha}.}
+\]
+\end{resultado}
+
+\begin{obs}
+Este resultado é válido para $i > \alpha$. Se $\alpha \geq i$, a série diverge
+(pagamentos crescem mais rápido do que a taxa de desconto) e o valor presente é infinito.
+\end{obs}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Séries Contínuas}
+
+\subsection{Perpetuidade Uniforme Contínua}
+
+Para um fluxo contínuo $b$ por unidade de tempo a uma taxa contínua $r$:
+\[
+  P = \lim_{T\to\infty} \frac{b(1-e^{-rT})}{r} = \frac{b}{r}.
+\]
+
+\begin{resultado}
+\[
+  P = \frac{b}{r}.
+\]
+\end{resultado}
+
+\begin{exemplo}{Comparação discreta vs.\ contínua (Exemplo 4.7)}
+$b = R = 1{.}500$ por mês, $r = \ln(1{,}005) \approx 0{,}4988\%$ a.m.:
+\[
+  P_{\text{cont}} = \frac{1{.}500}{0{,}004988} \approx \textbf{R\$\,300.720.}
+\]
+Praticamente idêntico ao resultado discreto (R\$\,300.000), pois o intervalo é pequeno.
+
+\smallskip
+\textit{Motivo:} O resultado contínuo expressa o somatório de taxas infinitesimais que não proporcionam aquela retirada (período = taxa).
+\end{exemplo}
+
+\subsection{Perpetuidade Gradiente Crescente Contínua}
+
+Para fluxo $b(t) = b_0 \, e^{\alpha t}$ (crescimento contínuo a taxa $\alpha$):
+\[
+  P = \int_0^\infty b_0 e^{\alpha t} e^{-rt}\,dt
+    = b_0 \int_0^\infty e^{-(r-\alpha)t}\,dt
+    = \frac{b_0}{r - \alpha}, \qquad r > \alpha.
+\]
+
+\begin{resultado}
+\[
+  P = \frac{b_0}{r - \alpha}.
+\]
+\end{resultado}
+
+\subsection{Perpetuidade Geométrica Discreta Finita (revisão)}
+
+Para $n$ períodos:
+\[
+  P_n = R\left[\frac{1 - e^{(\alpha-r)n}}{r - \alpha}\right].
+\]
+Quando $n\to\infty$ e $r>\alpha$: $P = R/(r-\alpha)$.
+
+\begin{exemplo}{Exemplo 4.9 -- perpetuidade geométrica contínua}
+$R = 100$, $r_{\text{am}} = 1{,}0\%$ a.m., $\alpha = 0{,}5\%$ a.m.:
+\[
+  P = \frac{100}{0{,}010 - 0{,}005} = \frac{100}{0{,}005} = \textbf{R\$\,20.000.}
+\]
+\end{exemplo}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Modelo de Gordon}
+
+O Modelo de Gordon (1956) é a aplicação direta da fórmula de perpetuidade geométrica à avaliação
+de ações.
+
+\begin{definicao}
+O \textbf{preço de uma ação} é o valor presente do fluxo de dividendos futuros esperados,
+descontados pela taxa de retorno requerida (custo de oportunidade) $i$:
+\[
+  P = \frac{D}{(1+i)} + \frac{D}{(1+i)^2} + \cdots
+\]
+\end{definicao}
+
+\paragraph{Caso uniforme (dividendo constante $D$):}
+\[
+  P = \frac{D}{i}.
+\]
+
+\paragraph{Caso geométrico (dividendo cresce a $\alpha$ por período, $i > \alpha$):}
+\[
+  P_0 = \frac{D_0(1+\alpha)}{(1+i)} + \frac{D_0(1+\alpha)^2}{(1+i)^2} + \cdots
+\]
+
+\begin{resultado}
+\[
+  \boxed{P_0 = \frac{D_0(1+\alpha)}{i - \alpha} = \frac{D_1}{i - \alpha},}
+\]
+onde $D_1 = D_0(1+\alpha)$ é o dividendo esperado no próximo período.
+\end{resultado}
+
+\begin{moderno}[title={Modelo de Gordon -- Petrobras (PETR4)}]
+Hipóteses ilustrativas (dados de referência, 2024):
+\begin{itemize}[leftmargin=1.8em, nosep]
+  \item Dividendo pago no último exercício: $D_0 = \text{R\$\,}3{,}20$ por ação.
+  \item Taxa de crescimento estimada dos dividendos: $\alpha = 5\%$ a.a.
+  \item Taxa de retorno requerida pelo acionista: $i = 15\%$ a.a. (CAPM).
+\end{itemize}
+\[
+  P_0 = \frac{3{,}20 \times 1{,}05}{0{,}15 - 0{,}05}
+       = \frac{3{,}36}{0{,}10} = \textbf{R\$\,33{,}60.}
+\]
+Se o preço de mercado for inferior a R\$\,33,60, o ativo está subavaliado pelo modelo.
+Note a sensibilidade: se $\alpha$ subir para $7\%$, o preço-justo sobe para R\$\,42,24 ($+25\%$).
+\end{moderno}

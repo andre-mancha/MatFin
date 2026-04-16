@@ -1,0 +1,110 @@
+% ============================================================
+%  cap03.tex  --  Capítulo 3: Séries Finitas -- Capitalização Instantânea
+%  Baseado em: Notas de Aula 2 (Aula 3)
+%  Referência: Bueno, Rangel & Santos, Cap. 3
+% ============================================================
+
+\chapter{Séries Finitas -- Capitalização Instantânea}
+
+\section{Motivação}
+
+As fórmulas do Capítulo~2 assumem capitalização \emph{periódica} (juros compostos discretos).
+Quando se trabalha com modelos em tempo contínuo -- comuns em Finanças Quantitativas e em
+precificação de derivativos -- utiliza-se a taxa de juros \textbf{contínua} $r$ (com $r = \ln(1+i)$).
+A diferença essencial é levar cada depósito $R$ ao valor futuro pela taxa contínua.
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Séries Discretas com Taxa Contínua}
+
+Considere $n$ depósitos iguais de valor $R$, realizados nos instantes $t = 0, 1, 2, \ldots, n-1$
+(final de cada período), acumulados até $t = n$ com taxa contínua $r$:
+
+\[
+  S = R + R e^r + R e^{2r} + \cdots + R e^{(n-1)r}.
+\]
+
+Esta é uma PG com $a_1 = R$ e razão $q = e^r$. Aplicando a fórmula da soma:
+
+\begin{resultado}
+\[
+  \boxed{S = R \left(\frac{e^{rn} - 1}{e^r - 1}\right)}
+\]
+\end{resultado}
+
+O valor presente correspondente (desconto a $e^{rn}$):
+\begin{resultado}
+\[
+  \boxed{P = R \left(\frac{e^{rn} - 1}{e^r - 1}\right) \cdot \frac{1}{e^{rn}}
+           = R \left(\frac{1 - e^{-rn}}{e^r - 1}\right)}
+\]
+\end{resultado}
+
+\begin{nota}
+Observe a analogia com o caso discreto:
+\[
+  S_{\text{discreto}} = R\left[\frac{(1+i)^n-1}{i}\right], \qquad
+  S_{\text{contínuo}} = R\left[\frac{e^{rn}-1}{e^r-1}\right].
+\]
+Basta substituir $(1+i)$ por $e^r$.
+\end{nota}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Comparação: Juros Compostos vs.\ Juros Contínuos}
+
+\begin{exemplo}{Poupança -- compostos vs.\ contínuos (Exemplo 3.1)}
+Depósitos mensais de R\$\,150 por 20 meses. Taxa: $2\%$ a.m.\ (discreta) e sua equivalente
+contínua $r = \ln(1{,}02)$.
+
+\medskip
+\textbf{Juros compostos (Cap.\ 2):}
+\[
+  S = 150\left[\frac{(1{,}02)^{20}-1}{0{,}02}\right] = \textbf{R\$\,3.644{,}61.}
+\]
+
+\textbf{Juros contínuos} com $r = \ln(1{,}02) \approx 0{,}019803$:
+\[
+  S = 150\left[\frac{e^{0{,}019803 \times 20}-1}{e^{0{,}019803}-1}\right]
+    = 150\left[\frac{e^{0{,}39606}-1}{e^{0{,}019803}-1}\right]
+    \approx \textbf{R\$\,3.651{,}92.}
+\]
+
+A diferença ($\approx$ R\$\,7,31) reflete o fato de que a taxa contínua equivalente ($\approx 1{,}9803\%$)
+produz ligeiramente mais acumulação intraperiodo do que a taxa discreta de $2\%$.
+Quanto mais curto o período de capitalização, menor a diferença.
+\end{exemplo}
+
+\begin{moderno}[title={Pricing de opções e taxa contínua}]
+Na fórmula de Black--Scholes (1973), o fator de desconto usa a taxa livre de risco \emph{contínua}:
+\[
+  \text{Fator de desconto} = e^{-r\,T},
+\]
+onde $T$ é o tempo até o vencimento (em anos). Para converter a taxa Selic de $10{,}5\%$ a.a.\
+(discreta, base 252) para contínua:
+\[
+  r = \ln(1{,}105) \approx 9{,}98\% \text{ a.a.}
+\]
+A diferença de $\sim$0,5 p.p.\ tem impacto significativo no apreçamento de opções de longo prazo.
+\end{moderno}
+
+% ─────────────────────────────────────────────────────────────────────────────
+\section{Séries Contínuas (Fluxo Ininterrupto)}
+
+Quando os depósitos ocorrem de forma \emph{contínua} (não em instantes discretos), a soma se
+torna uma integral. Para um fluxo constante $b$ por unidade de tempo durante $[0, T]$:
+
+\[
+  S = \int_0^T b\, e^{r(T-t)}\, dt = b \cdot \frac{e^{rT} - 1}{r}.
+\]
+
+\begin{resultado}
+\[
+  S_{\text{cont}} = \frac{b(e^{rT}-1)}{r}, \qquad
+  P_{\text{cont}} = \frac{b(1-e^{-rT})}{r}.
+\]
+\end{resultado}
+
+\begin{obs}
+Para fluxos contínuos a capitalização instantânea é o regime \emph{natural}: a fórmula discreta
+com juros compostos requer uma escolha artificial de periodicidade (mensal, diária, etc.),
+enquanto a contínua é independente de convenção.
+\end{obs}
