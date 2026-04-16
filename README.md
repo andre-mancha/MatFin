@@ -46,4 +46,4 @@ pdflatex main.tex
 
 ## ✉️ Contato
 
-Em caso de dúvidas sobre o material, entre em contato pelo [e-mail institucional](andre.mancha@usp.br) ou pela plataforma do curso (Moodle).
+Em caso de dúvidas sobre o material, entre em contato pelo [e-mail institucional](mailto:andre.mancha@usp.br) ou pela plataforma do curso (Moodle).
