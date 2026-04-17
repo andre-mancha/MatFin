@@ -1,0 +1,613 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Matemática Financeira",
+    "section": "",
+    "text": "Apresentação\nEstas notas de aula acompanham a disciplina Matemática Financeira da Graduação em Economia. O objetivo é fornecer um tratamento rigoroso, porém acessível, dos principais instrumentos quantitativos utilizados na análise financeira e na tomada de decisão sob incerteza.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#estrutura-do-curso",
+    "href": "index.html#estrutura-do-curso",
+    "title": "Matemática Financeira",
+    "section": "Estrutura do curso",
+    "text": "Estrutura do curso\nO material está organizado em três partes:\nParte I — Valor do Dinheiro no Tempo Regimes de capitalização, séries de pagamentos periódicas e instantâneas, e perpetuidades. Essa é a linguagem fundamental de toda a matemática financeira.\nParte II — Financiamentos e Taxas Sistemas de amortização (PRICE e SAC) e as diferentes formas de cotar taxas de juros, incluindo a distinção entre taxa nominal, efetiva e real (Equação de Fisher).\nParte III — Decisões de Investimento Critérios de avaliação de projetos (VPL, TIR, TIRM) e apreçamento de títulos públicos brasileiros (LFT, LTN, NTN-B, NTN-F).",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#como-usar-este-material",
+    "href": "index.html#como-usar-este-material",
+    "title": "Matemática Financeira",
+    "section": "Como usar este material",
+    "text": "Como usar este material\nAs notas foram pensadas para leitura acompanhada das aulas. Cada capítulo traz definições formais, resultados principais destacados e exemplos numéricos. Os exemplos modernos ao longo do texto contextualizam os conceitos com dados recentes do mercado brasileiro.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#referência-principal",
+    "href": "index.html#referência-principal",
+    "title": "Matemática Financeira",
+    "section": "Referência principal",
+    "text": "Referência principal\n\nBueno, R. L. S., Rangel, A. S., & Santos, J. C. S. (2008). Matemática Financeira Moderna. São Paulo: Atlas.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "index.html#contato",
+    "href": "index.html#contato",
+    "title": "Matemática Financeira",
+    "section": "Contato",
+    "text": "Contato\nDúvidas sobre o conteúdo podem ser encaminhadas pelo e-mail institucional ou pela plataforma do curso.",
+    "crumbs": [
+      "Apresentação"
+    ]
+  },
+  {
+    "objectID": "cap01.html",
+    "href": "cap01.html",
+    "title": "1  Regimes de Capitalização",
+    "section": "",
+    "text": "1.1 Conceito de Juros\nA forma como os juros se acumulam ao longo do tempo define o regime de capitalização. Os três regimes principais são:",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap01.html#conceito-de-juros",
+    "href": "cap01.html#conceito-de-juros",
+    "title": "1  Regimes de Capitalização",
+    "section": "",
+    "text": "TipDefinição\n\n\n\nJuros são a remuneração pelo sacrifício do consumo presente, ou equivalentemente, o custo de transferir poder de compra ao longo do tempo. Se um agente empresta o capital \\(P\\) (principal) por \\(n\\) períodos a uma taxa \\(i\\) por período, o montante recebido ao final é \\(S = P + J\\), onde \\(J\\) representa os juros totais.\n\n\n\n\nJuros simples — os juros são calculados sempre sobre o principal \\(P\\);\nJuros compostos — os juros de cada período se incorporam ao principal (“juros sobre juros”);\nCapitalização contínua (instantânea) — limite do regime composto quando o intervalo de capitalização tende a zero.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap01.html#juros-simples",
+    "href": "cap01.html#juros-simples",
+    "title": "1  Regimes de Capitalização",
+    "section": "1.2 Juros Simples",
+    "text": "1.2 Juros Simples\nNo regime de juros simples, a cada período acrescentam-se juros iguais a \\(i \\cdot P\\):\n\\[J_t = i \\cdot P, \\qquad t = 1, 2, \\ldots, n.\\]\nO montante após \\(n\\) períodos é portanto:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S = P\\,(1 + i\\,n)\\]\n\n\n\nConvenções de contagem de dias\nNa prática brasileira, dois padrões coexistem:\n\nConvenções de dias no mercado brasileiro\n\n\nConvenção\nAno\nMês\n\n\n\n\nDias corridos\n360 dias\n30 dias\n\n\nDias úteis\n252 dias úteis\n21 dias úteis\n\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nDevido a feriados e ao calendário, nem todos os meses efetivos têm o mesmo número de dias úteis. A estratégia correta é sempre usar os dias exatos do período analisado.\nFerramentas práticas:\n\nHP 12C: calcula dias efetivos entre duas datas no calendário de 360 ou 365 dias (g ΔDYS).\nExcel: função DIAS360 (corridos) ou DIATRABALHOTOTAL (úteis, requer tabela de feriados).\n\n\n\n\n\n\n\n\n\nNoteExemplo 1.1 — Comparação de rendimentos em juros simples\n\n\n\nUm título paga juros simples de \\(2{,}5\\%\\) ao mês. Qual o montante de R$ 10.000 investidos por 45 dias corridos?\n\\(n = 45/30 = 1{,}5\\) meses, portanto:\n\\[S = 10.000\\,(1 + 0{,}025 \\times 1{,}5) = 10.000 \\times 1{,}0375 = \\text{R\\$ }10.375{,}00\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap01.html#juros-compostos",
+    "href": "cap01.html#juros-compostos",
+    "title": "1  Regimes de Capitalização",
+    "section": "1.3 Juros Compostos",
+    "text": "1.3 Juros Compostos\nNo regime de juros compostos, ao fim de cada período os juros são incorporados ao saldo, tornando-se base de cálculo do período seguinte:\n\\[S_1 = P(1+i),\\quad S_2 = S_1(1+i) = P(1+i)^2,\\quad \\ldots\\]\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = P\\,(1+i)^n}\\]\n\n\n\nEquivalência de taxas\nDuas taxas \\(i_1\\) (para o período \\(n_1\\)) e \\(i_2\\) (para o período \\(n_2\\)) são equivalentes sob juros compostos se produzem o mesmo montante:\n\\[\n(1+i_1)^{n_1} = (1+i_2)^{n_2}\n\\quad\\Rightarrow\\quad\ni_2 = (1+i_1)^{n_1/n_2} - 1.\n\\]\n\n\n\n\n\n\nNoteExemplo 1.2 — Equivalência mensal–anual\n\n\n\nA taxa de \\(12\\%\\) a.a. equivale a que taxa mensal?\n\\[i_m = (1{,}12)^{1/12} - 1 \\approx 0{,}9489\\% \\text{ a.m.}\\]\nNote que a taxa proporcional de \\(12\\%/12 = 1\\%\\) a.m. é diferente; a proporcionalidade é válida apenas em juros simples.\n\n\n\n\nTaxa no período\nPara um investimento de \\(n\\) períodos à taxa \\(i\\) por período, a taxa total no período (ou taxa efetiva do período) é:\n\\[i_{\\text{per}} = (1+i)^n - 1.\\]\n\n\n\n\n\n\nNoteExemplo 1.3 — Rendimento acumulado em 3 anos\n\n\n\nUm fundo rende \\(0{,}9\\%\\) a.m. Qual o rendimento acumulado em 36 meses?\n\\[i_{36} = (1{,}009)^{36} - 1 \\approx 38{,}02\\%\\]\n\n\n\n\nTaxa de juros variável\nQuando a taxa varia a cada período \\(t\\), o montante é:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S = P \\prod_{t=1}^{n}(1+i_t)\\]\n\n\n\n\n\n\n\n\nNoteExemplo 1.4 — Taxa variável — 3 semestres\n\n\n\nTaxas semestrais: \\(5\\%\\), \\(4{,}5\\%\\), \\(6\\%\\). Montante de R$ 1.000:\n\\[S = 1.000 \\times 1{,}05 \\times 1{,}045 \\times 1{,}06 \\approx \\text{R\\$ }1.163{,}78\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap01.html#capitalização-contínua-instantânea",
+    "href": "cap01.html#capitalização-contínua-instantânea",
+    "title": "1  Regimes de Capitalização",
+    "section": "1.4 Capitalização Contínua (Instantânea)",
+    "text": "1.4 Capitalização Contínua (Instantânea)\nÀ medida que o intervalo de capitalização diminui para zero, o montante converge para:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = P\\,e^{r\\,n}}\\]\n\n\nonde \\(r\\) é a taxa contínua (ou taxa instantânea de juros).\n\nRelação entre taxa contínua e taxa discreta\nIgualando os montantes dos dois regimes:\n\\[\nP\\,e^{r\\,n} = P\\,(1+i)^n\n\\quad\\Rightarrow\\quad\ne^r = 1+i\n\\quad\\Rightarrow\\quad\n\\boxed{r = \\ln(1+i)}\n\\quad\\Leftrightarrow\\quad\n\\boxed{i = e^r - 1}\n\\]\n\n\n\n\n\n\nNoteExemplo 1.5 — Conversão taxa discreta ↔︎ contínua\n\n\n\n\n\\(i = 12\\%\\) a.a. \\(\\Rightarrow\\) \\(r = \\ln(1{,}12) \\approx 11{,}33\\%\\) a.a. (contínua).\n\\(r = 10\\%\\) a.a. (contínua) \\(\\Rightarrow\\) \\(i = e^{0{,}10}-1 \\approx 10{,}52\\%\\) a.a. (discreta).\n\n\n\n\n\n\n\n\n\nTipExemplo moderno — Taxa Selic em capitalização contínua (2024)\n\n\n\nA taxa Selic fixada em \\(10{,}50\\%\\) a.a. (discreta, base 252 d.u.) corresponde à taxa contínua:\n\\[r = \\ln(1{,}1050) \\approx 9{,}98\\% \\text{ a.a.}\\]\nModelos de apreçamento de derivativos (Black–Scholes, HJM) tipicamente trabalham com \\(r\\) contínuo.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap01.html#comparação-dos-regimes",
+    "href": "cap01.html#comparação-dos-regimes",
+    "title": "1  Regimes de Capitalização",
+    "section": "1.5 Comparação dos Regimes",
+    "text": "1.5 Comparação dos Regimes\nPara um mesmo capital \\(P\\), taxa \\(i\\) (ou taxa contínua equivalente \\(r = \\ln(1+i)\\)) e prazo \\(n\\):\n\nComparação dos três regimes de capitalização\n\n\n\n\n\n\n\n\nRegime\nMontante\nCresce\nUso típico\n\n\n\n\nJuros simples\n\\(P(1+in)\\)\nLinearmente\nTítulos curto prazo, CDI/dia\n\n\nJuros compostos\n\\(P(1+i)^n\\)\nExponencialmente\nMaioria das operações\n\n\nCapitalização contínua\n\\(Pe^{rn}\\)\nExponencialmente\nFinanças quantitativas\n\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nPara \\(n &lt; 1\\) e mesma taxa: juros simples \\(&gt;\\) compostos. Para \\(n &gt; 1\\): compostos \\(&gt;\\) simples. Na capitalização contínua e composta, os montantes coincidem quando \\(r = \\ln(1+i)\\).",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Regimes de Capitalização</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html",
+    "href": "cap02.html",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "",
+    "text": "2.1 Visão Geral\nUma série de pagamentos é uma sequência de fluxos de caixa \\(\\{R_1, R_2, \\ldots, R_n\\}\\) distribuída ao longo do tempo. Dependendo do comportamento desses valores, a série pode ser uniforme, em progressão aritmética (PA) ou em progressão geométrica (PG); os fluxos podem ser discretos ou contínuos; e a capitalização, periódica ou instantânea.\nEste capítulo trata de séries discretas sob capitalização periódica (juros compostos).",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#soma-da-progressão-geométrica",
+    "href": "cap02.html#soma-da-progressão-geométrica",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.2 Soma da Progressão Geométrica",
+    "text": "2.2 Soma da Progressão Geométrica\nAs fórmulas de séries de pagamentos derivam diretamente da soma de uma Progressão Geométrica (PG).\n\n\n\n\n\n\nTipDefinição\n\n\n\nUma Progressão Geométrica (PG) é uma sequência em que a razão entre termos consecutivos é constante e igual a \\(q\\):\n\\[q = \\frac{a_k}{a_{k-1}}, \\qquad A = \\{a_1,\\; a_1 q,\\; a_1 q^2,\\; \\ldots,\\; a_1 q^{n-1}\\}.\\]\n\n\n\nDerivação da fórmula\nSeja \\(S\\) a soma dos \\(n\\) termos:\n\\[S    = a_1 + a_1 q + a_1 q^2 + \\cdots + a_1 q^{n-1}  \\tag{I}\\] \\[qS   = a_1 q + a_1 q^2 + \\cdots + a_1 q^{n-1} + a_1 q^n  \\tag{II}\\]\nSubtraindo (I) de (II):\n\\[qS - S = a_1 q^n - a_1 \\quad\\Rightarrow\\quad S(q-1) = a_1(q^n - 1).\\]\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = a_1 \\left[\\frac{q^n - 1}{q - 1}\\right]} \\qquad (q \\neq 1).\\]\nPara \\(q &gt; 1\\): PG crescente; para \\(q &lt; 1\\): PG decrescente.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#séries-uniformes-vencidas-postecipadas",
+    "href": "cap02.html#séries-uniformes-vencidas-postecipadas",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.3 Séries Uniformes Vencidas (Postecipadas)",
+    "text": "2.3 Séries Uniformes Vencidas (Postecipadas)\nNa série uniforme vencida (ordinary annuity), os pagamentos \\(R\\) ocorrem ao final de cada período.\n\nFórmula do valor futuro (montante)\nLevando cada depósito \\(R\\) ao instante \\(n\\):\n\\[S = R + R(1+i) + R(1+i)^2 + \\cdots + R(1+i)^{n-1}.\\]\nEsta é uma PG com \\(a_1 = R\\), razão \\(q = (1+i)\\) e \\(n\\) termos:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = R\\left[\\frac{(1+i)^n - 1}{i}\\right]}\\]\nO fator \\(\\dfrac{(1+i)^n-1}{i}\\) é denominado Fator de Acumulação de Capital (FAC).\n\n\n\n\nFórmula do valor presente\nTrazendo \\(S\\) ao instante zero:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{P = R\\left[\\frac{(1+i)^n - 1}{i}\\right] \\cdot \\frac{1}{(1+i)^n} = \\frac{R}{(1+i)} + \\frac{R}{(1+i)^2} + \\cdots + \\frac{R}{(1+i)^n}}\\]\n\n\nIsolando \\(R\\) (prestação de um financiamento de principal \\(P\\)):\n\\[R = P\\left[\\frac{(1+i)^n \\cdot i}{(1+i)^n - 1}\\right].\\]\n\n\nShare de juros\nO share de juros mede a fração do valor presente que corresponde a juros:\n\\[\\frac{J}{P} = \\frac{S - P}{P} = (1+i)^n - 1.\\]\n\n\n\n\n\n\nNoteExemplo 2.1 — Poupança mensal\n\n\n\nDepósitos mensais de R$ 150 durante 20 meses à taxa de \\(2\\%\\) a.m.:\n\\[S = 150\\left[\\frac{(1{,}02)^{20}-1}{0{,}02}\\right] = 150 \\times 24{,}2974 \\approx \\textbf{R\\$ 3.644,61.}\\]\n\n\n\n\n\n\n\n\nNoteExemplo 2.2 — Financiamento\n\n\n\nFinanciamento de R$ 25.000 em 24 prestações mensais iguais à taxa de \\(3\\%\\) a.m.:\n\\[R = 25.000\\left[\\frac{(1{,}03)^{24} \\times 0{,}03}{(1{,}03)^{24}-1}\\right] \\approx \\textbf{R\\$ 1.476,19.}\\]\n\n\n\n\n\n\n\n\nTipExemplo moderno — Financiamento imobiliário PRICE (2025)\n\n\n\nPrincipal: R$ 300.000; prazo: 360 meses; taxa: \\(0{,}79\\%\\) a.m. (TR + 9,89% a.a. — referência Caixa, 2025):\n\\[R = 300.000 \\times \\frac{(1{,}0079)^{360}\\times 0{,}0079}{(1{,}0079)^{360}-1} \\approx \\textbf{R\\$ 2.547,48/mês.}\\]\nO total pago ao final (\\(360 \\times 2.547{,}48 = \\text{R\\$ }917.092{,}80\\)) é aproximadamente 3 vezes o principal.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#série-antecipada",
+    "href": "cap02.html#série-antecipada",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.4 Série Antecipada",
+    "text": "2.4 Série Antecipada\nNa série antecipada, os pagamentos ocorrem no início de cada período. Cada depósito fica aplicado por um período a mais, portanto:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S_{\\text{ant}} = R\\left[\\frac{(1+i)^n-1}{i}\\right](1+i), \\qquad P_{\\text{ant}} = R\\left[\\frac{(1+i)^n-1}{i}\\right]\\frac{1+i}{(1+i)^n}.\\]\n\n\nA prestação de um financiamento antecipado é:\n\\[R_{\\text{ant}} = P\\left[\\frac{(1+i)^n \\cdot i}{(1+i)^n - 1}\\right]\\frac{1}{1+i}.\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#séries-com-pagamentos-variáveis",
+    "href": "cap02.html#séries-com-pagamentos-variáveis",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.5 Séries com Pagamentos Variáveis",
+    "text": "2.5 Séries com Pagamentos Variáveis\nQuando os pagamentos \\(R_t\\) variam ao longo do tempo, calcula-se diretamente:\n\\[S = \\sum_{t=1}^{n} R_t\\,(1+i)^{n-t}, \\qquad P = \\sum_{t=1}^{n} \\frac{R_t}{(1+i)^t}.\\]\n\n\n\n\n\n\nNoteExemplo 2.3 — 5 pagamentos de R$ 1.000 + 5 de R$ 2.000 a 2% a.m.\n\n\n\n\\[P = \\frac{1.000}{1{,}02} + \\cdots + \\frac{2.000}{(1{,}02)^{10}} \\approx \\textbf{R\\$ 13.251,71.}\\]\n\n\n\n\n\n\n\n\nNoteExemplo 2.4 — Empréstimo de R$ 1.200 — taxa implícita\n\n\n\nCrédito de R$ 1.200 à vista; pagamento de \\(6 \\times \\text{R\\$ 100} + 6 \\times \\text{R\\$ 150}\\). Resolvendo para \\(i\\):\n\\[1.200 = \\frac{100}{(1+i)} + \\cdots + \\frac{150}{(1+i)^{12}} \\quad\\Rightarrow\\quad i \\approx 3{,}28\\%\\text{ a.m.}\\]\n(Resolução numérica — ver Capítulo 7, Método de Newton–Raphson.)",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#séries-em-progressão-aritmética-gradiente",
+    "href": "cap02.html#séries-em-progressão-aritmética-gradiente",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.6 Séries em Progressão Aritmética (Gradiente)",
+    "text": "2.6 Séries em Progressão Aritmética (Gradiente)\n\n\n\n\n\n\nTipDefinição\n\n\n\nUma série em Progressão Aritmética (PA) possui pagamentos que crescem (ou decrescem) de um valor constante \\(R\\) a cada período. O primeiro pagamento é igual à razão \\(R\\):\n\\[\\{R,\\; 2R,\\; 3R,\\; \\ldots,\\; nR\\}.\\]\n\n\n\nGradiente crescente\nTomando o valor futuro da série e aplicando o mesmo truque da soma de PG:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S = \\frac{R}{i}\\left\\{(1+i)\\left[\\frac{(1+i)^n-1}{i}\\right] - n\\right\\}.\\]\n\\[P = \\frac{R}{i}\\left\\{(1+i)\\left[\\frac{(1+i)^n-1}{i}\\right] - n\\right\\} \\cdot\\frac{1}{(1+i)^n}.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 2.5 — Depósitos crescentes em PA a 2,5% a.m.\n\n\n\nDepósitos de R$ 100 no 1º mês, R$ 200 no 2º, …, R$ 3.600 no 36º (\\(R = 100\\), \\(n = 36\\), \\(i = 0{,}025\\)):\n\\[S = \\frac{100}{0{,}025}\\left\\{1{,}025\\left[\\frac{(1{,}025)^{36}-1}{0{,}025}\\right]-36\\right\\} \\approx \\textbf{R\\$ 90.935,79.}\\]\n\n\n\n\nGradiente decrescente\nPara a série \\(\\{nR, (n-1)R, \\ldots, 2R, R\\}\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S = \\frac{R}{i}\\left\\{n(1+i)^n - \\left[\\frac{(1+i)^n-1}{i}\\right]\\right\\}, \\qquad P = S \\cdot \\frac{1}{(1+i)^n}.\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#série-com-valor-inicial-diferente-da-razão",
+    "href": "cap02.html#série-com-valor-inicial-diferente-da-razão",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.7 Série com Valor Inicial Diferente da Razão",
+    "text": "2.7 Série com Valor Inicial Diferente da Razão\nPara uma série com primeiro pagamento \\(F\\) e razão \\(R\\) (pagamentos \\(F{+}R\\), \\(F{+}2R\\), …, \\(F{+}nR\\)), decompomos em série gradiente + série uniforme:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S = \\underbrace{\\frac{R}{i}\\left\\{(1+i)\\left[\\frac{(1+i)^n-1}{i}\\right]-n\\right\\}}_{S_{\\text{grad}}} + \\underbrace{F\\left[\\frac{(1+i)^n-1}{i}\\right]}_{S_{\\text{unif}}} \\quad\\text{(postecipada).}\\]\n\n\n\n\n\n\n\n\nNoteExemplo 2.6 — Série com F = 400, R = 50, n = 35, i = 2% a.m.\n\n\n\n\\[S_{\\text{grad}} = \\frac{50}{0{,}02}\\left\\{1{,}02\\left[\\frac{(1{,}02)^{35}-1}{0{,}02}\\right]-35\\right\\} \\approx 17.933{,}57.\\]\n\\[S_{\\text{unif}} = 400\\left[\\frac{(1{,}02)^{35}-1}{0{,}02}\\right] \\approx 13.029{,}39.\\]\n\\[S_{\\text{total}} \\approx \\textbf{R\\$ 30.962,96.}\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap02.html#séries-em-progressão-geométrica",
+    "href": "cap02.html#séries-em-progressão-geométrica",
+    "title": "2  Séries Finitas — Capitalização Periódica",
+    "section": "2.8 Séries em Progressão Geométrica",
+    "text": "2.8 Séries em Progressão Geométrica\n\n\n\n\n\n\nTipDefinição\n\n\n\nEm uma série em PG, cada pagamento cresce (ou decresce) pelo fator constante \\((1+\\alpha)\\):\n\\[\\{R,\\; R(1+\\alpha),\\; R(1+\\alpha)^2,\\; \\ldots,\\; R(1+\\alpha)^{n-1}\\}.\\]\nPara \\(\\alpha &gt; 0\\): série crescente; \\(\\alpha &lt; 0\\): decrescente; \\(\\alpha = 0\\): série uniforme.\n\n\nO valor futuro resulta de uma PG com razão \\(\\delta = \\dfrac{1+\\alpha}{1+i}\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = R\\left[\\frac{(1+i)^n - (1+\\alpha)^n}{i - \\alpha}\\right]}, \\qquad i \\neq \\alpha.\\]\n\\[P = \\frac{R}{i-\\alpha}\\left[1 - \\left(\\frac{1+\\alpha}{1+i}\\right)^n\\right].\\]\n\n\n\n\n\n\n\n\nNoteNota — Caso especial i = α\n\n\n\nA expressão acima é indeterminada quando \\(i = \\alpha\\). Neste caso, todos os fluxos trazidos a valor futuro são iguais:\n\\[S = n\\,R\\,(1+i)^{n-1}.\\]\n\n\n\n\n\n\n\n\nTipExemplo moderno — Salários crescentes e poupança previdenciária\n\n\n\nUm jovem de 25 anos começa a poupar R$ 500/mês, com aportes crescendo \\(0{,}3\\%\\) a.m. (salário real), durante 40 anos (\\(n = 480\\) meses), à taxa de \\(0{,}7\\%\\) a.m. (\\(\\approx 8{,}7\\%\\) a.a.):\n\\[S = 500\\left[\\frac{(1{,}007)^{480}-(1{,}003)^{480}}{0{,}007-0{,}003}\\right] \\approx \\textbf{R\\$ 3,1 milhões.}\\]\nComparação: se os aportes fossem fixos (sem crescimento), \\(S \\approx\\) R$ 1,9 milhão — a série em PG acumula 63% a mais pelo efeito composto do crescimento salarial.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Séries Finitas — Capitalização Periódica</span>"
+    ]
+  },
+  {
+    "objectID": "cap03.html",
+    "href": "cap03.html",
+    "title": "3  Séries Finitas — Capitalização Instantânea",
+    "section": "",
+    "text": "3.1 Motivação\nAs fórmulas do Capítulo 2 assumem capitalização periódica (juros compostos discretos). Quando se trabalha com modelos em tempo contínuo — comuns em Finanças Quantitativas e em precificação de derivativos — utiliza-se a taxa de juros contínua \\(r\\) (com \\(r = \\ln(1+i)\\)). A diferença essencial é levar cada depósito \\(R\\) ao valor futuro pela taxa contínua.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Séries Finitas — Capitalização Instantânea</span>"
+    ]
+  },
+  {
+    "objectID": "cap03.html#séries-discretas-com-taxa-contínua",
+    "href": "cap03.html#séries-discretas-com-taxa-contínua",
+    "title": "3  Séries Finitas — Capitalização Instantânea",
+    "section": "3.2 Séries Discretas com Taxa Contínua",
+    "text": "3.2 Séries Discretas com Taxa Contínua\nConsidere \\(n\\) depósitos iguais de valor \\(R\\), realizados nos instantes \\(t = 0, 1, 2, \\ldots, n-1\\), acumulados até \\(t = n\\) com taxa contínua \\(r\\):\n\\[S = R + R e^r + R e^{2r} + \\cdots + R e^{(n-1)r}.\\]\nEsta é uma PG com \\(a_1 = R\\) e razão \\(q = e^r\\). Aplicando a fórmula da soma:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{S = R \\left(\\frac{e^{rn} - 1}{e^r - 1}\\right)}\\]\n\\[\\boxed{P = R \\left(\\frac{1 - e^{-rn}}{e^r - 1}\\right)}\\]\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nObserve a analogia com o caso discreto:\n\\[S_{\\text{discreto}} = R\\left[\\frac{(1+i)^n-1}{i}\\right], \\qquad S_{\\text{contínuo}} = R\\left[\\frac{e^{rn}-1}{e^r-1}\\right].\\]\nBasta substituir \\((1+i)\\) por \\(e^r\\).",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Séries Finitas — Capitalização Instantânea</span>"
+    ]
+  },
+  {
+    "objectID": "cap03.html#comparação-juros-compostos-vs.-juros-contínuos",
+    "href": "cap03.html#comparação-juros-compostos-vs.-juros-contínuos",
+    "title": "3  Séries Finitas — Capitalização Instantânea",
+    "section": "3.3 Comparação: Juros Compostos vs. Juros Contínuos",
+    "text": "3.3 Comparação: Juros Compostos vs. Juros Contínuos\n\n\n\n\n\n\nNoteExemplo 3.1 — Poupança: compostos vs. contínuos\n\n\n\nDepósitos mensais de R$ 150 por 20 meses. Taxa: \\(2\\%\\) a.m. (discreta) e sua equivalente contínua \\(r = \\ln(1{,}02)\\).\nJuros compostos (Cap. 2):\n\\[S = 150\\left[\\frac{(1{,}02)^{20}-1}{0{,}02}\\right] = \\textbf{R\\$ 3.644,61.}\\]\nJuros contínuos com \\(r = \\ln(1{,}02) \\approx 0{,}019803\\):\n\\[S = 150\\left[\\frac{e^{0{,}019803 \\times 20}-1}{e^{0{,}019803}-1}\\right] \\approx \\textbf{R\\$ 3.651,92.}\\]\nA diferença (\\(\\approx\\) R$ 7,31) reflete o fato de que a taxa contínua equivalente produz ligeiramente mais acumulação intraperiodo. Quanto mais curto o período de capitalização, menor a diferença.\n\n\n\n\n\n\n\n\nTipExemplo moderno — Pricing de opções e taxa contínua\n\n\n\nNa fórmula de Black–Scholes (1973), o fator de desconto usa a taxa livre de risco contínua:\n\\[\\text{Fator de desconto} = e^{-r\\,T},\\]\nonde \\(T\\) é o tempo até o vencimento (em anos). Para converter a taxa Selic de \\(10{,}5\\%\\) a.a. (discreta, base 252) para contínua:\n\\[r = \\ln(1{,}105) \\approx 9{,}98\\% \\text{ a.a.}\\]\nA diferença de $$0,5 p.p. tem impacto significativo no apreçamento de opções de longo prazo.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Séries Finitas — Capitalização Instantânea</span>"
+    ]
+  },
+  {
+    "objectID": "cap03.html#séries-contínuas-fluxo-ininterrupto",
+    "href": "cap03.html#séries-contínuas-fluxo-ininterrupto",
+    "title": "3  Séries Finitas — Capitalização Instantânea",
+    "section": "3.4 Séries Contínuas (Fluxo Ininterrupto)",
+    "text": "3.4 Séries Contínuas (Fluxo Ininterrupto)\nQuando os depósitos ocorrem de forma contínua, a soma se torna uma integral. Para um fluxo constante \\(b\\) por unidade de tempo durante \\([0, T]\\):\n\\[S = \\int_0^T b\\, e^{r(T-t)}\\, dt = b \\cdot \\frac{e^{rT} - 1}{r}.\\]\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[S_{\\text{cont}} = \\frac{b(e^{rT}-1)}{r}, \\qquad P_{\\text{cont}} = \\frac{b(1-e^{-rT})}{r}.\\]\n\n\n\n\n\n\n\n\nNoteObservação\n\n\n\nPara fluxos contínuos, a capitalização instantânea é o regime natural: a fórmula discreta com juros compostos requer uma escolha artificial de periodicidade (mensal, diária, etc.), enquanto a contínua é independente de convenção.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Séries Finitas — Capitalização Instantânea</span>"
+    ]
+  },
+  {
+    "objectID": "cap04.html",
+    "href": "cap04.html",
+    "title": "4  Séries Infinitas — Perpetuidades",
+    "section": "",
+    "text": "4.1 Motivação\nPerpetuidades surgem na avaliação de ações (Modelo de Gordon), fundos de endowment, rendas vitalícias e na análise de dívidas soberanas (consols britânicos).",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Séries Infinitas — Perpetuidades</span>"
+    ]
+  },
+  {
+    "objectID": "cap04.html#motivação",
+    "href": "cap04.html#motivação",
+    "title": "4  Séries Infinitas — Perpetuidades",
+    "section": "",
+    "text": "TipDefinição\n\n\n\nUma perpetuidade é uma série de pagamentos que se estende indefinidamente no tempo (\\(n \\to \\infty\\)). O problema central é: quanto vale hoje uma renda que dura para sempre?",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Séries Infinitas — Perpetuidades</span>"
+    ]
+  },
+  {
+    "objectID": "cap04.html#séries-discretas",
+    "href": "cap04.html#séries-discretas",
+    "title": "4  Séries Infinitas — Perpetuidades",
+    "section": "4.2 Séries Discretas",
+    "text": "4.2 Séries Discretas\n\nPerpetuidade Uniforme\nPartindo do valor presente de uma série vencida com \\(n\\) períodos e tomando o limite \\(n \\to \\infty\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{P = \\frac{R}{i}.} \\qquad\\text{Equivalentemente: } R = P\\cdot i.\\]\nA lógica é direta: os juros \\(P \\cdot i\\) gerados pelo capital \\(P\\) a cada período são exatamente retirados sem jamais tocar no principal.\n\n\n\n\n\n\n\n\nNoteExemplo 4.1 — Renda perpétua de R$ 1.500/mês\n\n\n\nCom taxa de \\(0{,}5\\%\\) a.m., o capital necessário para gerar R$ 1.500/mês para sempre:\n\\[P = \\frac{1.500}{0{,}005} = \\textbf{R\\$ 300.000.}\\]\n\n\n\n\nPerpetuidade em PA (Gradiente Crescente)\nPara pagamentos em PA — \\(\\{R, 2R, 3R, \\ldots\\}\\) — aplicando a Regra de L’Hôpital quando \\(n \\to \\infty\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[P = \\frac{R\\,(1+i)}{i^2}.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 4.2 — Perpetuidade em PA\n\n\n\n\\(R = 100\\), \\(i = 2\\%\\) a.m.:\n\\[P = \\frac{100 \\times 1{,}02}{(0{,}02)^2} = \\frac{102}{0{,}0004} = \\textbf{R\\$ 255.000.}\\]\nInterpretação: pagar hoje R$ 255.000 equivale a receber R$ 100 no mês 1, R$ 200 no mês 2, e assim por diante, sem fim.\n\n\n\n\n\n\n\n\nNoteNota — Séries decrescentes não convergem\n\n\n\nPara uma série em PA decrescente os pagamentos eventualmente se tornam negativos; a série não possui sentido econômico como perpetuidade. Para séries em PG decrescentes (\\(\\alpha &lt; 0\\)), a convergência requer \\(|\\alpha| &lt; i\\).\n\n\n\n\nPerpetuidade em PG\nPara pagamentos em PG com crescimento \\(\\alpha\\) por período, tomando \\(n \\to \\infty\\) com \\(\\alpha &lt; i\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\boxed{P = \\frac{R}{i - \\alpha}.}\\]\nSe \\(\\alpha \\geq i\\), a série diverge (pagamentos crescem mais rápido do que a taxa de desconto) e o valor presente é infinito.",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Séries Infinitas — Perpetuidades</span>"
+    ]
+  },
+  {
+    "objectID": "cap04.html#séries-contínuas",
+    "href": "cap04.html#séries-contínuas",
+    "title": "4  Séries Infinitas — Perpetuidades",
+    "section": "4.3 Séries Contínuas",
+    "text": "4.3 Séries Contínuas\n\nPerpetuidade Uniforme Contínua\nPara um fluxo contínuo \\(b\\) por unidade de tempo a uma taxa contínua \\(r\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[P = \\lim_{T\\to\\infty} \\frac{b(1-e^{-rT})}{r} = \\frac{b}{r}.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 4.3 — Comparação discreta vs. contínua\n\n\n\n\\(b = R = 1.500\\) por mês, \\(r = \\ln(1{,}005) \\approx 0{,}4988\\%\\) a.m.:\n\\[P_{\\text{cont}} = \\frac{1.500}{0{,}004988} \\approx \\textbf{R\\$ 300.720.}\\]\nPraticamente idêntico ao resultado discreto (R$ 300.000), pois o intervalo de capitalização é pequeno.\n\n\n\n\nPerpetuidade Gradiente Crescente Contínua\nPara fluxo \\(b(t) = b_0 \\, e^{\\alpha t}\\) (crescimento contínuo a taxa \\(\\alpha &lt; r\\)):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[P = \\int_0^\\infty b_0 e^{\\alpha t} e^{-rt}\\,dt = \\frac{b_0}{r - \\alpha}.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 4.4 — Perpetuidade geométrica contínua\n\n\n\n\\(R = 100\\), \\(r = 1{,}0\\%\\) a.m., \\(\\alpha = 0{,}5\\%\\) a.m.:\n\\[P = \\frac{100}{0{,}010 - 0{,}005} = \\frac{100}{0{,}005} = \\textbf{R\\$ 20.000.}\\]",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Séries Infinitas — Perpetuidades</span>"
+    ]
+  },
+  {
+    "objectID": "cap04.html#modelo-de-gordon",
+    "href": "cap04.html#modelo-de-gordon",
+    "title": "4  Séries Infinitas — Perpetuidades",
+    "section": "4.4 Modelo de Gordon",
+    "text": "4.4 Modelo de Gordon\nO Modelo de Gordon (1956) é a aplicação direta da fórmula de perpetuidade geométrica à avaliação de ações.\n\n\n\n\n\n\nTipDefinição\n\n\n\nO preço de uma ação é o valor presente do fluxo de dividendos futuros esperados, descontados pela taxa de retorno requerida (custo de oportunidade) \\(i\\).\n\n\nPara dividendo constante \\(D\\): \\(P = D/i\\).\nPara dividendo crescendo a \\(\\alpha\\) por período (\\(i &gt; \\alpha\\)):\n\n\n\n\n\n\nImportantResultado — Modelo de Gordon\n\n\n\n\\[\\boxed{P_0 = \\frac{D_0(1+\\alpha)}{i - \\alpha} = \\frac{D_1}{i - \\alpha},}\\]\nonde \\(D_1 = D_0(1+\\alpha)\\) é o dividendo esperado no próximo período.\n\n\n\n\n\n\n\n\nTipExemplo moderno — Modelo de Gordon: Petrobras (PETR4)\n\n\n\nHipóteses ilustrativas (dados de referência, 2024):\n\nDividendo pago no último exercício: \\(D_0 = \\text{R\\$ }3{,}20\\) por ação.\nTaxa de crescimento estimada dos dividendos: \\(\\alpha = 5\\%\\) a.a.\nTaxa de retorno requerida pelo acionista: \\(i = 15\\%\\) a.a. (CAPM).\n\n\\[P_0 = \\frac{3{,}20 \\times 1{,}05}{0{,}15 - 0{,}05} = \\frac{3{,}36}{0{,}10} = \\textbf{R\\$ 33,60.}\\]\nSe o preço de mercado for inferior a R$ 33,60, o ativo está subavaliado pelo modelo. Note a sensibilidade: se \\(\\alpha\\) subir para \\(7\\%\\), o preço-justo sobe para R$ 42,24 (\\(+25\\%\\)).",
+    "crumbs": [
+      "Parte I — Valor do Dinheiro no Tempo",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Séries Infinitas — Perpetuidades</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html",
+    "href": "cap05.html",
+    "title": "5  Sistemas de Amortização",
+    "section": "",
+    "text": "5.1 Estrutura Geral de uma Prestação\nQuando se toma um empréstimo de valor \\(P\\) a uma taxa \\(i\\) por período, cada prestação \\(R_t\\) é composta de duas partes:\nonde \\(J_t = i \\cdot P_{t-1}\\) são os juros do período \\(t\\), calculados sobre o saldo devedor \\(P_{t-1}\\); \\(A_t\\) é a amortização do período \\(t\\); e \\(P_t = P_{t-1} - A_t\\) é o saldo devedor ao final do período \\(t\\).\nÀ medida que o tempo passa e o principal é amortizado, \\(J_t\\) diminui pois \\(P_{t-1}\\) decresce. A forma como \\(A_t\\) é distribuída define o sistema de amortização.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#estrutura-geral-de-uma-prestação",
+    "href": "cap05.html#estrutura-geral-de-uma-prestação",
+    "title": "5  Sistemas de Amortização",
+    "section": "",
+    "text": "ImportantResultado\n\n\n\n\\[R_t = J_t + A_t,\\]\n\n\n\n\n\nSistemas de amortização\n\n\n\n\n\n\n\nSistema\nPrestação \\(R_t\\)\nAmortização \\(A_t\\)\n\n\n\n\nPRICE\nConstante (\\(R_t = \\bar{R}\\))\nCrescente\n\n\nSAC\nDecrescente (série gradiente)\nConstante (\\(A_t = \\bar{A}\\))\n\n\nAmericano\nConstante (\\(i\\cdot P\\)) + principal no final\nZero até \\(t=n-1\\)",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#sistema-price-francês",
+    "href": "cap05.html#sistema-price-francês",
+    "title": "5  Sistemas de Amortização",
+    "section": "5.2 Sistema PRICE (Francês)",
+    "text": "5.2 Sistema PRICE (Francês)\nNo sistema PRICE, a prestação é constante: \\(R_t = \\bar{R}\\) para todo \\(t\\). Isso é equivalente a uma série uniforme vencida:\n\\[\\bar{R} = P\\left[\\frac{i(1+i)^n}{(1+i)^n-1}\\right].\\]\nAs relações gerais para o período \\(k\\) são:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\bar{R} = P\\left[\\frac{i}{1-(1+i)^{-n}}\\right], \\quad J_k = \\bar{R}\\left[1-(1+i)^{k-n-1}\\right], \\quad A_k = \\bar{R}\\,(1+i)^{k-n-1}, \\quad P_k = \\bar{R}\\left[\\frac{1-(1+i)^{k-n}}{i}\\right].\\]\n\n\nOs juros decrescem e a amortização cresce, mantendo \\(R_t = \\bar{R}\\) constante.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#sistema-sac-constante",
+    "href": "cap05.html#sistema-sac-constante",
+    "title": "5  Sistemas de Amortização",
+    "section": "5.3 Sistema SAC (Constante)",
+    "text": "5.3 Sistema SAC (Constante)\nNo sistema SAC, a amortização é constante: \\(A_t = \\bar{A} = P/n\\), logo o saldo devedor decresce linearmente. A prestação é decrescente:\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\bar{A} = \\frac{P}{n}, \\quad J_k = i\\,(n-k+1)\\,\\bar{A}, \\quad R_k = \\bar{A}\\left[1 + i(n-k+1)\\right], \\quad P_k = (n-k)\\,\\bar{A}.\\]\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nO SAC é uma série gradiente decrescente com último termo \\(\\bar{A} + i\\bar{A}\\) e série uniforme de valor \\(\\bar{A}\\).",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#sistema-americano-e-sinking-fund",
+    "href": "cap05.html#sistema-americano-e-sinking-fund",
+    "title": "5  Sistemas de Amortização",
+    "section": "5.4 Sistema Americano e Sinking Fund",
+    "text": "5.4 Sistema Americano e Sinking Fund\nNo sistema americano, o principal não é amortizado ao longo do contrato:\n\\[R_t = i\\cdot P \\quad (t = 1, \\ldots, n-1), \\qquad R_n = i\\cdot P + P.\\]\nPara garantir a liquidação do principal, o devedor pode constituir um Sinking Fund — um depósito periódico \\(R_{\\text{sf}}\\) que, acumulado até \\(t = n\\), atinge exatamente \\(P\\):\n\\[R_{\\text{sf}} = P\\left[\\frac{i}{(1+i)^n-1}\\right].\\]\n\n\n\n\n\n\nNoteExemplo 5.1 — Sinking Fund\n\n\n\nDívida de R$ 6.000 por 7 anos com \\(i = 4{,}0083\\%\\) a.a.:\n\\[R_{\\text{sf}} = 6.000\\left[\\frac{0{,}040083}{(1{,}040083)^7-1}\\right] \\approx \\textbf{R\\$ 759,44/ano.}\\]",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#tabelas-de-amortização",
+    "href": "cap05.html#tabelas-de-amortização",
+    "title": "5  Sistemas de Amortização",
+    "section": "5.5 Tabelas de Amortização",
+    "text": "5.5 Tabelas de Amortização\nEmpréstimo de R$ 6.000 a \\(4{,}0083\\%\\) a.m., 7 períodos.\n\nPRICE\n\\[\\bar{R} = 6.000\\left[\\frac{0{,}040083\\,(1{,}040083)^7}{(1{,}040083)^7-1}\\right] \\approx \\text{R\\$ 1.000/mês.}\\]\n\nTabela PRICE\n\n\n\n\n\n\n\n\n\n\\(k\\)\nSaldo devedor\nJuros \\(J_k\\)\nAmortização \\(A_k\\)\nPrestação \\(R_k\\)\n\n\n\n\n0\n6.000,00\n—\n—\n—\n\n\n1\n5.240,56\n240,56\n759,44\n1.000,00\n\n\n2\n4.450,67\n210,12\n789,89\n1.000,00\n\n\n⋮\n⋮\n⋮\n⋮\n⋮\n\n\n7\n0,00\n38,55\n961,45\n1.000,00\n\n\nTotal\n—\n1.000,00\n6.000,00\n7.000,00\n\n\n\n\n\nSAC\n\\[\\bar{A} = \\frac{6.000}{7} \\approx \\text{R\\$ 857,14/mês.}\\]\n\nTabela SAC\n\n\n\n\n\n\n\n\n\n\\(k\\)\nSaldo devedor\nJuros \\(J_k\\)\nAmortização \\(A_k\\)\nPrestação \\(R_k\\)\n\n\n\n\n0\n6.000,00\n—\n—\n—\n\n\n1\n5.142,86\n240,50\n857,14\n1.097,64\n\n\n2\n4.285,71\n206,20\n857,14\n1.063,34\n\n\n⋮\n⋮\n⋮\n⋮\n⋮\n\n\n7\n0,00\n34,37\n857,14\n891,51\n\n\nTotal\n—\n962,25\n6.000,00\n6.962,25\n\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nO SAC tem total de juros menor (R$ 962 vs. R$ 1.000 no PRICE) porque amortiza o saldo mais rapidamente, reduzindo a base de cálculo dos juros. A desvantagem é que as primeiras prestações são mais altas.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap05.html#comparação-sac-price",
+    "href": "cap05.html#comparação-sac-price",
+    "title": "5  Sistemas de Amortização",
+    "section": "5.6 Comparação SAC × PRICE",
+    "text": "5.6 Comparação SAC × PRICE\n\nSAC: amortiza saldo mais depressa → maior parcela inicial, mas total de juros menor.\nPRICE: parcelas iguais facilitam o orçamento; juros maiores no total, pois o saldo devedor diminui mais lentamente.\nQual escolher? Depende da preferência intertemporal do devedor. Para quem vai pré-pagar, o SAC é mais vantajoso (saldo cai mais rápido).\n\n\n\n\n\n\n\nTipExemplo moderno — PRICE vs. SAC no Financiamento Imobiliário FGTS (2025)\n\n\n\nFinanciamento de R$ 400.000 em 360 meses, taxa de \\(8{,}16\\%\\) a.a. (FGTS — referência 2025): \\(i = (1{,}0816)^{1/12}-1 \\approx 0{,}6559\\%\\) a.m.\nPRICE: \\(\\bar{R} \\approx \\text{R\\$ }3.006/\\text{mês}\\); total pago \\(\\approx \\text{R\\$ }1.082.160\\).\nSAC: \\(\\bar{A} = 400.000/360 \\approx \\text{R\\$ }1.111/\\text{mês}\\) (amortização); 1ª prestação \\(\\approx \\text{R\\$ }3.737\\); 360ª prestação \\(\\approx \\text{R\\$ }1.118\\); total pago \\(\\approx \\text{R\\$ }882.000\\).\nO SAC economiza \\(\\approx\\) R$ 200.000 em juros, mas exige capacidade de pagamento maior nos primeiros anos. Bancos no Brasil oferecem ambos os sistemas.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Sistemas de Amortização</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html",
+    "href": "cap06.html",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "",
+    "text": "6.1 Objetivo\nEste capítulo tem dois objetivos complementares: (1) distinguir taxa nominal de taxa efetiva; e (2) introduzir o conceito de taxa real (descontada a inflação). Confundir essas cotações é fonte frequente de erro em contratos, projeções financeiras e análise de investimentos.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html#convenções-de-contagem-de-dias",
+    "href": "cap06.html#convenções-de-contagem-de-dias",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "6.2 Convenções de Contagem de Dias",
+    "text": "6.2 Convenções de Contagem de Dias\n\nConvenções de dias no mercado brasileiro\n\n\nConvenção\nAno-base\nMês-base\n\n\n\n\nDias corridos\n360 dias\n30 dias\n\n\nDias úteis\n252 dias úteis\n21 dias úteis\n\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nNa prática, devido a feriados, nem todos os meses têm o mesmo número de dias úteis. A estratégia correta é sempre utilizar os dias exatos do período.\n\nHP 12C: calcula dias efetivos entre duas datas (g ΔDYS), base 360 ou 365 dias.\nExcel: DIAS360 (corridos) ou DIATRABALHOTOTAL (úteis, requer tabela de feriados).",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html#taxa-nominal-vs.-taxa-efetiva",
+    "href": "cap06.html#taxa-nominal-vs.-taxa-efetiva",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "6.3 Taxa Nominal vs. Taxa Efetiva",
+    "text": "6.3 Taxa Nominal vs. Taxa Efetiva\n\n\n\n\n\n\nTipDefinição\n\n\n\nA taxa nominal é uma taxa anunciada para um período de referência que não corresponde diretamente à capitalização efetiva. Por convenção, ela é proporcional à subperiodização.\nA taxa efetiva é a taxa que de fato remunera o capital levando em conta a capitalização real no período analisado.\n\n\nSe a taxa nominal anual é \\(j\\) com capitalização \\(m\\) vezes por ano, a taxa efetiva anual é:\n\\[i_{\\text{ef}} = \\left(1 + \\frac{j}{m}\\right)^m - 1.\\]\n\n\n\n\n\n\nNoteExemplo 6.1 — Selic e taxa efetiva\n\n\n\nA taxa Selic-meta é anunciada como uma taxa anual, mas capitaliza diariamente (base 252 dias úteis). Uma taxa anual de \\(6\\%\\) com capitalização diária em base 252:\n\\[i_m = (1 + 0{,}06/252)^{21} - 1 \\approx 0{,}502\\% \\text{ a.m.}\\]\nJá a taxa de \\(0{,}5\\%\\) a.m. anunciada como nominal (taxa proporcional):\n\\[i_{\\text{ef}} = (1{,}005)^{12} - 1 \\approx 6{,}17\\% \\text{ a.a.}\\]\n\n\n\nEquivalência de taxas\nO princípio de equivalência (Capítulo 1) aplica-se diretamente:\n\\[(1 + i_1)^{n_1/360} = (1 + i_2)^{n_2/360}.\\]\nPara converter entre dias corridos e dias úteis, usa-se o número real de dias do período.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html#taxa-de-juros-real",
+    "href": "cap06.html#taxa-de-juros-real",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "6.4 Taxa de Juros Real",
+    "text": "6.4 Taxa de Juros Real\n\nMotivação\nAté aqui ignoramos a inflação (variação geral do nível de preços). Uma taxa de juros nominal de \\(12\\%\\) com inflação de \\(8\\%\\) não rende \\(12\\%\\) em termos de poder de compra real.\n\n\nDerivação da Equação de Fisher\nConsidere um ativo de preço \\(P_0\\) hoje e \\(P_1 = P_0(1+\\pi)\\) no próximo período (onde \\(\\pi\\) é a inflação). Um investimento \\(V_0\\) cresce para \\(V_1 = V_0(1+i)\\) em termos nominais. O poder de compra real ao final é:\n\\[\\frac{V_1}{P_1} = \\frac{V_0(1+i)}{P_0(1+\\pi)} = \\frac{V_0}{P_0} \\cdot \\frac{1+i}{1+\\pi}.\\]\nDefinindo a taxa de retorno real \\(r\\) como \\(1 + r = \\frac{1+i}{1+\\pi}\\):\n\n\n\n\n\n\nImportantResultado — Equação de Fisher\n\n\n\n\\[\\boxed{1 + r = \\frac{1+i}{1+\\pi}} \\qquad\\Leftrightarrow\\qquad r = \\frac{i - \\pi}{1 + \\pi}.\\]\nAproximação (para \\(i\\) e \\(\\pi\\) pequenos): \\(r \\approx i - \\pi\\).\n\n\n\n\n\n\n\n\nNoteExemplo 6.2 — Taxa real: referência brasileira 2024\n\n\n\nTaxa Selic: \\(i = 10{,}5\\%\\) a.a. — IPCA: \\(\\pi = 4{,}62\\%\\) a.a.\n\\[r = \\frac{1{,}105}{1{,}0462} - 1 \\approx 5{,}62\\% \\text{ a.a. (real).}\\]\nPela aproximação: \\(r \\approx 10{,}5\\% - 4{,}62\\% = 5{,}88\\%\\) (ligeiramente acima do valor exato).\n\n\n\n\nTaxa real com capitalização contínua\nNo regime contínuo, com taxas nominais \\(r_{\\text{nom}}\\) e inflação \\(\\pi_c\\) (ambas contínuas):\n\\[r_{\\text{real}} = r_{\\text{nom}} - \\pi_c.\\]\nA subtração simples é exata em tempo contínuo — não há o termo \\(r\\pi\\) de correção.\n\n\nCaso mais realista: inflação variável\nSe a inflação \\(\\pi_t\\) varia a cada período \\(t = 1, \\ldots, n\\):\n\\[(1+r)^n = \\frac{(1+i)^n}{\\prod_{t=1}^n(1+\\pi_t)}, \\qquad 1 + r = \\frac{(1+i)}{\\left[\\prod_{t=1}^n(1+\\pi_t)\\right]^{1/n}}.\\]",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html#fluxo-de-caixa-real",
+    "href": "cap06.html#fluxo-de-caixa-real",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "6.5 Fluxo de Caixa Real",
+    "text": "6.5 Fluxo de Caixa Real\nAo avaliar um projeto com fluxos em termos nominais \\(R_t\\), a alternativa é trabalhar em termos reais:\n\\[R_t^{\\text{real}} = \\frac{R_t}{(1+\\pi_1)(1+\\pi_2)\\cdots(1+\\pi_t)} \\approx \\frac{R_t}{(1+\\bar\\pi)^t},\\]\ne descontar pela taxa real \\(r\\):\n\\[P = \\sum_{t=1}^n \\frac{R_t^{\\text{real}}}{(1+r)^t}.\\]\n\n\n\n\n\n\nNoteNota\n\n\n\nO resultado é o mesmo se descontarmos o fluxo nominal pela taxa nominal \\(i\\), desde que a taxa \\(i\\) e os fluxos \\(R_t\\) sejam consistentes (ambos nominais ou ambos reais). Em geral usa-se o IPCA/FGV como índice de reajuste \\(\\pi_t\\).",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap06.html#perpetuidade-com-inflação-fisher-gordon",
+    "href": "cap06.html#perpetuidade-com-inflação-fisher-gordon",
+    "title": "6  Formas de Cotar a Taxa de Juros",
+    "section": "6.6 Perpetuidade com Inflação (Fisher + Gordon)",
+    "text": "6.6 Perpetuidade com Inflação (Fisher + Gordon)\nPara uma perpetuidade cujos pagamentos crescem pela inflação \\(\\pi\\) (série geométrica com \\(\\alpha = \\pi\\)):\n\\[P = \\frac{R_1}{i - \\pi}.\\]\nPela equação de Fisher, \\(i - \\pi \\approx r(1+\\pi)\\), logo:\n\n\n\n\n\n\nImportantResultado\n\n\n\nA perpetuidade nominal crescente à inflação \\(\\pi\\) vale o mesmo que a perpetuidade real uniforme com fluxo \\(R^{\\text{real}}\\) descontada pela taxa real \\(r\\):\n\\[P = \\frac{R_1}{i-\\pi} = \\frac{R^{\\text{real}}}{r}.\\]\n\n\n\n\n\n\n\n\nTipExemplo moderno — Tesouro IPCA+ como perpetuidade real (2025)\n\n\n\nO título NTN-B paga cupom semestral de \\(6\\%\\) a.a. mais correção pelo IPCA. Para uma NTN-B de prazo muito longo (hipotética), com taxa real demandada \\(r = 6\\%\\) a.a. e cupom semestral \\(c = 3\\%\\) sobre o valor de face de R$ 1.000 (corrigido pelo IPCA):\n\\[P \\approx \\frac{30}{0{,}03} = \\text{R\\$ }1.000 \\qquad\\text{(à par, quando a taxa de mercado = cupom).}\\]\nSe o mercado exige \\(r = 7\\%\\) a.a., o preço cai abaixo do par (deságio) — o investidor compra mais barato e garante \\(7\\%\\) real ao ano até o vencimento.",
+    "crumbs": [
+      "Parte II — Financiamentos e Taxas",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Formas de Cotar a Taxa de Juros</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html",
+    "href": "cap07.html",
+    "title": "7  Análise de Investimentos",
+    "section": "",
+    "text": "7.1 Risco e Retorno: Introdução\nTodo investimento envolve um trade-off fundamental: entre projetos com mesmo retorno, escolhe-se o de menor risco; entre projetos com mesmo risco, escolhe-se o de maior retorno.\nPara mensurar e comparar projetos, três ferramentas centrais são: (1) VPL (Valor Presente Líquido): maximiza o lucro absoluto; (2) TIR (Taxa Interna de Retorno): mede a rentabilidade relativa; (3) TIRM (TIR Modificada): corrige uma limitação da TIR.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#valor-presente-líquido-vpl",
+    "href": "cap07.html#valor-presente-líquido-vpl",
+    "title": "7  Análise de Investimentos",
+    "section": "7.2 Valor Presente Líquido (VPL)",
+    "text": "7.2 Valor Presente Líquido (VPL)\n\n\n\n\n\n\nTipDefinição\n\n\n\nDado um projeto com investimento inicial \\(P\\) e fluxos de receita \\(\\{R_1, R_2, \\ldots, R_n\\}\\), o Valor Presente Líquido é:\n\\[\\text{VPL}(i) = -P + \\sum_{t=1}^n \\frac{R_t}{(1+i)^t},\\]\nonde \\(i\\) é a taxa livre de risco (custo de oportunidade).\n\n\n\nRegra de decisão\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[\\begin{cases} \\text{VPL} &gt; 0: & \\text{custo de oportunidade} &lt; \\text{TIR} \\quad\\Rightarrow\\quad \\text{vale investir;} \\\\ \\text{VPL} = 0: & \\text{equilíbrio econômico} \\quad (i = \\text{TIR}); \\\\ \\text{VPL} &lt; 0: & \\text{custo de oportunidade} &gt; \\text{TIR} \\quad\\Rightarrow\\quad \\text{não vale investir.} \\end{cases}\\]\n\n\n\n\nPropriedades da função VPL\nAdmitindo todos os fluxos intermediários positivos (\\(R_t &gt; 0\\)), a função \\(\\text{VPL}(i)\\) é decrescente (\\(\\text{VPL}'(i) &lt; 0\\)) e convexa (\\(\\text{VPL}''(i) &gt; 0\\)).",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#taxa-interna-de-retorno-tir",
+    "href": "cap07.html#taxa-interna-de-retorno-tir",
+    "title": "7  Análise de Investimentos",
+    "section": "7.3 Taxa Interna de Retorno (TIR)",
+    "text": "7.3 Taxa Interna de Retorno (TIR)\n\n\n\n\n\n\nTipDefinição\n\n\n\nA TIR é a taxa \\(r^*\\) que zera o VPL:\n\\[P = \\sum_{t=1}^n \\frac{R_t}{(1+r^*)^t} \\quad\\Leftrightarrow\\quad \\text{VPL}(r^*) = 0.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 7.1 — TIR simples\n\n\n\nInvestimento de R$ 100 que retorna R$ 60 ao final do 1º e do 2º ano:\n\\[100 = \\frac{60}{1+r} + \\frac{60}{(1+r)^2} \\quad\\Rightarrow\\quad r \\approx 13{,}07\\%.\\]\nSe a taxa livre de risco for \\(10\\%\\), vale investir.\n\n\n\nUnicidade da TIR — Regra de Descartes\nA equação \\(\\text{VPL}(r) = 0\\) é um polinômio de grau \\(n\\) que pode ter múltiplas raízes reais positivas.\n\n\n\n\n\n\nImportantResultado — Regra de Descartes\n\n\n\nO número de raízes reais positivas é no máximo igual ao número de mudanças de sinal na sequência de fluxos \\(\\{-P, R_1, R_2, \\ldots, R_n\\}\\).\nHá unicidade quando existe exatamente uma inversão de sinal. Projetos com múltiplas saídas de caixa intermediárias podem ter várias TIRs.\n\n\n\n\n\n\n\n\nNoteExemplo 7.2 — Múltiplas TIRs\n\n\n\nFluxo: \\(\\{-6;\\; +29;\\; -46;\\; +24\\}\\) (em R$):\n\\[\\text{VPL}(r) = \\frac{29}{1+r} - \\frac{46}{(1+r)^2} + \\frac{24}{(1+r)^3} - 6 = 0 \\quad\\Rightarrow\\quad r_1 \\approx 33{,}3\\%,\\ r_2 \\approx 50\\%,\\ r_3 = 100\\%.\\]\nTrês inversões de sinal \\(\\Rightarrow\\) até três TIRs reais.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#método-de-newtonraphson-para-calcular-a-tir",
+    "href": "cap07.html#método-de-newtonraphson-para-calcular-a-tir",
+    "title": "7  Análise de Investimentos",
+    "section": "7.4 Método de Newton–Raphson para Calcular a TIR",
+    "text": "7.4 Método de Newton–Raphson para Calcular a TIR\nComo a TIR não tem forma fechada em geral, usa-se métodos numéricos. O método de Newton–Raphson obtém aproximações sucessivas da raiz de \\(f(r) = \\text{VPL}(r) = 0\\):\n\n\n\n\n\n\nImportantResultado\n\n\n\n\\[x_0 = \\frac{f(0)}{f'(0)}, \\qquad x_{k+1} = x_k - \\frac{f(x_k)}{f'(x_k)}.\\]\nGeometricamente, cada iteração traça a tangente à curva \\(f\\) no ponto atual e usa a interseção com o eixo \\(x\\) como próxima estimativa.\n\n\n\n\n\n\n\n\nNoteExemplo 7.3 — Newton–Raphson para TIR\n\n\n\nProjeto: R$ 100 iniciais; retornos de R$ 40, R$ 40, R$ 40 nos anos 1, 2 e 3.\n\\[f(r) = \\frac{40}{(1+r)} + \\frac{40}{(1+r)^2} + \\frac{40}{(1+r)^3} - 100, \\qquad f'(r) = -\\frac{40}{(1+r)^2} - \\frac{80}{(1+r)^3} - \\frac{120}{(1+r)^4}.\\]\nIteração 1: \\(x_0 = \\frac{f(0)}{f'(0)} = \\frac{20}{-240} \\approx 0{,}0833\\ (8{,}33\\%).\\)\nIteração 2: \\(x_1 \\approx 9{,}70\\%.\\)\nA TIR converge para \\(\\approx 9{,}70\\%\\) a.a.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#vpl-vs.-tir-conflitos",
+    "href": "cap07.html#vpl-vs.-tir-conflitos",
+    "title": "7  Análise de Investimentos",
+    "section": "7.5 VPL vs. TIR: Conflitos",
+    "text": "7.5 VPL vs. TIR: Conflitos\n\nProjetos de escalas diferentes\nQuando dois projetos têm a mesma TIR mas escalas de investimento distintas, a TIR pode indicar um projeto menor; o VPL a taxas baixas pode indicar o maior. O VPL prevalece: maximiza a riqueza absoluta do investidor.\n\n\nProjetos com ciclos de vida diferentes\nQuando os projetos têm horizontes distintos, o método da TIR é superior para comparar a taxa de retorno por período. O VPL de projetos maiores sempre será maior — o que não reflete eficiência.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#tir-modificada-tirm",
+    "href": "cap07.html#tir-modificada-tirm",
+    "title": "7  Análise de Investimentos",
+    "section": "7.6 TIR Modificada (TIRM)",
+    "text": "7.6 TIR Modificada (TIRM)\nA premissa implícita da TIR é que as receitas intermediárias são reinvestidas à própria TIR. Isso é irreal em muitos contextos.\n\n\n\n\n\n\nTipDefinição\n\n\n\nA TIRM reinveste as receitas à taxa de mercado \\(i\\) e compara com o valor presente dos investimentos:\n\\[P\\,(1+\\text{TIRM})^n = \\sum_{t=1}^n R_t(1+i)^{n-t} \\quad\\Rightarrow\\quad \\text{TIRM} = \\left(\\frac{\\text{Valor acumulado das receitas}}{P}\\right)^{1/n} - 1.\\]\n\n\n\n\n\n\n\n\nNoteExemplo 7.4 — Comparação TIR vs. TIRM\n\n\n\nProjeto: \\(P = 50.000\\), \\(R = 7.500/\\text{ano}\\), \\(n = 10\\), \\(i_{\\text{mercado}} = 6\\%\\) a.a.\nTIR: \\(50.000 = 7.500\\left[\\frac{(1+r)^{10}-1}{r}\\right]\\frac{1}{(1+r)^{10}} \\Rightarrow \\text{TIR} \\approx 8{,}15\\%.\\)\nVPL (\\(i = 6\\%\\)): \\(\\text{VPL} = 7.500\\left[\\frac{(1{,}06)^{10}-1}{0{,}06}\\right]\\frac{1}{(1{,}06)^{10}} - 50.000 \\approx \\textbf{R\\$ 5.200,65.}\\)",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap07.html#índice-de-sharpe-e-risco",
+    "href": "cap07.html#índice-de-sharpe-e-risco",
+    "title": "7  Análise de Investimentos",
+    "section": "7.7 Índice de Sharpe e Risco",
+    "text": "7.7 Índice de Sharpe e Risco\nPara comparar ativos com diferentes perfis de risco, define-se o retorno histórico:\n\\[r_t = \\frac{P_t - P_{t-1}}{P_{t-1}}, \\qquad \\bar{r} = \\frac{1}{n}\\sum_{t=1}^n r_t, \\qquad \\sigma = \\sqrt{\\frac{\\sum_{t=1}^n (r_t - \\bar{r})^2}{n-1}}.\\]\n\n\n\n\n\n\nTipDefinição\n\n\n\nO Índice de Sharpe mede o excesso de retorno por unidade de risco:\n\\[S_i = \\frac{r_i - r_f}{\\sigma_i},\\]\nonde \\(r_f\\) é a taxa livre de risco. Quanto maior \\(S_i\\), melhor o ativo em termos de risco–retorno.\n\n\n\n\n\n\n\n\nTipExemplo moderno — Análise de projeto de energia solar (2025)\n\n\n\nUma empresa estuda instalar painéis solares com: investimento inicial R$ 120.000, economia anual em energia R$ 20.000/ano por 10 anos, taxa de desconto (WACC) \\(8\\%\\) a.a.\n\\[\\text{VPL} = 20.000\\left[\\frac{(1{,}08)^{10}-1}{0{,}08}\\right]\\frac{1}{(1{,}08)^{10}} - 120.000 \\approx \\textbf{R\\$ 14.205.}\\]\nComo VPL \\(&gt; 0\\), o projeto cria valor. A TIR implícita \\(\\approx 10{,}56\\%\\) a.a., superior ao WACC de \\(8\\%\\). Com créditos de carbono adicionando R$ 2.000/ano, o VPL sobe para \\(\\approx\\) R$ 27.600.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Análise de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html",
+    "href": "cap08.html",
+    "title": "8  Títulos Públicos",
+    "section": "",
+    "text": "8.1 Motivação: Como o Governo se Financia\nOs governos financiam seus déficits primordialmente de duas formas: impostos (receita compulsória) e dívida pública (emissão de títulos vendidos ao mercado).",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#motivação-como-o-governo-se-financia",
+    "href": "cap08.html#motivação-como-o-governo-se-financia",
+    "title": "8  Títulos Públicos",
+    "section": "",
+    "text": "Dados Brasil 2024\n\nDívida Pública Federal — Brasil 2024\n\n\n\n\n\n\n\nIndicador\nValor\nReferência\n\n\n\n\nEstoque da dívida (DPF)\n\\(\\approx\\) R$ 7 trilhões\nTesouro Nacional, dez/2024\n\n\nCusto médio\n\\(\\approx\\) 11% a.a.\n\n\n\nPIB\n\\(\\approx\\) R$ 11,7 trilhões\nIBGE, 2024\n\n\nComposição por indexador:\n\n\n\n\nPós-fixados (SELIC)\n\\(\\approx\\) 46,3%\n\n\n\nPré-fixados\n\\(\\approx\\) 22%\n\n\n\nIPCA+\n\\(\\approx\\) 27%\n\n\n\nComposição por detentor:\n\n\n\n\nInstituições Financeiras\n\\(\\approx\\) 30%\n\n\n\nFundos de Investimento\n\\(\\approx\\) 22%\n\n\n\nPrevidência\n\\(\\approx\\) 24%\n\n\n\nEstrangeiros\n\\(\\approx\\) 10%",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#tesouro-direto-visão-geral",
+    "href": "cap08.html#tesouro-direto-visão-geral",
+    "title": "8  Títulos Públicos",
+    "section": "8.2 Tesouro Direto — Visão Geral",
+    "text": "8.2 Tesouro Direto — Visão Geral\nO Tesouro Direto é o programa do governo federal para venda de títulos públicos diretamente ao investidor pessoa física, criado em 2002.\nRequisitos: CPF e conta em uma corretora habilitada pelo Tesouro Nacional. Negociação disponível nos dias úteis das 9h30 às 18h, com liquidez diária.\nLiquidação: compra a partir das 18h do dia útil posterior; resgate até 13h → mesmo D.U.; entre 13h–18h → D.U. seguinte.\nImposto de renda:\n\nTabela de IR regressivo\n\n\nPrazo da aplicação\nAlíquota IR\n\n\n\n\nAté 180 dias\n22,5%\n\n\n181 a 360 dias\n20,0%\n\n\n361 a 720 dias\n17,5%\n\n\nAcima de 720 dias\n15,0%\n\n\n\n\n\n\n\n\n\nNoteNota\n\n\n\nPara resgates em menos de 30 dias, há incidência adicional de IOF, regressivo de 96% a 0% do rendimento.\n\n\nTítulos disponíveis:\n\nTítulos do Tesouro Direto\n\n\nTítulo\nIndexador\nCupom\nVencimento típico\n\n\n\n\nLTN (Tesouro Prefixado)\nPré\nNão\n1–5 anos\n\n\nNTN-F (Tesouro Prefixado c/ juros)\nPré\nSemestral\n5–15 anos\n\n\nLFT (Tesouro Selic)\nSELIC\nNão\n1–6 anos\n\n\nNTN-B Principal (Tesouro IPCA+)\nIPCA\nNão\n5–35 anos\n\n\nNTN-B (Tesouro IPCA+ c/ juros)\nIPCA\nSemestral\n5–40 anos\n\n\nEDUCA+ (NTN-B1)\nIPCA\nNão (acumula)\n20 anos\n\n\nRENDA+ (NTN-B2)\nIPCA\nMensal (renda)\n30–40 anos\n\n\n\nNegociação mínima: \\(0{,}01\\%\\) do valor de face (ou um título). Máximo: R$ 1 milhão por mês por pessoa.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#tesouro-selic-lft",
+    "href": "cap08.html#tesouro-selic-lft",
+    "title": "8  Títulos Públicos",
+    "section": "8.3 Tesouro Selic (LFT)",
+    "text": "8.3 Tesouro Selic (LFT)\nA LFT (Letra Financeira do Tesouro) é o título pós-fixado referenciado na taxa SELIC acumulada. O investidor compra hoje por \\(P\\) e recebe o valor de resgate \\(VR\\) na data de vencimento:\n\\[VR = P_0\\,(1 + \\bar{i}_{\\text{SELIC}})^{n/252},\\]\nonde \\(\\bar{i}_{\\text{SELIC}}\\) é a taxa SELIC acumulada no período (base 252 d.u.).\n\n\n\n\n\n\nNoteNota — Ágio e deságio\n\n\n\n\nÁgio (\\(d &gt; 0\\)): rentabilidade menor que a SELIC (e.g. SELIC\\(-0{,}02\\%\\)).\nDeságio (\\(d &lt; 0\\)): rentabilidade maior (e.g. SELIC\\(+0{,}02\\%\\)).\n\nDecomposição: \\((1+\\bar{i}_m) = (1+d)(1+\\bar{i}_{\\text{SELIC}})\\), portanto \\(d = \\frac{1+\\bar{i}_m}{1+\\bar{i}_{\\text{SELIC}}} - 1.\\)\n\n\n\n\n\n\n\n\nNoteExemplo 8.1 — LFT\n\n\n\n\nValor de face (par): R$ 1.000; Valor de compra (cotação): R$ 990; Valor de resgate: R$ 1.182,17 (após \\(n = 189\\) d.u.)\n\nTaxa negociada (pela qual o mercado precificou):\n\\[1.182{,}17 = 1.000\\,(1+\\bar{i})^{189/252} \\quad\\Rightarrow\\quad \\bar{i} = 25\\% \\text{ a.a.}\\]\nTaxa efetiva (para o comprador ao preço de R$ 990):\n\\[1.182{,}17 = 990\\,(1+\\text{YTM})^{189/252} \\quad\\Rightarrow\\quad \\text{YTM} \\approx 26{,}69\\% \\text{ a.a.}\\]\nDeságio (comprou abaixo do par \\(\\Rightarrow\\) rende mais que a SELIC):\n\\[d = \\frac{1{,}2669}{1{,}25} - 1 \\approx +1{,}35\\% \\text{ a.a.}\\]",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#ltn-tesouro-prefixado",
+    "href": "cap08.html#ltn-tesouro-prefixado",
+    "title": "8  Títulos Públicos",
+    "section": "8.4 LTN (Tesouro Prefixado)",
+    "text": "8.4 LTN (Tesouro Prefixado)\nA LTN é um título zero-cupom prefixado: o investidor paga o preço \\(P\\) hoje e recebe exatamente R$ 1.000 no vencimento. A relação preço–taxa (base 252 d.u.) é:\n\\[P = \\frac{1.000}{(1+\\text{YTM})^{n/252}}.\\]\n\n\n\n\n\n\nNoteExemplo 8.2 — LTN\n\n\n\n\\(n = 26\\) d.u., cotação \\(VC = \\text{R\\$ }985{,}65\\), \\(VR = \\text{R\\$ }1.000\\):\n\\[1.000 = 985{,}65\\,(1+\\text{YTM})^{26/252} \\quad\\Rightarrow\\quad \\text{YTM} \\approx 15{,}34\\% \\text{ a.a.}\\]",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#ntn-f-tesouro-prefixado-com-juros-semestrais",
+    "href": "cap08.html#ntn-f-tesouro-prefixado-com-juros-semestrais",
+    "title": "8  Títulos Públicos",
+    "section": "8.5 NTN-F (Tesouro Prefixado com Juros Semestrais)",
+    "text": "8.5 NTN-F (Tesouro Prefixado com Juros Semestrais)\nA NTN-F é um título prefixado com cupons semestrais de \\(10\\%\\) a.a. (\\(\\approx 4{,}881\\%\\) ao semestre) sobre o valor de face de R$ 1.000, mais devolução do principal no vencimento:\n\\[P = \\sum_{j=1}^{n} \\frac{C_j}{(1+\\text{YTM})^{j/2}} + \\frac{1.000}{(1+\\text{YTM})^n},\\]\nonde \\(C_j = 1000 \\times 4{,}881\\%\\) e os expoentes usam semestres.\n\n\n\n\n\n\nNoteNota\n\n\n\nO cupom semestral de \\(10\\%\\) a.a. equivale a \\((1{,}10)^{1/2}-1 \\approx 4{,}881\\%\\) ao semestre. A NTN-F é precificada como um bond clássico (similar ao T-Note americano).",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#ntn-b-tesouro-ipca",
+    "href": "cap08.html#ntn-b-tesouro-ipca",
+    "title": "8  Títulos Públicos",
+    "section": "8.6 NTN-B (Tesouro IPCA+)",
+    "text": "8.6 NTN-B (Tesouro IPCA+)\nA NTN-B combina: (1) correção pelo IPCA — protege o poder de compra do principal; (2) taxa de juros real pré-fixada (cupom semestral de \\(6\\%\\) a.a. \\(\\approx 2{,}956\\%\\) ao semestre).\n\nCálculo do VNA (Valor Nominal Atualizado)\n\\[\\text{VNA} = 1.000 \\times \\frac{\\text{IPCA}_{\\text{hoje}}}{\\text{IPCA}_{\\text{base}}} = \\text{VNA}_{t-1} \\times (1 + \\text{IPCA}_{\\text{acum. no mês}}).\\]\n\n\nCotação e Preço\n\\[\\text{Cotação} = \\frac{100}{(1+\\text{taxa})^{d_u/252}}, \\qquad \\text{Preço} = \\text{VNA}_{\\text{projetado}} \\times \\text{Cotação}.\\]\nPara a NTN-B com cupons semestrais:\n\\[P = \\text{VNA} \\times \\left[\\sum_{k=1}^{n} \\frac{c}{(1+\\text{taxa})^{d_{u,k}/252}} + \\frac{100}{(1+\\text{taxa})^{d_{u,n}/252}}\\right],\\]\nonde \\(c = 100 \\times[(1{,}06)^{1/2}-1] \\approx 2{,}9563\\) é o cupom percentual semestral.\n\n\n\n\n\n\nNoteNota\n\n\n\nA NTN-B + Principal é idêntica à NTN-B, mas sem cupons: o investidor recebe tudo no vencimento (VNA final + juros acumulados). Ideal para acumulação de longo prazo.\n\n\n\n\n\n\n\n\nTipExemplo moderno — NTN-B: precificação em 2025\n\n\n\nTítulo: NTN-B com vencimento em 15/08/2035 (\\(n \\approx 10\\) anos = 20 semestres).\n\nVNA (15/01/2025): R$ 4.587,40.\nTaxa de mercado (ANBIMA): \\(6{,}28\\%\\) a.a. real.\nCupom: \\(6\\%\\) a.a. \\(\\Rightarrow\\) \\(2{,}9563\\%\\) por semestre.\n\n\\[\\text{Cotação} = \\sum_{k=1}^{20} \\frac{2{,}9563}{(1{,}0628)^{k/2}} + \\frac{100}{(1{,}0628)^{10}} \\approx 97{,}23.\\]\n\\[P = 4.587{,}40 \\times \\frac{97{,}23}{100} \\approx \\textbf{R\\$ 4.460,00.}\\]\nComprar a R$ 4.460 hoje garante o IPCA mais \\(6{,}28\\%\\) reais ao ano até 2035 — proteção contra inflação com rentabilidade real positiva.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#yield-to-maturity-ytm-e-ytm-modificada",
+    "href": "cap08.html#yield-to-maturity-ytm-e-ytm-modificada",
+    "title": "8  Títulos Públicos",
+    "section": "8.7 Yield to Maturity (YTM) e YTM Modificada",
+    "text": "8.7 Yield to Maturity (YTM) e YTM Modificada\n\n\n\n\n\n\nTipDefinição\n\n\n\nO Yield to Maturity (YTM) de um título é a TIR do fluxo de caixa do investimento — a taxa que iguala o preço pago ao valor presente de todos os fluxos futuros:\n\\[P = \\sum_{t=1}^{n}\\frac{C_t}{(1+\\text{YTM})^t} + \\frac{M}{(1+\\text{YTM})^n}.\\]\n\n\nPara a NTN-F (bond clássico com cupom \\(R\\) e valor de face \\(M = 1.000\\)):\n\\[P = R\\left[\\frac{(1+\\text{YTM})^n-1}{\\text{YTM}}\\right]\\frac{1}{(1+\\text{YTM})^n} + \\frac{1.000}{(1+\\text{YTM})^n}.\\]\nA YTM modificada considera o reinvestimento dos cupons à taxa de mercado \\(i\\):\n\\[P\\,(1+\\text{YTM}_m)^n = R\\left[\\frac{(1+i)^n-1}{i}\\right] + 1.000.\\]\n\n\n\n\n\n\nNoteNota\n\n\n\nA YTM modificada é menor que a YTM quando a taxa de mercado \\(i &lt; \\text{YTM}\\), pois considera o reinvestimento dos cupons a uma taxa inferior — cenário mais realista para a maioria dos investidores.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  }
+]

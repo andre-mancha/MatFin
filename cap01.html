@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>1&nbsp; Regimes de Capitalização – Matemática Financeira</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./cap02.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-23bbe8b5e4efc1e257f6d59dce478b08.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-acf12a64177840b8d86f2d4f01b2e9fb.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-5e84bfc275a11b50e0d7ebff09d618b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-033fcdf7c47ae6dba4dd670e3d8864e9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-5e84bfc275a11b50e0d7ebff09d618b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap01.html">Parte I — Valor do Dinheiro no Tempo</a></li><li class="breadcrumb-item"><a href="./cap01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regimes de Capitalização</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Matemática Financeira</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/andre-mancha/MatFin" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Apresentação</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte I — Valor do Dinheiro no Tempo</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap01.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regimes de Capitalização</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Séries Finitas — Capitalização Periódica</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Séries Finitas — Capitalização Instantânea</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap04.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Séries Infinitas — Perpetuidades</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte II — Financiamentos e Taxas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap05.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sistemas de Amortização</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap06.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Formas de Cotar a Taxa de Juros</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Parte III — Decisões de Investimento</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap07.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Análise de Investimentos</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./cap08.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Títulos Públicos</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#conceito-de-juros" id="toc-conceito-de-juros" class="nav-link active" data-scroll-target="#conceito-de-juros"><span class="header-section-number">1.1</span> Conceito de Juros</a></li>
+  <li><a href="#juros-simples" id="toc-juros-simples" class="nav-link" data-scroll-target="#juros-simples"><span class="header-section-number">1.2</span> Juros Simples</a>
+  <ul class="collapse">
+  <li><a href="#convenções-de-contagem-de-dias" id="toc-convenções-de-contagem-de-dias" class="nav-link" data-scroll-target="#convenções-de-contagem-de-dias">Convenções de contagem de dias</a></li>
+  </ul></li>
+  <li><a href="#juros-compostos" id="toc-juros-compostos" class="nav-link" data-scroll-target="#juros-compostos"><span class="header-section-number">1.3</span> Juros Compostos</a>
+  <ul class="collapse">
+  <li><a href="#equivalência-de-taxas" id="toc-equivalência-de-taxas" class="nav-link" data-scroll-target="#equivalência-de-taxas">Equivalência de taxas</a></li>
+  <li><a href="#taxa-no-período" id="toc-taxa-no-período" class="nav-link" data-scroll-target="#taxa-no-período">Taxa no período</a></li>
+  <li><a href="#taxa-de-juros-variável" id="toc-taxa-de-juros-variável" class="nav-link" data-scroll-target="#taxa-de-juros-variável">Taxa de juros variável</a></li>
+  </ul></li>
+  <li><a href="#capitalização-contínua-instantânea" id="toc-capitalização-contínua-instantânea" class="nav-link" data-scroll-target="#capitalização-contínua-instantânea"><span class="header-section-number">1.4</span> Capitalização Contínua (Instantânea)</a>
+  <ul class="collapse">
+  <li><a href="#relação-entre-taxa-contínua-e-taxa-discreta" id="toc-relação-entre-taxa-contínua-e-taxa-discreta" class="nav-link" data-scroll-target="#relação-entre-taxa-contínua-e-taxa-discreta">Relação entre taxa contínua e taxa discreta</a></li>
+  </ul></li>
+  <li><a href="#comparação-dos-regimes" id="toc-comparação-dos-regimes" class="nav-link" data-scroll-target="#comparação-dos-regimes"><span class="header-section-number">1.5</span> Comparação dos Regimes</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap01.html">Parte I — Valor do Dinheiro no Tempo</a></li><li class="breadcrumb-item"><a href="./cap01.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regimes de Capitalização</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regimes de Capitalização</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="conceito-de-juros" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="conceito-de-juros"><span class="header-section-number">1.1</span> Conceito de Juros</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Definição">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Definição
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Juros</strong> são a remuneração pelo sacrifício do consumo presente, ou equivalentemente, o custo de transferir poder de compra ao longo do tempo. Se um agente empresta o capital <span class="math inline">\(P\)</span> (principal) por <span class="math inline">\(n\)</span> períodos a uma taxa <span class="math inline">\(i\)</span> por período, o montante recebido ao final é <span class="math inline">\(S = P + J\)</span>, onde <span class="math inline">\(J\)</span> representa os juros totais.</p>
+</div>
+</div>
+<p>A forma como os juros se acumulam ao longo do tempo define o <strong>regime de capitalização</strong>. Os três regimes principais são:</p>
+<ol type="1">
+<li><strong>Juros simples</strong> — os juros são calculados sempre sobre o principal <span class="math inline">\(P\)</span>;</li>
+<li><strong>Juros compostos</strong> — os juros de cada período se incorporam ao principal (“juros sobre juros”);</li>
+<li><strong>Capitalização contínua (instantânea)</strong> — limite do regime composto quando o intervalo de capitalização tende a zero.</li>
+</ol>
+<hr>
+</section>
+<section id="juros-simples" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="juros-simples"><span class="header-section-number">1.2</span> Juros Simples</h2>
+<p>No regime de <strong>juros simples</strong>, a cada período acrescentam-se juros iguais a <span class="math inline">\(i \cdot P\)</span>:</p>
+<p><span class="math display">\[J_t = i \cdot P, \qquad t = 1, 2, \ldots, n.\]</span></p>
+<p>O montante após <span class="math inline">\(n\)</span> períodos é portanto:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[S = P\,(1 + i\,n)\]</span></p>
+</div>
+</div>
+<section id="convenções-de-contagem-de-dias" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="convenções-de-contagem-de-dias">Convenções de contagem de dias</h3>
+<p>Na prática brasileira, dois padrões coexistem:</p>
+<table class="table-striped caption-top table">
+<caption>Convenções de dias no mercado brasileiro</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Convenção</th>
+<th style="text-align: center;">Ano</th>
+<th style="text-align: center;">Mês</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Dias corridos</td>
+<td style="text-align: center;">360 dias</td>
+<td style="text-align: center;">30 dias</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dias úteis</td>
+<td style="text-align: center;">252 dias úteis</td>
+<td style="text-align: center;">21 dias úteis</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Nota">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Devido a feriados e ao calendário, nem todos os meses efetivos têm o mesmo número de dias úteis. A estratégia correta é sempre usar os dias <em>exatos</em> do período analisado.</p>
+<p>Ferramentas práticas:</p>
+<ul>
+<li><strong>HP 12C</strong>: calcula dias efetivos entre duas datas no calendário de 360 ou 365 dias (<code>g</code> ΔDYS).</li>
+<li><strong>Excel</strong>: função <code>DIAS360</code> (corridos) ou <code>DIATRABALHOTOTAL</code> (úteis, requer tabela de feriados).</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 1.1 — Comparação de rendimentos em juros simples">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemplo 1.1 — Comparação de rendimentos em juros simples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Um título paga juros simples de <span class="math inline">\(2{,}5\%\)</span> ao mês. Qual o montante de R$ 10.000 investidos por 45 dias corridos?</p>
+<p><span class="math inline">\(n = 45/30 = 1{,}5\)</span> meses, portanto:</p>
+<p><span class="math display">\[S = 10.000\,(1 + 0{,}025 \times 1{,}5) = 10.000 \times 1{,}0375 = \text{R\$ }10.375{,}00\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="juros-compostos" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="juros-compostos"><span class="header-section-number">1.3</span> Juros Compostos</h2>
+<p>No regime de <strong>juros compostos</strong>, ao fim de cada período os juros são incorporados ao saldo, tornando-se base de cálculo do período seguinte:</p>
+<p><span class="math display">\[S_1 = P(1+i),\quad S_2 = S_1(1+i) = P(1+i)^2,\quad \ldots\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{S = P\,(1+i)^n}\]</span></p>
+</div>
+</div>
+<section id="equivalência-de-taxas" class="level3">
+<h3 class="anchored" data-anchor-id="equivalência-de-taxas">Equivalência de taxas</h3>
+<p>Duas taxas <span class="math inline">\(i_1\)</span> (para o período <span class="math inline">\(n_1\)</span>) e <span class="math inline">\(i_2\)</span> (para o período <span class="math inline">\(n_2\)</span>) são <strong>equivalentes</strong> sob juros compostos se produzem o mesmo montante:</p>
+<p><span class="math display">\[
+(1+i_1)^{n_1} = (1+i_2)^{n_2}
+\quad\Rightarrow\quad
+i_2 = (1+i_1)^{n_1/n_2} - 1.
+\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 1.2 — Equivalência mensal–anual">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemplo 1.2 — Equivalência mensal–anual
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A taxa de <span class="math inline">\(12\%\)</span> a.a. equivale a que taxa mensal?</p>
+<p><span class="math display">\[i_m = (1{,}12)^{1/12} - 1 \approx 0{,}9489\% \text{ a.m.}\]</span></p>
+<p>Note que a taxa proporcional de <span class="math inline">\(12\%/12 = 1\%\)</span> a.m. é <em>diferente</em>; a proporcionalidade é válida apenas em juros simples.</p>
+</div>
+</div>
+</section>
+<section id="taxa-no-período" class="level3">
+<h3 class="anchored" data-anchor-id="taxa-no-período">Taxa no período</h3>
+<p>Para um investimento de <span class="math inline">\(n\)</span> períodos à taxa <span class="math inline">\(i\)</span> por período, a <strong>taxa total no período</strong> (ou taxa efetiva do período) é:</p>
+<p><span class="math display">\[i_{\text{per}} = (1+i)^n - 1.\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 1.3 — Rendimento acumulado em 3 anos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemplo 1.3 — Rendimento acumulado em 3 anos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Um fundo rende <span class="math inline">\(0{,}9\%\)</span> a.m. Qual o rendimento acumulado em 36 meses?</p>
+<p><span class="math display">\[i_{36} = (1{,}009)^{36} - 1 \approx 38{,}02\%\]</span></p>
+</div>
+</div>
+</section>
+<section id="taxa-de-juros-variável" class="level3">
+<h3 class="anchored" data-anchor-id="taxa-de-juros-variável">Taxa de juros variável</h3>
+<p>Quando a taxa varia a cada período <span class="math inline">\(t\)</span>, o montante é:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[S = P \prod_{t=1}^{n}(1+i_t)\]</span></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 1.4 — Taxa variável — 3 semestres">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemplo 1.4 — Taxa variável — 3 semestres
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Taxas semestrais: <span class="math inline">\(5\%\)</span>, <span class="math inline">\(4{,}5\%\)</span>, <span class="math inline">\(6\%\)</span>. Montante de R$ 1.000:</p>
+<p><span class="math display">\[S = 1.000 \times 1{,}05 \times 1{,}045 \times 1{,}06 \approx \text{R\$ }1.163{,}78\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="capitalização-contínua-instantânea" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="capitalização-contínua-instantânea"><span class="header-section-number">1.4</span> Capitalização Contínua (Instantânea)</h2>
+<p>À medida que o intervalo de capitalização diminui para zero, o montante converge para:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{S = P\,e^{r\,n}}\]</span></p>
+</div>
+</div>
+<p>onde <span class="math inline">\(r\)</span> é a <strong>taxa contínua</strong> (ou taxa instantânea de juros).</p>
+<section id="relação-entre-taxa-contínua-e-taxa-discreta" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="relação-entre-taxa-contínua-e-taxa-discreta">Relação entre taxa contínua e taxa discreta</h3>
+<p>Igualando os montantes dos dois regimes:</p>
+<p><span class="math display">\[
+P\,e^{r\,n} = P\,(1+i)^n
+\quad\Rightarrow\quad
+e^r = 1+i
+\quad\Rightarrow\quad
+\boxed{r = \ln(1+i)}
+\quad\Leftrightarrow\quad
+\boxed{i = e^r - 1}
+\]</span></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 1.5 — Conversão taxa discreta ↔ contínua">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Exemplo 1.5 — Conversão taxa discreta ↔︎ contínua
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><span class="math inline">\(i = 12\%\)</span> a.a. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(r = \ln(1{,}12) \approx 11{,}33\%\)</span> a.a. (contínua).</li>
+<li><span class="math inline">\(r = 10\%\)</span> a.a. (contínua) <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(i = e^{0{,}10}-1 \approx 10{,}52\%\)</span> a.a. (discreta).</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo moderno — Taxa Selic em capitalização contínua (2024)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo moderno — Taxa Selic em capitalização contínua (2024)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A taxa Selic fixada em <span class="math inline">\(10{,}50\%\)</span> a.a. (discreta, base 252 d.u.) corresponde à taxa contínua:</p>
+<p><span class="math display">\[r = \ln(1{,}1050) \approx 9{,}98\% \text{ a.a.}\]</span></p>
+<p>Modelos de apreçamento de derivativos (Black–Scholes, HJM) tipicamente trabalham com <span class="math inline">\(r\)</span> contínuo.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="comparação-dos-regimes" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="comparação-dos-regimes"><span class="header-section-number">1.5</span> Comparação dos Regimes</h2>
+<p>Para um mesmo capital <span class="math inline">\(P\)</span>, taxa <span class="math inline">\(i\)</span> (ou taxa contínua equivalente <span class="math inline">\(r = \ln(1+i)\)</span>) e prazo <span class="math inline">\(n\)</span>:</p>
+<table class="table-striped table-hover caption-top table">
+<caption>Comparação dos três regimes de capitalização</caption>
+<colgroup>
+<col style="width: 21%">
+<col style="width: 26%">
+<col style="width: 21%">
+<col style="width: 31%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Regime</th>
+<th style="text-align: center;">Montante</th>
+<th style="text-align: center;">Cresce</th>
+<th style="text-align: left;">Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Juros simples</td>
+<td style="text-align: center;"><span class="math inline">\(P(1+in)\)</span></td>
+<td style="text-align: center;">Linearmente</td>
+<td style="text-align: left;">Títulos curto prazo, CDI/dia</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Juros compostos</td>
+<td style="text-align: center;"><span class="math inline">\(P(1+i)^n\)</span></td>
+<td style="text-align: center;">Exponencialmente</td>
+<td style="text-align: left;">Maioria das operações</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Capitalização contínua</td>
+<td style="text-align: center;"><span class="math inline">\(Pe^{rn}\)</span></td>
+<td style="text-align: center;">Exponencialmente</td>
+<td style="text-align: left;">Finanças quantitativas</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Nota">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Nota
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para <span class="math inline">\(n &lt; 1\)</span> e mesma taxa: juros simples <span class="math inline">\(&gt;\)</span> compostos. Para <span class="math inline">\(n &gt; 1\)</span>: compostos <span class="math inline">\(&gt;\)</span> simples. Na capitalização contínua e composta, os montantes coincidem quando <span class="math inline">\(r = \ln(1+i)\)</span>.</p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Apresentação">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Apresentação</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./cap02.html" class="pagination-link" aria-label="Séries Finitas — Capitalização Periódica">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Séries Finitas — Capitalização Periódica</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap01.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
