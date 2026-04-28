@@ -609,5 +609,49 @@
       "Parte III — Decisões de Investimento",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
     ]
+  },
+  {
+    "objectID": "cap08.html#sensibilidade-do-preço-à-taxa-de-juros",
+    "href": "cap08.html#sensibilidade-do-preço-à-taxa-de-juros",
+    "title": "8  Títulos Públicos",
+    "section": "8.8 Sensibilidade do Preço à Taxa de Juros",
+    "text": "8.8 Sensibilidade do Preço à Taxa de Juros\nUma propriedade fundamental dos títulos de renda fixa é a relação inversa entre preço e taxa de juros: quando a taxa de mercado sobe, o preço do título cai; quando a taxa cai, o preço sobe. Isso ocorre porque o valor presente dos fluxos futuros diminui quando a taxa de desconto aumenta.\nPara a LTN (Letra do Tesouro Nacional), o preço é dado por:\n\\[P = \\frac{1.000}{(1+i)^{du/252}}\\]\nonde \\(du\\) é o número de dias úteis até o vencimento. Como o único fluxo é o valor de face no vencimento, qualquer variação na taxa \\(i\\) afeta diretamente o preço.\n\n\n\n\n\n\nTipExemplo — Sensibilidade da LTN\n\n\n\nConsidere uma LTN com \\(du \\approx 126\\) dias úteis (~6 meses). A tabela abaixo mostra o preço para diferentes taxas de mercado:\n\n\n\nTaxa \\(i\\) (a.a.)\nPreço \\(P\\) (R$)\n\n\n\n\n13%\n944,91\n\n\n14%\n936,59\n\n\n15%\n933,50\n\n\n16%\n928,48\n\n\n17%\n924,50\n\n\n\nObserve que um aumento de 4 p.p. na taxa (de 13% para 17%) reduz o preço em aproximadamente R$ 20 — uma queda de ~2,2%.\n\n\n\n\n\n\n\n\nImportantImplicação para o investidor\n\n\n\nQuem compra uma LTN e precisa vendê-la antes do vencimento fica exposto ao risco de mercado: se as taxas subirem, o preço de venda será inferior ao preço de compra. Quem carrega o título até o vencimento recebe exatamente a taxa contratada.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#duration-de-macaulay",
+    "href": "cap08.html#duration-de-macaulay",
+    "title": "8  Títulos Públicos",
+    "section": "8.9 Duration de Macaulay",
+    "text": "8.9 Duration de Macaulay\nA Duration de Macaulay (\\(D\\)) mede o prazo médio ponderado dos fluxos de caixa de um título, usando como pesos os valores presentes de cada fluxo. É uma medida de sensibilidade do preço à variação na taxa de juros.\n\\[D = \\frac{\\displaystyle\\sum_{t=1}^{n} t \\cdot \\frac{C_t}{(1+r)^t}}{\\displaystyle\\sum_{t=1}^{n} \\frac{C_t}{(1+r)^t}} = \\frac{\\displaystyle\\sum_{t=1}^{n} t \\cdot VP_t}{P}\\]\nonde \\(C_t\\) são os fluxos de caixa (cupons e valor de face), \\(r\\) é a taxa de juros e \\(P\\) é o preço atual do título.\n\n\n\n\n\n\nTipExemplo — Duration de uma NTN-F\n\n\n\nTítulo com cupom \\(C = 5\\%\\) ao ano, valor de face \\(VF = 1.000\\), prazo \\(n = 5\\) anos e taxa de mercado \\(i = 7\\%\\) a.a.\n\n\n\nAno \\(t\\)\nFluxo \\(C_t\\)\n\\(VP_t = C_t/(1{,}07)^t\\)\n\\(t \\cdot VP_t\\)\n\n\n\n\n1\n50\n46,73\n46,73\n\n\n2\n50\n43,67\n87,34\n\n\n3\n50\n40,81\n122,43\n\n\n4\n50\n38,14\n152,56\n\n\n5\n1.050\n748,85\n3.744,25\n\n\nTotal\n\n918,20\n4.153,31\n\n\n\n\\[D = \\frac{4.153{,}31}{918{,}20} \\approx \\mathbf{4{,}52 \\text{ anos}}\\]\nO título tem Duration de 4,52 anos, inferior ao prazo de vencimento de 5 anos — porque parte do valor é recebida antecipadamente via cupons.\n\n\n\n\n\n\n\n\nNoteInterpretação\n\n\n\nPara um título zero-cupom (sem pagamentos intermediários), a Duration é exatamente igual ao prazo de vencimento, pois todo o fluxo está concentrado no final. Para títulos com cupom, \\(D &lt; n\\) sempre.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#duration-modificada",
+    "href": "cap08.html#duration-modificada",
+    "title": "8  Títulos Públicos",
+    "section": "8.10 Duration Modificada",
+    "text": "8.10 Duration Modificada\nA Duration Modificada (\\(DM\\)) é a Duration de Macaulay ajustada pela taxa de juros, e fornece diretamente a sensibilidade percentual do preço a uma variação na taxa:\n\\[DM = \\frac{D}{1 + ytm/n}\\]\nonde \\(ytm\\) é o yield to maturity e \\(n\\) é o número de pagamentos por ano (1 para pagamentos anuais).\nA interpretação é direta: uma variação de \\(\\Delta i\\) na taxa de juros provoca uma variação aproximada no preço de:\n\\[\\frac{\\Delta P}{P} \\approx -DM \\cdot \\Delta i\\]\n\n\n\n\n\n\nTipExemplo — Duration Modificada\n\n\n\nUsando o exemplo anterior (\\(D = 4{,}52\\) anos, \\(ytm = 7\\%\\) a.a., pagamentos anuais):\n\\[DM = \\frac{4{,}52}{1{,}07} \\approx \\mathbf{4{,}22}\\]\nSe a taxa de juros subir 1 p.p. (de 7% para 8%), o preço do título cai aproximadamente:\n\\[\\frac{\\Delta P}{P} \\approx -4{,}22 \\times 0{,}01 = -4{,}22\\%\\]\nUm aumento de 1 p.p. na taxa implica queda de ~4,2% no preço — quanto maior a Duration Modificada, mais sensível o título é às variações de juros.\n\n\n\n\n\n\n\n\nImportantUso prático\n\n\n\nA Duration Modificada é amplamente utilizada na gestão de risco de carteiras de renda fixa (bond portfolio management). Um gestor que espera queda de juros prefere títulos com maior DM (maior potencial de ganho de capital); quem teme alta de juros prefere títulos com menor DM (menor risco de desvalorização).",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
+  },
+  {
+    "objectID": "cap08.html#tesouro-educa-planejamento-educacional",
+    "href": "cap08.html#tesouro-educa-planejamento-educacional",
+    "title": "8  Títulos Públicos",
+    "section": "8.11 Tesouro EDUCA+ — Planejamento Educacional",
+    "text": "8.11 Tesouro EDUCA+ — Planejamento Educacional\nO Tesouro EDUCA+ (anteriormente chamado de Tesouro RENDA+) é um título do Tesouro Direto desenhado para o planejamento de gastos futuros, como a educação superior de um filho. O investidor acumula recursos durante uma fase de aportes e, ao final, passa a receber uma renda mensal por um período definido.\nO problema de planejamento tem duas etapas:\nEtapa 1 — Fase de Acúmulo: durante \\(n_1\\) anos, realiza-se aportes mensais \\(R\\) a uma taxa real \\(i_{am}\\). O valor acumulado ao final deve ser suficiente para financiar a fase de retirada.\nEtapa 2 — Fase de Retirada: durante \\(n_2\\) anos, recebe-se uma renda mensal \\(R_f\\) (em termos reais). O Valor Presente dessa renda, calculado no início da fase de retirada, equivale ao montante acumulado na Etapa 1.\nA taxa real mensal é obtida a partir da taxa anual \\(i\\) (IPCA + spread):\n\\[i_{am} = (1 + i)^{1/12} - 1\\]\n\n\n\n\n\n\nTipExemplo — Tesouro EDUCA+\n\n\n\nDados:\n\nFase de retirada: \\(n_2 = 5\\) anos (60 meses) com renda mensal \\(R_f = \\text{R\\$}\\;8.000\\) (em valores reais).\nFase de acúmulo: \\(n_1 = 18\\) anos (216 meses) de aportes mensais \\(R\\).\nTaxa real: \\(i = \\text{IPCA} + 6\\%\\) a.a. \\(\\Rightarrow\\) \\(i_{am} = (1{,}06)^{1/12} - 1 \\approx 0{,}4868\\%\\) a.m.\n\nEtapa 1 — Valor Presente da fase de retirada (capital necessário ao início das retiradas):\n\\[VP = R_f \\cdot \\frac{1 - (1+i_{am})^{-60}}{i_{am}} = 8.000 \\cdot \\frac{1 - (1{,}004868)^{-60}}{0{,}004868} \\approx \\text{R\\$}\\;415.235\\]\nEtapa 2 — Aporte mensal necessário (para acumular VP em \\(n_1 = 18\\) anos = 216 meses):\n\\[R = VP \\cdot \\frac{i_{am}}{(1+i_{am})^{216} - 1} = 415.235 \\cdot \\frac{0{,}004868}{(1{,}004868)^{216} - 1} \\approx \\text{R\\$}\\;1.083{,}90 \\text{ por mês}\\]\nInterpretação: para garantir uma renda real de R$ 8.000/mês durante 5 anos (cobrindo, por exemplo, os custos universitários de um filho), o investidor precisa aportar aproximadamente R$ 1.084 por mês durante 18 anos no Tesouro EDUCA+, assumindo rentabilidade real de IPCA + 6% a.a.\n\n\n\n\n\n\n\n\nNoteObs: cálculo em termos reais\n\n\n\nTodo o exercício acima é feito em valores reais — o efeito da inflação (IPCA) já está embutido na taxa de desconto. Isso significa que R$ 8.000 representa o poder de compra atual, e o título garante esse valor corrigido pelo IPCA ao longo do tempo.",
+    "crumbs": [
+      "Parte III — Decisões de Investimento",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
+    ]
   }
 ]

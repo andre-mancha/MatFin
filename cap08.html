@@ -419,6 +419,10 @@ window.Quarto = {
   <li><a href="#cotação-e-preço" id="toc-cotação-e-preço" class="nav-link" data-scroll-target="#cotação-e-preço">Cotação e Preço</a></li>
   </ul></li>
   <li><a href="#yield-to-maturity-ytm-e-ytm-modificada" id="toc-yield-to-maturity-ytm-e-ytm-modificada" class="nav-link" data-scroll-target="#yield-to-maturity-ytm-e-ytm-modificada"><span class="header-section-number">8.7</span> <em>Yield to Maturity</em> (YTM) e YTM Modificada</a></li>
+  <li><a href="#sensibilidade-do-preço-à-taxa-de-juros" id="toc-sensibilidade-do-preço-à-taxa-de-juros" class="nav-link" data-scroll-target="#sensibilidade-do-preço-à-taxa-de-juros"><span class="header-section-number">8.8</span> Sensibilidade do Preço à Taxa de Juros</a></li>
+  <li><a href="#duration-de-macaulay" id="toc-duration-de-macaulay" class="nav-link" data-scroll-target="#duration-de-macaulay"><span class="header-section-number">8.9</span> Duration de Macaulay</a></li>
+  <li><a href="#duration-modificada" id="toc-duration-modificada" class="nav-link" data-scroll-target="#duration-modificada"><span class="header-section-number">8.10</span> Duration Modificada</a></li>
+  <li><a href="#tesouro-educa-planejamento-educacional" id="toc-tesouro-educa-planejamento-educacional" class="nav-link" data-scroll-target="#tesouro-educa-planejamento-educacional"><span class="header-section-number">8.11</span> Tesouro EDUCA+ — Planejamento Educacional</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap08.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -640,7 +644,7 @@ window.Quarto = {
 <p>A LFT (<em>Letra Financeira do Tesouro</em>) é o título <strong>pós-fixado</strong> referenciado na taxa SELIC acumulada. O investidor compra hoje por <span class="math inline">\(P\)</span> e recebe o valor de resgate <span class="math inline">\(VR\)</span> na data de vencimento:</p>
 <p><span class="math display">\[VR = P_0\,(1 + \bar{i}_{\text{SELIC}})^{n/252},\]</span></p>
 <p>onde <span class="math inline">\(\bar{i}_{\text{SELIC}}\)</span> é a taxa SELIC acumulada no período (base 252 d.u.).</p>
-<div id="db1e7445" class="cell" data-execution_count="1">
+<div id="9d612044" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -693,7 +697,7 @@ window.Quarto = {
 <h2 data-number="8.4" class="anchored" data-anchor-id="ltn-tesouro-prefixado"><span class="header-section-number">8.4</span> LTN (Tesouro Prefixado)</h2>
 <p>A LTN é um título <strong>zero-cupom</strong> prefixado: o investidor paga o preço <span class="math inline">\(P\)</span> hoje e recebe exatamente R$ 1.000 no vencimento. A relação preço–taxa (base 252 d.u.) é:</p>
 <p><span class="math display">\[P = \frac{1.000}{(1+\text{YTM})^{n/252}}.\]</span></p>
-<div id="45919a2e" class="cell" data-execution_count="2">
+<div id="657624d8" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -819,6 +823,239 @@ window.Quarto = {
 </div>
 <div class="callout-body-container callout-body">
 <p>A YTM modificada é menor que a YTM quando a taxa de mercado <span class="math inline">\(i &lt; \text{YTM}\)</span>, pois considera o reinvestimento dos cupons a uma taxa inferior — cenário mais realista para a maioria dos investidores.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="sensibilidade-do-preço-à-taxa-de-juros" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="sensibilidade-do-preço-à-taxa-de-juros"><span class="header-section-number">8.8</span> Sensibilidade do Preço à Taxa de Juros</h2>
+<p>Uma propriedade fundamental dos títulos de renda fixa é a <strong>relação inversa entre preço e taxa de juros</strong>: quando a taxa de mercado sobe, o preço do título cai; quando a taxa cai, o preço sobe. Isso ocorre porque o valor presente dos fluxos futuros diminui quando a taxa de desconto aumenta.</p>
+<p>Para a <strong>LTN</strong> (<em>Letra do Tesouro Nacional</em>), o preço é dado por:</p>
+<p><span class="math display">\[P = \frac{1.000}{(1+i)^{du/252}}\]</span></p>
+<p>onde <span class="math inline">\(du\)</span> é o número de dias úteis até o vencimento. Como o único fluxo é o valor de face no vencimento, qualquer variação na taxa <span class="math inline">\(i\)</span> afeta diretamente o preço.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Sensibilidade da LTN">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Sensibilidade da LTN
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Considere uma LTN com <span class="math inline">\(du \approx 126\)</span> dias úteis (~6 meses). A tabela abaixo mostra o preço para diferentes taxas de mercado:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Taxa <span class="math inline">\(i\)</span> (a.a.)</th>
+<th style="text-align: center;">Preço <span class="math inline">\(P\)</span> (R$)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">13%</td>
+<td style="text-align: center;">944,91</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14%</td>
+<td style="text-align: center;">936,59</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15%</td>
+<td style="text-align: center;">933,50</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16%</td>
+<td style="text-align: center;">928,48</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">17%</td>
+<td style="text-align: center;">924,50</td>
+</tr>
+</tbody>
+</table>
+<p>Observe que um aumento de 4 p.p. na taxa (de 13% para 17%) reduz o preço em aproximadamente R$ 20 — uma queda de ~2,2%.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Implicação para o investidor">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Implicação para o investidor
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Quem compra uma LTN e precisa vendê-la <strong>antes do vencimento</strong> fica exposto ao risco de mercado: se as taxas subirem, o preço de venda será inferior ao preço de compra. Quem carrega o título até o vencimento recebe exatamente a taxa contratada.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="duration-de-macaulay" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="duration-de-macaulay"><span class="header-section-number">8.9</span> Duration de Macaulay</h2>
+<p>A <strong>Duration de Macaulay</strong> (<span class="math inline">\(D\)</span>) mede o prazo médio ponderado dos fluxos de caixa de um título, usando como pesos os valores presentes de cada fluxo. É uma medida de <strong>sensibilidade do preço</strong> à variação na taxa de juros.</p>
+<p><span class="math display">\[D = \frac{\displaystyle\sum_{t=1}^{n} t \cdot \frac{C_t}{(1+r)^t}}{\displaystyle\sum_{t=1}^{n} \frac{C_t}{(1+r)^t}} = \frac{\displaystyle\sum_{t=1}^{n} t \cdot VP_t}{P}\]</span></p>
+<p>onde <span class="math inline">\(C_t\)</span> são os fluxos de caixa (cupons e valor de face), <span class="math inline">\(r\)</span> é a taxa de juros e <span class="math inline">\(P\)</span> é o preço atual do título.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Duration de uma NTN-F">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Duration de uma NTN-F
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Título com cupom <span class="math inline">\(C = 5\%\)</span> ao ano, valor de face <span class="math inline">\(VF = 1.000\)</span>, prazo <span class="math inline">\(n = 5\)</span> anos e taxa de mercado <span class="math inline">\(i = 7\%\)</span> a.a.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Ano <span class="math inline">\(t\)</span></th>
+<th style="text-align: center;">Fluxo <span class="math inline">\(C_t\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(VP_t = C_t/(1{,}07)^t\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(t \cdot VP_t\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">46,73</td>
+<td style="text-align: center;">46,73</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">43,67</td>
+<td style="text-align: center;">87,34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">40,81</td>
+<td style="text-align: center;">122,43</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">50</td>
+<td style="text-align: center;">38,14</td>
+<td style="text-align: center;">152,56</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1.050</td>
+<td style="text-align: center;">748,85</td>
+<td style="text-align: center;">3.744,25</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>918,20</strong></td>
+<td style="text-align: center;"><strong>4.153,31</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[D = \frac{4.153{,}31}{918{,}20} \approx \mathbf{4{,}52 \text{ anos}}\]</span></p>
+<p>O título tem Duration de <strong>4,52 anos</strong>, inferior ao prazo de vencimento de 5 anos — porque parte do valor é recebida antecipadamente via cupons.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Interpretação">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Interpretação
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Para um <strong>título zero-cupom</strong> (sem pagamentos intermediários), a Duration é exatamente igual ao prazo de vencimento, pois todo o fluxo está concentrado no final. Para títulos com cupom, <span class="math inline">\(D &lt; n\)</span> sempre.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="duration-modificada" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="duration-modificada"><span class="header-section-number">8.10</span> Duration Modificada</h2>
+<p>A <strong>Duration Modificada</strong> (<span class="math inline">\(DM\)</span>) é a Duration de Macaulay ajustada pela taxa de juros, e fornece diretamente a <strong>sensibilidade percentual do preço</strong> a uma variação na taxa:</p>
+<p><span class="math display">\[DM = \frac{D}{1 + ytm/n}\]</span></p>
+<p>onde <span class="math inline">\(ytm\)</span> é o <em>yield to maturity</em> e <span class="math inline">\(n\)</span> é o número de pagamentos por ano (1 para pagamentos anuais).</p>
+<p>A interpretação é direta: uma variação de <span class="math inline">\(\Delta i\)</span> na taxa de juros provoca uma variação aproximada no preço de:</p>
+<p><span class="math display">\[\frac{\Delta P}{P} \approx -DM \cdot \Delta i\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Duration Modificada">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Duration Modificada
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Usando o exemplo anterior (<span class="math inline">\(D = 4{,}52\)</span> anos, <span class="math inline">\(ytm = 7\%\)</span> a.a., pagamentos anuais):</p>
+<p><span class="math display">\[DM = \frac{4{,}52}{1{,}07} \approx \mathbf{4{,}22}\]</span></p>
+<p>Se a taxa de juros subir 1 p.p. (de 7% para 8%), o preço do título cai aproximadamente:</p>
+<p><span class="math display">\[\frac{\Delta P}{P} \approx -4{,}22 \times 0{,}01 = -4{,}22\%\]</span></p>
+<p>Um aumento de 1 p.p. na taxa implica queda de ~4,2% no preço — quanto maior a Duration Modificada, mais sensível o título é às variações de juros.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Uso prático">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Uso prático
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A Duration Modificada é amplamente utilizada na gestão de risco de carteiras de renda fixa (<em>bond portfolio management</em>). Um gestor que espera queda de juros prefere títulos com <strong>maior DM</strong> (maior potencial de ganho de capital); quem teme alta de juros prefere títulos com <strong>menor DM</strong> (menor risco de desvalorização).</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="tesouro-educa-planejamento-educacional" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="tesouro-educa-planejamento-educacional"><span class="header-section-number">8.11</span> Tesouro EDUCA+ — Planejamento Educacional</h2>
+<p>O <strong>Tesouro EDUCA+</strong> (anteriormente chamado de Tesouro RENDA+) é um título do Tesouro Direto desenhado para o planejamento de gastos futuros, como a educação superior de um filho. O investidor acumula recursos durante uma fase de aportes e, ao final, passa a receber uma renda mensal por um período definido.</p>
+<p>O problema de planejamento tem <strong>duas etapas</strong>:</p>
+<p><strong>Etapa 1 — Fase de Acúmulo:</strong> durante <span class="math inline">\(n_1\)</span> anos, realiza-se aportes mensais <span class="math inline">\(R\)</span> a uma taxa real <span class="math inline">\(i_{am}\)</span>. O valor acumulado ao final deve ser suficiente para financiar a fase de retirada.</p>
+<p><strong>Etapa 2 — Fase de Retirada:</strong> durante <span class="math inline">\(n_2\)</span> anos, recebe-se uma renda mensal <span class="math inline">\(R_f\)</span> (em termos reais). O <strong>Valor Presente</strong> dessa renda, calculado no início da fase de retirada, equivale ao montante acumulado na Etapa 1.</p>
+<p>A taxa real mensal é obtida a partir da taxa anual <span class="math inline">\(i\)</span> (IPCA + spread):</p>
+<p><span class="math display">\[i_{am} = (1 + i)^{1/12} - 1\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Tesouro EDUCA+">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Tesouro EDUCA+
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dados:</strong></p>
+<ul>
+<li>Fase de retirada: <span class="math inline">\(n_2 = 5\)</span> anos (60 meses) com renda mensal <span class="math inline">\(R_f = \text{R\$}\;8.000\)</span> (em valores reais).</li>
+<li>Fase de acúmulo: <span class="math inline">\(n_1 = 18\)</span> anos (216 meses) de aportes mensais <span class="math inline">\(R\)</span>.</li>
+<li>Taxa real: <span class="math inline">\(i = \text{IPCA} + 6\%\)</span> a.a. <span class="math inline">\(\Rightarrow\)</span> <span class="math inline">\(i_{am} = (1{,}06)^{1/12} - 1 \approx 0{,}4868\%\)</span> a.m.</li>
+</ul>
+<p><strong>Etapa 1 — Valor Presente da fase de retirada</strong> (capital necessário ao início das retiradas):</p>
+<p><span class="math display">\[VP = R_f \cdot \frac{1 - (1+i_{am})^{-60}}{i_{am}} = 8.000 \cdot \frac{1 - (1{,}004868)^{-60}}{0{,}004868} \approx \text{R\$}\;415.235\]</span></p>
+<p><strong>Etapa 2 — Aporte mensal necessário</strong> (para acumular VP em <span class="math inline">\(n_1 = 18\)</span> anos = 216 meses):</p>
+<p><span class="math display">\[R = VP \cdot \frac{i_{am}}{(1+i_{am})^{216} - 1} = 415.235 \cdot \frac{0{,}004868}{(1{,}004868)^{216} - 1} \approx \text{R\$}\;1.083{,}90 \text{ por mês}\]</span></p>
+<p><strong>Interpretação:</strong> para garantir uma renda real de R$ 8.000/mês durante 5 anos (cobrindo, por exemplo, os custos universitários de um filho), o investidor precisa aportar aproximadamente <strong>R$ 1.084 por mês</strong> durante 18 anos no Tesouro EDUCA+, assumindo rentabilidade real de IPCA + 6% a.a.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Obs: cálculo em termos reais">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Obs: cálculo em termos reais
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo o exercício acima é feito em <strong>valores reais</strong> — o efeito da inflação (IPCA) já está embutido na taxa de desconto. Isso significa que R$ 8.000 representa o poder de compra atual, e o título garante esse valor corrigido pelo IPCA ao longo do tempo.</p>
 </div>
 </div>
 
