@@ -653,5 +653,93 @@
       "Parte III — Decisões de Investimento",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Títulos Públicos</span>"
     ]
+  },
+  {
+    "objectID": "cap09.html",
+    "href": "cap09.html",
+    "title": "9  Títulos Privados",
+    "section": "",
+    "text": "9.1 Captação de Recursos: Setor Público vs. Privado\nO juro é o preço do tempo — a remuneração exigida por quem cede recursos a quem precisa captá-los. No sistema financeiro, essa captação ocorre em dois grandes segmentos: o setor público e o setor privado.",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#captação-de-recursos-setor-público-vs.-privado",
+    "href": "cap09.html#captação-de-recursos-setor-público-vs.-privado",
+    "title": "9  Títulos Privados",
+    "section": "",
+    "text": "NoteDistinção fundamental\n\n\n\nNo caso de Títulos Públicos, o Tesouro Nacional sempre pode emitir moeda para quitar sua dívida interna. Por isso, o risco de inadimplência soberana (em moeda local) é considerado praticamente nulo. O preço dos títulos públicos é afetado principalmente por condições macroeconômicas — inflação, câmbio e nível geral de juros.\nJá no caso de Títulos Privados, as firmas e instituições financeiras não possuem essa capacidade. O preço é, via de regra, acima do título público equivalente (maior retorno exigido = maior risco), e é afetado por fatores macro e micro:\n\nGarantias — reais (imóveis, recebíveis) ou institucionais (FGC)\nRating — classificação de risco da firma e da emissão\nLiquidez — facilidade de negociar o título no mercado secundário",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#interbancário-e-a-taxa-di",
+    "href": "cap09.html#interbancário-e-a-taxa-di",
+    "title": "9  Títulos Privados",
+    "section": "9.2 Interbancário e a Taxa DI",
+    "text": "9.2 Interbancário e a Taxa DI\nO mercado interbancário é onde as instituições financeiras (IFs) negociam reservas entre si, geralmente por prazo de 1 dia (overnight). Quando uma IF não consegue encontrar contraparte no mercado, é possível negociar diretamente com o Banco Central.\nA remuneração dos depósitos interbancários segue a fórmula de juros compostos em base de 360 dias corridos:\n\\[VR = VP\\,(1+i)^{1/360}\\]\n\n\n\n\n\n\nTipTaxa DI (CDI)\n\n\n\nA Taxa DI (também chamada de CDI — Certificado de Depósito Interbancário) é a média das taxas praticadas nas operações de overnight entre as instituições financeiras. É calculada e divulgada diariamente pela B3.\nA Taxa DI é geralmente ligeiramente superior à SELIC, pois reflete o custo efetivo de captação entre bancos privados — sem o benefício de garantia implícita do governo.",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#cdb-certificado-de-depósito-bancário",
+    "href": "cap09.html#cdb-certificado-de-depósito-bancário",
+    "title": "9  Títulos Privados",
+    "section": "9.3 CDB — Certificado de Depósito Bancário",
+    "text": "9.3 CDB — Certificado de Depósito Bancário\nO CDB é um título de dívida emitido por instituições financeiras (bancos comerciais, de investimento, etc.) para captar recursos junto a investidores pessoas físicas e jurídicas.\nPrincipais características:\n\nGarantido pelo FGC (Fundo Garantidor de Créditos) até R$ 250 mil por IF e por CPF/CNPJ\nTaxa varia conforme liquidez do título, rating do emissor e prazo\nTributação: IR conforme tabela regressiva (22,5% até 180 dias → 15% acima de 720 dias); IOF para resgates em até 30 dias\n\nO imposto de renda incide apenas sobre o rendimento:\n\\[IR = (VR - VA) \\cdot \\alpha\\]\nonde \\(\\alpha\\) é a alíquota aplicável conforme o prazo de aplicação.\n\nCDB Pré-fixado\nA taxa é definida no momento da contratação e o valor de resgate é conhecido desde o início:\n\\[VCB = VA\\,(1+i)^{n/360}\\]\nonde \\(i\\) é a taxa nominal anual contratada e \\(n\\) é o prazo em dias corridos.\n\n\nCDB Pós-fixado\nO valor de resgate depende de um indexador que varia ao longo do tempo, acrescido de um spread fixo. A fórmula geral combina dois fatores:\n\\[VCB = VA\\,(1+i_L)^{n_L/360} \\cdot (1+i_s)^{n_s/360}\\]\nonde \\(i_L\\) é a taxa do indexador e \\(i_s\\) é o spread contratado. Os indexadores mais comuns são:\n\n\n\nIndexador\nForma habitual\nExemplo\n\n\n\n\nCDI\nPercentual do CDI\n110% do CDI\n\n\nIGPM\nIGPM + spread\nIGPM + 2% a.a.\n\n\nIPCA\nIPCA + spread\nIPCA + 5% a.a.\n\n\n\n\n\n\n\n\n\nNotePor que CDB pós-fixado protege da inflação?\n\n\n\nUm CDB atrelado ao IPCA + spread garante rentabilidade real positiva: mesmo que a inflação suba, o valor de resgate acompanha a correção monetária. Isso o torna economicamente semelhante a uma NTN-B, mas emitido pelo setor bancário privado (com FGC como garantia adicional).",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#debêntures",
+    "href": "cap09.html#debêntures",
+    "title": "9  Títulos Privados",
+    "section": "9.4 Debêntures",
+    "text": "9.4 Debêntures\nAs debêntures são títulos de longo prazo emitidos por instituições não financeiras (empresas de capital aberto) para captar recursos diretamente no mercado de capitais. Por não serem emitidas por bancos, não contam com a garantia do FGC. Para compensar esse risco, as empresas frequentemente utilizam garantias reais ou fidejussórias para melhorar o rating da emissão e reduzir o custo de captação.\n\nIsentas de IOF; tributação de IR conforme tabela regressiva\nNegociadas na B3 ou no mercado de balcão\nPodem ser debentures incentivadas (isentas de IR para pessoa física) quando vinculadas a projetos de infraestrutura\n\n\nPrecificação de Debêntures Pós-fixadas (IGPM + spread)\nPara debêntures indexadas ao IGPM com pagamentos periódicos de cupom, o Valor Nominal Atualizado (VNA) é corrigido pelo índice a cada período, e o cupom é calculado sobre o VNA corrente:\n\\[VNA_k = VNA_{k-1}\\,(1+IGPM_k)\\]\n\\[R_k = VNA_k \\cdot i_s\\]\nonde \\(i_s\\) é a taxa semestral equivalente ao spread anual: \\(i_s = (1+i_a)^{1/2} - 1\\).\nNa maturidade, o principal devolvido é o \\(VNA_n\\) atualizado.\nO preço de mercado \\(P\\) é o valor presente de todos os fluxos:\n\\[P = \\sum_{k=1}^{n}\\frac{R_k}{(1+Ytm)^k} + \\frac{VNA_n}{(1+Ytm)^n}\\]\nonde \\(Ytm\\) é o yield to maturity semestral implícito no preço negociado.\n\n\n\n\n\n\nTipExemplo — Debênture IGPM + 14% a.a.\n\n\n\nDados:\n\nTaxa: IGPM + \\(14\\%\\) a.a. \\(\\Rightarrow\\) \\(i_s = (1{,}14)^{1/2} - 1 = 6{,}77\\%\\) a.s.\nPrazo: 18 meses (3 semestres), com juros semestrais\nIGPM acumulado por semestre: \\(0{,}5\\%\\); \\(0{,}6\\%\\); \\(0{,}7\\%\\)\nValor de face: \\(VF = \\text{R\\$}\\;1.000\\)\nPreço de mercado: \\(VA = \\text{R\\$}\\;945\\)\n\nPasso 1 — Atualização do VNA e cálculo dos cupons:\n\n\n\nSemestre\n\\(IGPM_k\\)\n\\(VNA_k\\)\n\\(R_k = VNA_k \\times 6{,}77\\%\\)\n\n\n\n\n1\n0,5%\n1.005,00\n68,04\n\n\n2\n0,6%\n1.011,03\n68,45\n\n\n3\n0,7%\n1.018,11\n68,93\n\n\n\nFluxo final (sem. 3): cupom \\(+\\) principal \\(= 68{,}93 + 1.018{,}11 = \\text{R\\$}\\;1.087{,}04\\).\nPasso 2 — YTM implícito:\n\\[945 = \\frac{68{,}04}{(1+Ytm)} + \\frac{68{,}45}{(1+Ytm)^2} + \\frac{1.087{,}04}{(1+Ytm)^3}\\]\n\\[Ytm \\approx \\mathbf{9{,}59\\%}\\text{ a.s.}\\]\nO investidor que paga R$ 945 por uma debênture com IGPM + 14% a.a. (spread contratado) obtém, dado o atual nível de IGPM, um retorno efetivo de 9,59% ao semestre — que inclui a correção monetária e o spread de crédito.",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#lci-e-lca",
+    "href": "cap09.html#lci-e-lca",
+    "title": "9  Títulos Privados",
+    "section": "9.5 LCI e LCA",
+    "text": "9.5 LCI e LCA\nAs Letras de Crédito Imobiliário (LCI) e as Letras de Crédito do Agronegócio (LCA) são títulos emitidos por bancos com destinação específica: os recursos captados devem ser direcionados, respectivamente, para o financiamento imobiliário e para o agronegócio.\nCaracterísticas principais:\n\nIsentas de IR e IOF para pessoas físicas — vantagem tributária relevante em relação ao CDB\nGarantidas pelo FGC (até R$ 250 mil por IF e CPF), assim como o CDB\nGeralmente atreladas ao CDI ou ao IPCA + spread\nRessalva importante: possuem prazo mínimo de carência (em geral 90 dias), o que limita a liquidez — o investidor não pode resgatar antes do prazo contratado\n\n\n\n\n\n\n\nNoteEquivalência com CDB após IR\n\n\n\nPara comparar uma LCI/LCA com um CDB tributado, é necessário calcular a taxa equivalente líquida. Para alíquota de IR de \\(\\alpha\\):\n\\[i_{CDB\\text{ líq}} = i_{CDB} \\cdot (1-\\alpha) \\quad \\Leftrightarrow \\quad i_{LCI/LCA}\\]\nExemplo: um CDB a 12% a.a. com IR de 15% rende 10,2% a.a. líquido — equivalente a uma LCI a 10,2% a.a.",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#cri-e-cra",
+    "href": "cap09.html#cri-e-cra",
+    "title": "9  Títulos Privados",
+    "section": "9.6 CRI e CRA",
+    "text": "9.6 CRI e CRA\nOs Certificados de Recebíveis Imobiliários (CRI) e os Certificados de Recebíveis do Agronegócio (CRA) são instrumentos de securitização: empresas transformam carteiras de crédito (recebíveis) em títulos negociáveis no mercado de capitais.\n\nEmitidos por empresas securitizadoras (não por bancos)\nLastreados no valor de uma carteira de recebíveis (aluguéis, financiamentos, contratos agrícolas)\nIsentos de IR e IOF para pessoas físicas\nNão contam com garantia do FGC — o risco de crédito recai sobre a qualidade dos recebíveis e das garantias estruturadas na emissão\nGeralmente têm liquidez mais limitada que CDB/LCI/LCA\n\n\n\n\n\n\n\nImportantComparativo dos títulos privados de renda fixa\n\n\n\n\n\n\n\n\n\n\n\n\n\nTítulo\nEmissor\nFGC\nIR/IOF\nIndexadores\n\n\n\n\nCDB\nBanco\n✓\nSim\nPré, CDI, IPCA, IGPM\n\n\nLCI/LCA\nBanco\n✓\nIsento\nCDI, IPCA\n\n\nDebênture\nEmpresa não financeira\n✗\nSim\nIGPM, IPCA, IPCA+spread\n\n\nCRI/CRA\nSecuritizadora\n✗\nIsento\nIPCA, IGP-M, CDI",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
+  },
+  {
+    "objectID": "cap09.html#mercado-internacional",
+    "href": "cap09.html#mercado-internacional",
+    "title": "9  Títulos Privados",
+    "section": "9.7 Mercado Internacional",
+    "text": "9.7 Mercado Internacional\nOs títulos de renda fixa do mercado internacional seguem lógica semelhante à dos títulos brasileiros, com nomenclatura e convenções próprias.\n\nTesouro Americano (U.S. Treasury)\nOs títulos emitidos pelo governo federal dos EUA são considerados o ativo livre de risco de referência global (risk-free benchmark), pois os EUA podem emitir dólares para honrar sua dívida interna.\n\n\n\nTítulo\nEquivalente BR\nPrazo\nCupom\n\n\n\n\nT-Bill\nLTN\nCurto prazo (≤ 1 ano)\nNenhum (zero cupom)\n\n\nT-Note\nNTN-F\nMédio prazo (2–10 anos)\nSemestral\n\n\nT-Bond\nNTN-F\nLongo prazo (&gt; 10 anos)\nSemestral\n\n\n\n\n\nBonds Corporativos\nOs bonds corporativos são o equivalente internacional das debêntures — títulos de dívida emitidos por empresas para captar recursos no mercado de capitais internacional. Em geral, pagam cupom semestral sobre o valor de face e têm preço determinado pelo mercado secundário em função do risco de crédito do emissor.\n\n\n\n\n\n\nNoteSpread soberano e spread de crédito\n\n\n\nNo mercado internacional, o rendimento (yield) de qualquer título é decomposto em duas partes:\n\\[Yield = Yield_{T-Bond} + \\underbrace{Spread_{\\text{soberano}} + Spread_{\\text{crédito}}}_{\\text{prêmio de risco}}\\]\nO spread soberano reflete o risco-país (ex: diferencial entre títulos brasileiros e americanos de mesmo prazo), enquanto o spread de crédito reflete o risco específico do emissor privado em relação ao governo local.",
+    "crumbs": [
+      "Parte IV — Renda Fixa Privada e Mercado Internacional",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Títulos Privados</span>"
+    ]
   }
 ]
