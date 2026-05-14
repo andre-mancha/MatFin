@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="André Mancha">
 
-<title>Matemática Financeira</title>
+<title>10&nbsp; Operações de Crédito – Matemática Financeira</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -34,7 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cap01.html" rel="next">
+<link href="./cap09.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -77,6 +76,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -251,7 +279,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Apresentação</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap10.html">Parte V — Operações de Crédito</a></li><li class="breadcrumb-item"><a href="./cap10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Operações de Crédito</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -282,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Apresentação</span></a>
   </div>
 </li>
@@ -395,7 +423,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap10.html" class="sidebar-item-text sidebar-link">
+  <a href="./cap10.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Operações de Crédito</span></span></a>
   </div>
 </li>
@@ -411,43 +439,35 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#apresentação" id="toc-apresentação" class="nav-link active" data-scroll-target="#apresentação">Apresentação</a>
+  <li><a href="#motivação-o-crédito-no-balanço-das-empresas" id="toc-motivação-o-crédito-no-balanço-das-empresas" class="nav-link active" data-scroll-target="#motivação-o-crédito-no-balanço-das-empresas"><span class="header-section-number">10.1</span> Motivação: O Crédito no Balanço das Empresas</a></li>
+  <li><a href="#iof-imposto-sobre-operações-financeiras" id="toc-iof-imposto-sobre-operações-financeiras" class="nav-link" data-scroll-target="#iof-imposto-sobre-operações-financeiras"><span class="header-section-number">10.2</span> IOF — Imposto sobre Operações Financeiras</a></li>
+  <li><a href="#empréstimos-bullet-com-iof" id="toc-empréstimos-bullet-com-iof" class="nav-link" data-scroll-target="#empréstimos-bullet-com-iof"><span class="header-section-number">10.3</span> Empréstimos Bullet com IOF</a>
   <ul class="collapse">
-  <li><a href="#estrutura-do-curso" id="toc-estrutura-do-curso" class="nav-link" data-scroll-target="#estrutura-do-curso">Estrutura do curso</a></li>
-  <li><a href="#como-usar-este-material" id="toc-como-usar-este-material" class="nav-link" data-scroll-target="#como-usar-este-material">Como usar este material</a></li>
-  <li><a href="#referência-principal" id="toc-referência-principal" class="nav-link" data-scroll-target="#referência-principal">Referência principal</a></li>
-  <li><a href="#contato" id="toc-contato" class="nav-link" data-scroll-target="#contato">Contato</a></li>
+  <li><a href="#curto-prazo-caso-1" id="toc-curto-prazo-caso-1" class="nav-link" data-scroll-target="#curto-prazo-caso-1">Curto Prazo — Caso 1</a></li>
+  <li><a href="#longo-prazo-caso-2" id="toc-longo-prazo-caso-2" class="nav-link" data-scroll-target="#longo-prazo-caso-2">Longo Prazo — Caso 2</a></li>
+  </ul></li>
+  <li><a href="#empréstimos-amortizados-com-iof-tabela-price" id="toc-empréstimos-amortizados-com-iof-tabela-price" class="nav-link" data-scroll-target="#empréstimos-amortizados-com-iof-tabela-price"><span class="header-section-number">10.4</span> Empréstimos Amortizados com IOF — Tabela Price</a>
+  <ul class="collapse">
+  <li><a href="#alíquota-iof-por-parcela" id="toc-alíquota-iof-por-parcela" class="nav-link" data-scroll-target="#alíquota-iof-por-parcela">Alíquota IOF por Parcela</a></li>
+  <li><a href="#caso-3-amortização-trimestral-não-financiado" id="toc-caso-3-amortização-trimestral-não-financiado" class="nav-link" data-scroll-target="#caso-3-amortização-trimestral-não-financiado">Caso 3 — Amortização Trimestral (Não Financiado)</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap10.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap10.html">Parte V — Operações de Crédito</a></li><li class="breadcrumb-item"><a href="./cap10.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Operações de Crédito</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Matemática Financeira</h1>
-<p class="subtitle lead">Notas de Aula — Graduação em Economia</p>
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Operações de Crédito</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>André Mancha </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">May 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -457,29 +477,326 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="apresentação" class="level1 unnumbered">
-<h1 class="unnumbered">Apresentação</h1>
-<p>Estas notas de aula acompanham a disciplina <strong>Matemática Financeira</strong> da Graduação em Economia. O objetivo é fornecer um tratamento rigoroso, porém acessível, dos principais instrumentos quantitativos utilizados na análise financeira e na tomada de decisão sob incerteza.</p>
-<section id="estrutura-do-curso" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-curso">Estrutura do curso</h2>
-<p>O material está organizado em três partes:</p>
-<p><strong>Parte I — Valor do Dinheiro no Tempo</strong> Regimes de capitalização, séries de pagamentos periódicas e instantâneas, e perpetuidades. Essa é a linguagem fundamental de toda a matemática financeira.</p>
-<p><strong>Parte II — Financiamentos e Taxas</strong> Sistemas de amortização (PRICE e SAC) e as diferentes formas de cotar taxas de juros, incluindo a distinção entre taxa nominal, efetiva e real (Equação de Fisher).</p>
-<p><strong>Parte III — Decisões de Investimento</strong> Critérios de avaliação de projetos (VPL, TIR, TIRM) e apreçamento de títulos públicos brasileiros (LFT, LTN, NTN-B, NTN-F).</p>
+<section id="motivação-o-crédito-no-balanço-das-empresas" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="motivação-o-crédito-no-balanço-das-empresas"><span class="header-section-number">10.1</span> Motivação: O Crédito no Balanço das Empresas</h2>
+<p>Para entender as operações de crédito, é útil partir da estrutura financeira das firmas. O <strong>Balanço Patrimonial</strong> registra, num dado momento, o que a empresa possui (Ativo) e como esse patrimônio é financiado (Passivo + Patrimônio Líquido):</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><strong>Ativo</strong></th>
+<th><strong>Passivo + PL</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Caixa</td>
+<td>Fornecedores</td>
+</tr>
+<tr class="even">
+<td>Disponibilidades</td>
+<td>Dívidas (empréstimos, debêntures)</td>
+</tr>
+<tr class="odd">
+<td>Outros ativos</td>
+<td><strong>PL:</strong> Reservas + Capital Social</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>Demonstração de Resultado (DRE)</strong> mostra o desempenho econômico no período:</p>
+<p><span class="math display">\[\underbrace{(+)\;\text{Receitas}}_{\text{vendas}} \;-\; \underbrace{(-)\;\text{Despesas}}_{\text{operacionais, financeiras, tributárias}} \;=\; \underbrace{(=)\;\text{Lucro/Prejuízo}}_{\text{antes de impostos}} \;-\; (-)\;\text{Impostos} \;=\; \textbf{Lucro Líquido}\]</span></p>
+<p>Já a <strong>Demonstração de Fluxo de Caixa (DFC)</strong> capta os movimentos efetivos de caixa, divididos em três componentes:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 40%">
+<col style="width: 33%">
+<col style="width: 26%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Componente</th>
+<th>Entradas</th>
+<th>Saídas</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>FC Operacional</strong></td>
+<td>Recebíveis (prazo longo/curto)</td>
+<td>Pagamentos (prazo longo/curto)</td>
+</tr>
+<tr class="even">
+<td><strong>FC Investimento</strong></td>
+<td>Venda de ativos</td>
+<td>Compra de ativos</td>
+</tr>
+<tr class="odd">
+<td><strong>FC Financiamento</strong></td>
+<td>Empréstimos, emissão de ações</td>
+<td>Amortizações, dividendos</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-note callout-titled" title="Por que as empresas tomam crédito?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Por que as empresas tomam crédito?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Uma <strong>empresa saudável</strong> (genuinamente lucrativa) gera caixa pelo FC Operacional e utiliza o FC de Financiamento apenas para projetos de expansão. Já empresas que recorrem ao crédito para cobrir déficits operacionais estão em situação de atenção — o crédito é usado para <strong>financiar o próprio fluxo de caixa</strong>.</p>
+<p>Do ponto de vista do credor, entender a DFC da empresa é essencial para avaliar a capacidade de pagamento.</p>
+</div>
+</div>
+<hr>
 </section>
-<section id="como-usar-este-material" class="level2">
-<h2 class="anchored" data-anchor-id="como-usar-este-material">Como usar este material</h2>
-<p>As notas foram pensadas para leitura acompanhada das aulas. Cada capítulo traz definições formais, resultados principais destacados e exemplos numéricos. Os <strong>exemplos modernos</strong> ao longo do texto contextualizam os conceitos com dados recentes do mercado brasileiro.</p>
+<section id="iof-imposto-sobre-operações-financeiras" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="iof-imposto-sobre-operações-financeiras"><span class="header-section-number">10.2</span> IOF — Imposto sobre Operações Financeiras</h2>
+<p>O <strong>IOF</strong> é um tributo federal que incide sobre operações de crédito, câmbio, seguros e títulos. Nas operações de crédito para pessoas jurídicas, as alíquotas variam conforme o <strong>prazo</strong>:</p>
+<p><strong>Curto prazo (até 365 dias):</strong></p>
+<p><span class="math display">\[IOF = 0{,}38\%\;\text{(flat)} + 0{,}0082\%\;\text{por dia} \times n_{\text{dias}}\]</span></p>
+<p>onde o produto <span class="math inline">\(0{,}0082\% \times n\)</span> é <strong>limitado a 365 dias</strong> (teto de <span class="math inline">\(0{,}0082 \times 365 \approx 2{,}993\%\)</span>), resultando numa alíquota máxima total de:</p>
+<p><span class="math display">\[IOF_{\max} = 0{,}38\% + 2{,}993\% \approx 3{,}38\%\]</span></p>
+<p><strong>Longo prazo (acima de 365 dias):</strong> a alíquota é <strong>3,38%</strong> do valor total (flat, com os juros após o cap diário já atingido).</p>
+<div class="callout callout-style-default callout-important callout-titled" title="IOF Financiado vs. Não Financiado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>IOF Financiado vs.&nbsp;Não Financiado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Há duas formas de estruturar o pagamento do IOF numa operação de crédito:</p>
+<ul>
+<li><strong>Financiado:</strong> o IOF é somado ao principal do empréstimo. O tomador recebe o valor cheio, mas o banco cobra juros sobre principal + IOF. A <strong>taxa efetiva</strong> supera a taxa contratada.</li>
+<li><strong>Não Financiado:</strong> o IOF é descontado do valor liberado (pago separadamente). O tomador recebe o principal líquido, e a taxa contratada reflete apenas o custo do crédito — o IOF é um custo tributário adicional, mas não compõe a base de juros.</li>
+</ul>
+</div>
+</div>
+<hr>
 </section>
-<section id="referência-principal" class="level2">
-<h2 class="anchored" data-anchor-id="referência-principal">Referência principal</h2>
-<blockquote class="blockquote">
-<p>Bueno, R. L. S., Rangel, A. S., &amp; Santos, J. C. S. (2008). <em>Matemática Financeira Moderna</em>. São Paulo: Atlas.</p>
-</blockquote>
+<section id="empréstimos-bullet-com-iof" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="empréstimos-bullet-com-iof"><span class="header-section-number">10.3</span> Empréstimos Bullet com IOF</h2>
+<section id="curto-prazo-caso-1" class="level3">
+<h3 class="anchored" data-anchor-id="curto-prazo-caso-1">Curto Prazo — Caso 1</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Bullet 4 meses, i = 5% a.m.">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Bullet 4 meses, i = 5% a.m.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dados:</strong> <span class="math inline">\(P = \text{R\$}\;10.000\)</span>, prazo <span class="math inline">\(n = 4\)</span> meses, modalidade bullet (pagamento único no vencimento), <span class="math inline">\(i = 5\%\)</span> a.m.</p>
+<p><strong>IOF (curto prazo, 4 meses ≈ 120 dias):</strong></p>
+<p><span class="math display">\[IOF = 3{,}5\% \times 10.000 = \text{R\$}\;350\]</span></p>
+<p><em>(alíquota simplificada de 3,5% para o prazo de 4 meses utilizada no exemplo)</em></p>
+<hr>
+<p><strong>A — Financiado (IOF somado ao principal):</strong></p>
+<p>O banco financia R$ 10.000 + R$ 350 = R$ 10.350. O tomador recebe R$ 10.000 líquidos, mas os juros correm sobre R$ 10.350:</p>
+<p><span class="math display">\[VF = 10.350 \times (1{,}05)^4 = \textbf{R\$}\;12.580{,}43\]</span></p>
+<p>Taxa efetiva sobre os R$ 10.000 recebidos:</p>
+<p><span class="math display">\[\frac{12.580{,}43}{10.000} = (1+r)^4 \implies r \approx \mathbf{5{,}91\%}\text{ a.m.}\]</span></p>
+<p>A taxa efetiva (<strong>5,91% a.m.</strong>) supera a contratada (5% a.m.) porque o IOF também rende juros.</p>
+<hr>
+<p><strong>B — Não Financiado (IOF descontado na liberação):</strong></p>
+<p>O banco libera R$ 10.000 − R$ 350 = R$ <strong>9.650</strong> líquidos. O empréstimo é de R$ 10.000 à taxa de 5% a.m.:</p>
+<p><span class="math display">\[VF = 10.000 \times (1{,}05)^4 = \text{R\$}\;12.155{,}06\]</span></p>
+<p>A taxa efetiva <strong>do crédito</strong> permanece em <strong>5% a.m.</strong> — o IOF é um custo tributário separado, não compõe a base de juros.</p>
+</div>
+</div>
 </section>
-<section id="contato" class="level2">
-<h2 class="anchored" data-anchor-id="contato">Contato</h2>
-<p>Dúvidas sobre o conteúdo podem ser encaminhadas pelo e-mail institucional ou pela plataforma do curso.</p>
+<section id="longo-prazo-caso-2" class="level3">
+<h3 class="anchored" data-anchor-id="longo-prazo-caso-2">Longo Prazo — Caso 2</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Bullet 14 meses, i = 5% a.m.">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Bullet 14 meses, i = 5% a.m.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dados:</strong> <span class="math inline">\(P = \text{R\$}\;10.000\)</span>, <span class="math inline">\(n = 14\)</span> meses (&gt; 12 meses), bullet, <span class="math inline">\(i = 5\%\)</span> a.m.</p>
+<p>Como <span class="math inline">\(n &gt; 12\)</span> meses (prazo superior a 365 dias), aplica-se a alíquota máxima:</p>
+<p><span class="math display">\[IOF = 3{,}38\% \times 10.000 = \text{R\$}\;338\]</span></p>
+<p><strong>Financiado:</strong></p>
+<p><span class="math display">\[VF = 10.338 \times (1{,}05)^{14} = \textbf{R\$}\;20.468{,}53\]</span></p>
+<p>Taxa efetiva:</p>
+<p><span class="math display">\[\frac{20.468{,}53}{10.000} = (1+r)^{14} \implies r \approx \mathbf{5{,}25\%}\text{ a.m.}\]</span></p>
+<p>O spread gerado pelo IOF é menor do que no curto prazo (0,25 p.p. vs.&nbsp;0,91 p.p.) porque, com prazo mais longo, o custo fixo do IOF se dilui ao longo do tempo.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="empréstimos-amortizados-com-iof-tabela-price" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="empréstimos-amortizados-com-iof-tabela-price"><span class="header-section-number">10.4</span> Empréstimos Amortizados com IOF — Tabela Price</h2>
+<p>Quando o empréstimo é pago em <strong>parcelas periódicas</strong> (em vez de bullet), o IOF é calculado <strong>sobre cada amortização</strong>, com a alíquota crescendo conforme o prazo acumulado até cada parcela. Para calcular o valor amortizado (componente de principal) em cada prestação, utiliza-se a <strong>Tabela Price</strong>:</p>
+<p><span class="math display">\[A_k = \frac{R}{(1+i)^{n-k+1}}\]</span></p>
+<p>onde <span class="math inline">\(R\)</span> é a prestação fixa, <span class="math inline">\(i\)</span> a taxa periódica e <span class="math inline">\(n\)</span> o número de parcelas.</p>
+<section id="alíquota-iof-por-parcela" class="level3">
+<h3 class="anchored" data-anchor-id="alíquota-iof-por-parcela">Alíquota IOF por Parcela</h3>
+<p>Para empréstimos amortizados <strong>não financiados</strong>, o IOF de cada parcela é calculado com base nos dias acumulados até aquele pagamento:</p>
+<p><span class="math display">\[\text{Alíquota}_k = \min\!\left(0{,}38\% + 0{,}0082\% \times d_k,\; 3{,}38\%\right)\]</span></p>
+<p>onde <span class="math inline">\(d_k\)</span> é o número de dias corridos até o <span class="math inline">\(k\)</span>-ésimo pagamento. Atingido o teto de 365 dias, a alíquota fica fixa em 3,38%.</p>
+</section>
+<section id="caso-3-amortização-trimestral-não-financiado" class="level3">
+<h3 class="anchored" data-anchor-id="caso-3-amortização-trimestral-não-financiado">Caso 3 — Amortização Trimestral (Não Financiado)</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Price trimestral, i = 5% a.t., 5 parcelas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Price trimestral, i = 5% a.t., 5 parcelas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dados:</strong> <span class="math inline">\(P = \text{R\$}\;10.000\)</span>, <span class="math inline">\(n = 5\)</span> trimestres (15 meses), amortização trimestral (Tabela Price), <span class="math inline">\(i = 5\%\)</span> a.t.</p>
+<p><strong>Parcela fixa:</strong></p>
+<p><span class="math display">\[10.000 = R \cdot \frac{(1{,}05)^5 - 1}{0{,}05} \cdot \frac{1}{(1{,}05)^5} \implies R = \text{R\$}\;2.303{,}75\]</span></p>
+<p><strong>Quadro de amortização com IOF:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 25%">
+<col style="width: 27%">
+<col style="width: 20%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Trim.</th>
+<th style="text-align: center;">Prestação (R$)</th>
+<th style="text-align: center;">Amortização (R$)</th>
+<th style="text-align: center;">Alíquota IOF</th>
+<th style="text-align: center;">IOF (R$)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2.303,75</td>
+<td style="text-align: center;">1.803,75</td>
+<td style="text-align: center;">1,13%</td>
+<td style="text-align: center;">20,42</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2.303,75</td>
+<td style="text-align: center;">1.900,04</td>
+<td style="text-align: center;">1,88%</td>
+<td style="text-align: center;">35,66</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2.303,75</td>
+<td style="text-align: center;">1.995,25</td>
+<td style="text-align: center;">2,63%</td>
+<td style="text-align: center;">52,48</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">2.303,75</td>
+<td style="text-align: center;">2.095,01</td>
+<td style="text-align: center;">3,38%</td>
+<td style="text-align: center;">70,86</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">2.303,75</td>
+<td style="text-align: center;">2.199,76</td>
+<td style="text-align: center;">3,38%*</td>
+<td style="text-align: center;">74,90</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Total</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>10.000,00</strong></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><strong>254,32</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>*Alíquota máxima atingida (teto de 365 dias).</em></p>
+<p>As alíquotas crescem porque a cada trimestre acumulam-se mais dias: 91 dias (1,13%), 182 dias (1,88%), 273 dias (2,63%) e, a partir de 365 dias, o teto de 3,38%.</p>
+<p><strong>Taxa efetiva (não financiado):</strong></p>
+<p>No caso não financiado, o total de IOF (<strong>R$ 253,32</strong>) é descontado da liberação. O tomador recebe:</p>
+<p><span class="math display">\[VP_{\text{líquido}} = 10.000 - 253{,}32 = \text{R\$}\;9.746{,}69 \text{ (líquido)}\]</span></p>
+<p>A taxa efetiva <span class="math inline">\(r\)</span> é aquela que desconta as 5 prestações de R$ 2.303,75 ao valor líquido recebido:</p>
+<p><span class="math display">\[9.746{,}69 = 2.303{,}75 \cdot \frac{(1+r)^5 - 1}{r} \cdot \frac{1}{(1+r)^5} \implies r \approx \mathbf{5{,}94\%}\text{ a.t.}\]</span></p>
+<p>Mesmo sem financiar o IOF, a taxa efetiva (5,94% a.t.) supera a contratada (5% a.t.) porque o tomador recebe menos do que deve pagar.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Resumo: efeito do IOF na taxa efetiva">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Resumo: efeito do IOF na taxa efetiva
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 18%">
+<col style="width: 10%">
+<col style="width: 25%">
+<col style="width: 24%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Modalidade</th>
+<th>Prazo</th>
+<th style="text-align: center;">IOF Financiado?</th>
+<th style="text-align: center;">Taxa contratada</th>
+<th style="text-align: center;">Taxa efetiva</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Bullet</td>
+<td>4 meses</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">5,00% a.m.</td>
+<td style="text-align: center;">5,91% a.m.</td>
+</tr>
+<tr class="even">
+<td>Bullet</td>
+<td>4 meses</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">5,00% a.m.</td>
+<td style="text-align: center;">5,00% a.m.</td>
+</tr>
+<tr class="odd">
+<td>Bullet</td>
+<td>14 meses</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">5,00% a.m.</td>
+<td style="text-align: center;">5,25% a.m.</td>
+</tr>
+<tr class="even">
+<td>Price (5 tri)</td>
+<td>15 meses</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">5,00% a.t.</td>
+<td style="text-align: center;">5,94% a.t.</td>
+</tr>
+</tbody>
+</table>
+<p>O IOF <strong>sempre eleva o custo efetivo</strong> para o tomador — mesmo quando não financiado, reduz o valor líquido recebido. A diferença entre as modalidades está em <strong>quem paga os juros sobre o IOF</strong>: no caso financiado, o próprio banco cobra juros sobre o tributo.</p>
+</div>
+</div>
 
 
 </section>
@@ -901,11 +1218,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./cap09.html" class="pagination-link" aria-label="Títulos Privados">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Títulos Privados</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cap01.html" class="pagination-link" aria-label="Regimes de Capitalização">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Regimes de Capitalização</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -913,4 +1230,4 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap10.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
