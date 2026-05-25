@@ -457,7 +457,17 @@ window.Quarto = {
   <li><a href="#projetos-com-ciclos-de-vida-diferentes" id="toc-projetos-com-ciclos-de-vida-diferentes" class="nav-link" data-scroll-target="#projetos-com-ciclos-de-vida-diferentes">Projetos com ciclos de vida diferentes</a></li>
   </ul></li>
   <li><a href="#tir-modificada-tirm" id="toc-tir-modificada-tirm" class="nav-link" data-scroll-target="#tir-modificada-tirm"><span class="header-section-number">7.6</span> TIR Modificada (TIRM)</a></li>
-  <li><a href="#índice-de-sharpe-e-risco" id="toc-índice-de-sharpe-e-risco" class="nav-link" data-scroll-target="#índice-de-sharpe-e-risco"><span class="header-section-number">7.7</span> Índice de Sharpe e Risco</a></li>
+  <li><a href="#vpl-com-replicação-infinita-vpln-infty" id="toc-vpl-com-replicação-infinita-vpln-infty" class="nav-link" data-scroll-target="#vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.7</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></a></li>
+  <li><a href="#duração-ótima-problema-da-poda-da-árvore" id="toc-duração-ótima-problema-da-poda-da-árvore" class="nav-link" data-scroll-target="#duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.8</span> Duração Ótima: Problema da Poda da Árvore</a>
+  <ul class="collapse">
+  <li><a href="#configuração-do-problema" id="toc-configuração-do-problema" class="nav-link" data-scroll-target="#configuração-do-problema">Configuração do Problema</a></li>
+  <li><a href="#abordagem-1-maximização-do-vpl-projeto-único" id="toc-abordagem-1-maximização-do-vpl-projeto-único" class="nav-link" data-scroll-target="#abordagem-1-maximização-do-vpl-projeto-único">Abordagem 1: Maximização do VPL (Projeto Único)</a></li>
+  <li><a href="#abordagem-2-maximização-da-tir" id="toc-abordagem-2-maximização-da-tir" class="nav-link" data-scroll-target="#abordagem-2-maximização-da-tir">Abordagem 2: Maximização da TIR</a></li>
+  <li><a href="#abordagem-3-maximização-do-vpl-com-replicação-vplt-infty" id="toc-abordagem-3-maximização-do-vpl-com-replicação-vplt-infty" class="nav-link" data-scroll-target="#abordagem-3-maximização-do-vpl-com-replicação-vplt-infty">Abordagem 3: Maximização do VPL com Replicação <span class="math inline">\(VPL(t, \infty)\)</span></a></li>
+  <li><a href="#comparação-dos-três-critérios" id="toc-comparação-dos-três-critérios" class="nav-link" data-scroll-target="#comparação-dos-três-critérios">Comparação dos Três Critérios</a></li>
+  <li><a href="#projetos-replicáveis-vs.-não-replicáveis" id="toc-projetos-replicáveis-vs.-não-replicáveis" class="nav-link" data-scroll-target="#projetos-replicáveis-vs.-não-replicáveis">Projetos Replicáveis vs.&nbsp;Não Replicáveis</a></li>
+  </ul></li>
+  <li><a href="#índice-de-sharpe-e-risco" id="toc-índice-de-sharpe-e-risco" class="nav-link" data-scroll-target="#índice-de-sharpe-e-risco"><span class="header-section-number">7.9</span> Índice de Sharpe e Risco</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap07.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -526,7 +536,7 @@ window.Quarto = {
 <section id="propriedades-da-função-vpl" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="propriedades-da-função-vpl">Propriedades da função VPL</h3>
 <p>Admitindo todos os fluxos intermediários positivos (<span class="math inline">\(R_t &gt; 0\)</span>), a função <span class="math inline">\(\text{VPL}(i)\)</span> é <strong>decrescente</strong> (<span class="math inline">\(\text{VPL}'(i) &lt; 0\)</span>) e <strong>convexa</strong> (<span class="math inline">\(\text{VPL}''(i) &gt; 0\)</span>).</p>
-<div id="cb4bb48d" class="cell" data-execution_count="1">
+<div id="82974186" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -645,7 +655,7 @@ window.Quarto = {
 <section id="projetos-de-escalas-diferentes" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="projetos-de-escalas-diferentes">Projetos de escalas diferentes</h3>
 <p>Quando dois projetos têm a mesma TIR mas escalas de investimento distintas, a TIR pode indicar um projeto menor; o VPL a taxas baixas pode indicar o maior. <strong>O VPL prevalece</strong>: maximiza a riqueza absoluta do investidor.</p>
-<div id="f3ad19a0" class="cell" data-execution_count="2">
+<div id="552b0276" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -695,8 +705,219 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="índice-de-sharpe-e-risco" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="índice-de-sharpe-e-risco"><span class="header-section-number">7.7</span> Índice de Sharpe e Risco</h2>
+<section id="vpl-com-replicação-infinita-vpln-infty" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.7</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></h2>
+<p>Até aqui, as ferramentas de VPL e TIR assumiam uma <strong>duração fixa</strong> do projeto. Mas e se a duração for a própria decisão? E se o projeto for <strong>replicável</strong> — ao final de cada ciclo de <span class="math inline">\(n\)</span> anos, podemos reiniciar um ciclo idêntico indefinidamente?</p>
+<p>Para projetos replicáveis, o critério correto é maximizar o <strong>VPL de um fluxo infinito de replicações</strong>:</p>
+<p><span class="math display">\[VPL(n, \infty) = VPL(n) + \frac{VPL(n)}{(1+k)^n} + \frac{VPL(n)}{(1+k)^{2n}} + \cdots\]</span></p>
+<p>Reconhecendo a progressão geométrica com razão <span class="math inline">\(\alpha = \frac{1}{(1+k)^n}\)</span>:</p>
+<p><span class="math display">\[VPL(n, \infty) = VPL(n)\left(1 + \alpha + \alpha^2 + \cdots\right) = \frac{VPL(n)}{1 - \frac{1}{(1+k)^n}}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado — VPL com Replicação Infinita">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado — VPL com Replicação Infinita
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{VPL(n,\infty) = \frac{VPL(n)}{1 - \frac{1}{(1+k)^n}}}\]</span></p>
+<p>Para tempo contínuo (taxa contínua <span class="math inline">\(k\)</span>):</p>
+<p><span class="math display">\[\boxed{VPL(t,\infty) = -c + \frac{V(t) - c}{e^{kt} - 1}}\]</span></p>
+<p>onde <span class="math inline">\(V(t)\)</span> é o valor do ativo no momento da colheita, <span class="math inline">\(c\)</span> é o custo inicial e <span class="math inline">\(k\)</span> o custo de oportunidade.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="duração-ótima-problema-da-poda-da-árvore" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.8</span> Duração Ótima: Problema da Poda da Árvore</h2>
+<p>O problema clássico de <strong>timing ótimo</strong> aparece quando o valor de um ativo cresce com o tempo e precisamos decidir <em>quando colher</em>. Exemplos: plantio de árvores, envelhecimento de uísque, exploração de recursos naturais, venda de empresa em crescimento.</p>
+<section id="configuração-do-problema" class="level3">
+<h3 class="anchored" data-anchor-id="configuração-do-problema">Configuração do Problema</h3>
+<p>Assuma um bosque de árvores cuja receita de colheita no instante <span class="math inline">\(t\)</span> é dada por:</p>
+<p><span class="math display">\[V(t) = 10.000\sqrt{1+t}\]</span></p>
+<p>Parâmetros: - Custo inicial: <span class="math inline">\(c = \$15.000\)</span> - Custo de oportunidade: <span class="math inline">\(k = 5\%\)</span> a.a. (contínuo) - VPL de uma colheita única no instante <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[VPL(t) = V(t)\cdot e^{-kt} - c = 10.000\sqrt{1+t}\cdot e^{-0{,}05t} - 15.000\]</span></p>
+<p>O objetivo é encontrar <span class="math inline">\(t^*\)</span> que <strong>maximiza</strong> essa função.</p>
+<hr>
+</section>
+<section id="abordagem-1-maximização-do-vpl-projeto-único" class="level3">
+<h3 class="anchored" data-anchor-id="abordagem-1-maximização-do-vpl-projeto-único">Abordagem 1: Maximização do VPL (Projeto Único)</h3>
+<p>Para um projeto <strong>não replicável</strong> (única colheita), maximizamos <span class="math inline">\(VPL(t)\)</span> derivando e igualando a zero:</p>
+<p><span class="math display">\[\frac{d(VPL)}{dt} = \left[\frac{dV(t)}{dt}\cdot e^{-kt} + V(t)\cdot(-ke^{-kt})\right] = 0\]</span></p>
+<p><span class="math display">\[\Rightarrow \frac{dV(t)/dt}{V(t)} = k\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Regra de Ouro do Timing Ótimo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Regra de Ouro do Timing Ótimo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>O momento ótimo de colher é quando a taxa de crescimento marginal do ativo se iguala ao custo de oportunidade do capital.</strong></p>
+<p><span class="math display">\[\frac{V'(t)}{V(t)} = k\]</span></p>
+</div>
+</div>
+<p>Aplicando ao nosso exemplo:</p>
+<p><span class="math display">\[\frac{dV}{dt} = \frac{10.000}{2\sqrt{1+t}}, \qquad \frac{V'(t)}{V(t)} = \frac{10.000}{2\sqrt{1+t}} \cdot \frac{1}{10.000\sqrt{1+t}} = \frac{1}{2(1+t)} = k = 0{,}05\]</span></p>
+<p><span class="math display">\[\Rightarrow 1 + t = \frac{1}{2 \times 0{,}05} = 10 \quad\Rightarrow\quad \mathbf{t^* = 9 \text{ anos}}\]</span></p>
+<div id="fa6c4f0b" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stderr">
+<pre><code>&lt;&gt;:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+&lt;&gt;:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+C:\Users\André Mancha\AppData\Local\Temp\ipykernel_15596\1592791013.py:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
+  ax.set_ylabel('VPL (\$)', fontsize=10)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cap07_files/figure-html/cell-4-output-2.png" class="quarto-figure quarto-figure-center figure-img" width="662" height="371"></p>
+</figure>
+</div>
+</div>
+</div>
+<hr>
+</section>
+<section id="abordagem-2-maximização-da-tir" class="level3">
+<h3 class="anchored" data-anchor-id="abordagem-2-maximização-da-tir">Abordagem 2: Maximização da TIR</h3>
+<p>A <strong>TIR</strong> de uma colheita única no instante <span class="math inline">\(t\)</span> satisfaz <span class="math inline">\(VPL = 0\)</span>:</p>
+<p><span class="math display">\[V(t)\cdot e^{-it} = c \quad\Rightarrow\quad i = \frac{\ln(V(t)/c)}{t}\]</span></p>
+<p>Maximizando em relação a <span class="math inline">\(t\)</span>:</p>
+<p><span class="math display">\[\frac{di}{dt} = \frac{1}{t}\left[\frac{V'(t)}{V(t)} - \frac{\ln(V(t)/c)}{t}\right] = 0 \quad\Rightarrow\quad \frac{V'(t)}{V(t)} = i\]</span></p>
+<p>A regra é a mesma estrutura — colher quando a taxa de crescimento marginal iguala a TIR — mas a TIR assume que as receitas intermediárias são reinvestidas à <strong>própria TIR do projeto</strong>, não ao custo de oportunidade <span class="math inline">\(k\)</span>.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Por que a TIR leva a uma decisão subótima?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Por que a TIR leva a uma decisão subótima?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A TIR assume que os fluxos gerados pela colheita poderiam ser reinvestidos à própria TIR do projeto, o que é irrealista. A taxa de reinvestimento mais sólida é o <strong>custo de oportunidade <span class="math inline">\(k\)</span></strong>. Por isso, a maximização da TIR geralmente leva a colher <strong>mais cedo</strong> do que o ótimo.</p>
+<p>No exemplo: <span class="math inline">\(t^* \approx 4 \text{ anos}\)</span> pela TIR vs.&nbsp;<span class="math inline">\(t^* = 9 \text{ anos}\)</span> pelo VPL único. <span class="math display">\[TIR(t=4) \approx 9{,}98\%\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="abordagem-3-maximização-do-vpl-com-replicação-vplt-infty" class="level3">
+<h3 class="anchored" data-anchor-id="abordagem-3-maximização-do-vpl-com-replicação-vplt-infty">Abordagem 3: Maximização do VPL com Replicação <span class="math inline">\(VPL(t, \infty)\)</span></h3>
+<p>Para um bosque de árvores (ativo <strong>replicável</strong>), o objetivo é maximizar o valor de um fluxo infinito de colheitas:</p>
+<p><span class="math display">\[VPL(t, \infty) = -c + \frac{V(t) - c}{e^{kt} - 1}\]</span></p>
+<p>Derivando em relação a <span class="math inline">\(t\)</span> e igualando a zero:</p>
+<p><span class="math display">\[\frac{dVPL(t,\infty)}{dt} = 0 \quad\Rightarrow\quad \frac{dV(t)}{dt} = \frac{k(V(t)-c)}{1-e^{-kt}}\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Regra de Ouro com Replicação">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Regra de Ouro com Replicação
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O ganho marginal de esperar deve igualar o <strong>custo de oportunidade de adiar a perpetuidade</strong>:</p>
+<p><span class="math display">\[V'(t) = \frac{k\,(V(t) - c)}{1 - e^{-kt}}\]</span></p>
+<p>Resolvendo numericamente: <span class="math inline">\(\mathbf{t^* \approx 4{,}61 \text{ anos}}\)</span>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="comparação-dos-três-critérios" class="level3">
+<h3 class="anchored" data-anchor-id="comparação-dos-três-critérios">Comparação dos Três Critérios</h3>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Critério</th>
+<th style="text-align: center;"><span class="math inline">\(t^*\)</span></th>
+<th style="text-align: center;">TIR</th>
+<th style="text-align: center;"><span class="math inline">\(VPL_{k=5\%}\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(VPL(t,\infty)\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>VPL máximo (único)</td>
+<td style="text-align: center;">9 anos</td>
+<td style="text-align: center;">8,29%</td>
+<td style="text-align: center;">$5.160</td>
+<td style="text-align: center;">$14.249</td>
+</tr>
+<tr class="even">
+<td>VPL(∞) com replicação</td>
+<td style="text-align: center;">4,61 anos</td>
+<td style="text-align: center;">9,91%</td>
+<td style="text-align: center;">$3.810</td>
+<td style="text-align: center;"><strong>$18.505</strong></td>
+</tr>
+<tr class="odd">
+<td>TIR máxima</td>
+<td style="text-align: center;">4 anos</td>
+<td style="text-align: center;">9,98%</td>
+<td style="text-align: center;">$3.320</td>
+<td style="text-align: center;">$18.245</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled" title="Quanto vale a terra?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Quanto vale a terra?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O valor criado pela <strong>melhor estratégia</strong> (replicação com <span class="math inline">\(t \approx 4{,}6\)</span> anos) é o VPL máximo com replicação: <strong>$18.500</strong>.</p>
+<p>O valor total da terra (o ativo subjacente) inclui também o custo do primeiro plantio:</p>
+<p><span class="math display">\[\text{Valor da Terra} = VPL(t^*, \infty) + c = \$18.500 + \$15.000 = \mathbf{\$33.500}\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="projetos-replicáveis-vs.-não-replicáveis" class="level3">
+<h3 class="anchored" data-anchor-id="projetos-replicáveis-vs.-não-replicáveis">Projetos Replicáveis vs.&nbsp;Não Replicáveis</h3>
+<p>A escolha do critério correto depende da natureza do projeto:</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Projetos Únicos e Não Replicáveis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Projetos Únicos e Não Replicáveis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Exemplos:</strong> venda de uma empresa, projeto de P&amp;D para patente específica, exploração de mina.</p>
+<p><strong>Abordagem correta: Maximização do VPL simples.</strong></p>
+<p><strong>Por quê?</strong> Se não existe oportunidade de repetir o ciclo, a melhor decisão é esperar até <span class="math inline">\(t = 9\)</span> anos — o ponto de máximo do VPL único.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Projetos Replicáveis">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Projetos Replicáveis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Exemplos:</strong> plantio de árvores, envelhecimento de uísque, gestão de ativos renováveis.</p>
+<p><strong>Abordagem correta: Maximização do VPL com Replicação <span class="math inline">\(VPL(t, \infty)\)</span>.</strong></p>
+<p><strong>Por quê?</strong> Maximiza a riqueza ao otimizar o uso do ativo subjacente (a terra, a destilaria) para um fluxo infinito de ciclos. A melhor decisão é colher a cada <span class="math inline">\(t \approx 4{,}6\)</span> anos.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="índice-de-sharpe-e-risco" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="índice-de-sharpe-e-risco"><span class="header-section-number">7.9</span> Índice de Sharpe e Risco</h2>
 <p>Para comparar ativos com diferentes perfis de risco, define-se o retorno histórico:</p>
 <p><span class="math display">\[r_t = \frac{P_t - P_{t-1}}{P_{t-1}}, \qquad \bar{r} = \frac{1}{n}\sum_{t=1}^n r_t, \qquad \sigma = \sqrt{\frac{\sum_{t=1}^n (r_t - \bar{r})^2}{n-1}}.\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Definição">

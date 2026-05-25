@@ -443,7 +443,14 @@ window.Quarto = {
   <li><a href="#motivação" id="toc-motivação" class="nav-link active" data-scroll-target="#motivação"><span class="header-section-number">3.1</span> Motivação</a></li>
   <li><a href="#séries-discretas-com-taxa-contínua" id="toc-séries-discretas-com-taxa-contínua" class="nav-link" data-scroll-target="#séries-discretas-com-taxa-contínua"><span class="header-section-number">3.2</span> Séries Discretas com Taxa Contínua</a></li>
   <li><a href="#comparação-juros-compostos-vs.-juros-contínuos" id="toc-comparação-juros-compostos-vs.-juros-contínuos" class="nav-link" data-scroll-target="#comparação-juros-compostos-vs.-juros-contínuos"><span class="header-section-number">3.3</span> Comparação: Juros Compostos vs.&nbsp;Juros Contínuos</a></li>
-  <li><a href="#séries-contínuas-fluxo-ininterrupto" id="toc-séries-contínuas-fluxo-ininterrupto" class="nav-link" data-scroll-target="#séries-contínuas-fluxo-ininterrupto"><span class="header-section-number">3.4</span> Séries Contínuas (Fluxo Ininterrupto)</a></li>
+  <li><a href="#séries-contínuas-fluxo-ininterrupto" id="toc-séries-contínuas-fluxo-ininterrupto" class="nav-link" data-scroll-target="#séries-contínuas-fluxo-ininterrupto"><span class="header-section-number">3.4</span> Séries Contínuas (Fluxo Ininterrupto)</a>
+  <ul class="collapse">
+  <li><a href="#série-uniforme-contínua-rt-q" id="toc-série-uniforme-contínua-rt-q" class="nav-link" data-scroll-target="#série-uniforme-contínua-rt-q">Série Uniforme Contínua — <span class="math inline">\(R(t) = Q\)</span></a></li>
+  <li><a href="#série-em-pa-crescente-rt-r-bt" id="toc-série-em-pa-crescente-rt-r-bt" class="nav-link" data-scroll-target="#série-em-pa-crescente-rt-r-bt">Série em PA Crescente — <span class="math inline">\(R(t) = R + bt\)</span></a></li>
+  <li><a href="#série-em-pa-decrescente-rt-r---bt" id="toc-série-em-pa-decrescente-rt-r---bt" class="nav-link" data-scroll-target="#série-em-pa-decrescente-rt-r---bt">Série em PA Decrescente — <span class="math inline">\(R(t) = R - bt\)</span></a></li>
+  <li><a href="#série-em-pg-contínua-rt-realpha-t" id="toc-série-em-pg-contínua-rt-realpha-t" class="nav-link" data-scroll-target="#série-em-pg-contínua-rt-realpha-t">Série em PG Contínua — <span class="math inline">\(R(t) = Re^{\alpha t}\)</span></a></li>
+  <li><a href="#exemplo-3.11-série-contínua-em-pa" id="toc-exemplo-3.11-série-contínua-em-pa" class="nav-link" data-scroll-target="#exemplo-3.11-série-contínua-em-pa">Exemplo 3.11 — Série Contínua em PA</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap03.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -552,19 +559,25 @@ window.Quarto = {
 </section>
 <section id="séries-contínuas-fluxo-ininterrupto" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="séries-contínuas-fluxo-ininterrupto"><span class="header-section-number">3.4</span> Séries Contínuas (Fluxo Ininterrupto)</h2>
-<p>Quando os depósitos ocorrem de forma <em>contínua</em>, a soma se torna uma integral. Para um fluxo constante <span class="math inline">\(b\)</span> por unidade de tempo durante <span class="math inline">\([0, T]\)</span>:</p>
-<p><span class="math display">\[S = \int_0^T b\, e^{r(T-t)}\, dt = b \cdot \frac{e^{rT} - 1}{r}.\]</span></p>
-<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
+<p>Quando os depósitos ocorrem de forma <em>contínua</em> — isto é, são uma função contínua do tempo <span class="math inline">\(R(t)\)</span> —, o valor atual dos depósitos é determinado pela integral:</p>
+<p><span class="math display">\[P = \int_{t=0}^{n} R(t)\, e^{-rt}\, dt\]</span></p>
+<p>pois cada depósito infinitesimal <span class="math inline">\(R(t)\,dt\)</span> realizado no instante <span class="math inline">\(t\)</span> possui valor atual <span class="math inline">\(R(t)\,e^{-rt}\,dt\)</span>. O <strong>montante</strong> (valor futuro) é <span class="math inline">\(S = P \cdot e^{rn}\)</span>.</p>
+<hr>
+<section id="série-uniforme-contínua-rt-q" class="level3">
+<h3 class="anchored" data-anchor-id="série-uniforme-contínua-rt-q">Série Uniforme Contínua — <span class="math inline">\(R(t) = Q\)</span></h3>
+<p>Para um fluxo constante <span class="math inline">\(R(t) = Q\)</span> ao longo de <span class="math inline">\([0,n]\)</span>:</p>
+<p><span class="math display">\[P = \int_0^n Q\, e^{-rt}\, dt = Q\left(-\frac{e^{-rt}}{r}\right)\Bigg|_0^n = Q\left(\frac{1 - e^{-rn}}{r}\right)\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado — Série Uniforme Contínua">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Resultado
+<span class="screen-reader-only">Important</span>Resultado — Série Uniforme Contínua
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><span class="math display">\[S_{\text{cont}} = \frac{b(e^{rT}-1)}{r}, \qquad P_{\text{cont}} = \frac{b(1-e^{-rT})}{r}.\]</span></p>
+<p><span class="math display">\[\boxed{P = Q\left(\frac{1 - e^{-rn}}{r}\right)}, \qquad \boxed{S = Q\left(\frac{e^{rn} - 1}{r}\right)}\]</span></p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Observação">
@@ -577,11 +590,134 @@ window.Quarto = {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Para fluxos contínuos, a capitalização instantânea é o regime <em>natural</em>: a fórmula discreta com juros compostos requer uma escolha artificial de periodicidade (mensal, diária, etc.), enquanto a contínua é independente de convenção.</p>
+<p>Para fluxos contínuos, a capitalização instantânea é o regime <em>natural</em>: basta trocar a fórmula discreta <span class="math inline">\([(1+i)^n-1]/i\)</span> pela contínua <span class="math inline">\((e^{rn}-1)/r\)</span>.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="série-em-pa-crescente-rt-r-bt" class="level3">
+<h3 class="anchored" data-anchor-id="série-em-pa-crescente-rt-r-bt">Série em PA Crescente — <span class="math inline">\(R(t) = R + bt\)</span></h3>
+<p>Quando os depósitos crescem linearmente com o tempo, <span class="math inline">\(R(t) = R + bt\)</span>, o valor presente é decomposto em duas partes:</p>
+<p><span class="math display">\[P = \int_0^n (R + bt)\,e^{-rt}\,dt = \underbrace{R\int_0^n e^{-rt}\,dt}_{\text{sabemos}} + \underbrace{b\int_0^n t\,e^{-rt}\,dt}_{\text{calcular}}\]</span></p>
+<p>A segunda integral resolve-se por <strong>integração por partes</strong>, com a troca de variável <span class="math inline">\(x = -rt\)</span>:</p>
+<p><span class="math display">\[b\int_0^n t\,e^{-rt}\,dt = \frac{b}{r^2}\left(-nre^{-rn} - e^{-rn} + 1\right) = \frac{b}{r^2}\left(1 - e^{-rn} - nre^{-rn}\right)\]</span></p>
+<p>Portanto, o <strong>valor presente total</strong> é:</p>
+<p><span class="math display">\[P = \frac{R(1-e^{-rn})}{r} + \frac{b}{r^2}\!\left(1 - e^{-rn} - nre^{-rn}\right)\]</span></p>
+<p>e o <strong>montante</strong> correspondente (<span class="math inline">\(S = P \cdot e^{rn}\)</span>) pode ser reescrito como:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado — Série em PA Crescente Contínua">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado — Série em PA Crescente Contínua
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{S = R\left(\frac{e^{rn}-1}{r}\right) + \frac{b}{r}\!\left[\left(\frac{e^{rn}-1}{r}\right) - n\right]}\]</span></p>
+<p>onde o primeiro termo é a série uniforme contínua e o segundo é a contribuição do crescimento linear.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="série-em-pa-decrescente-rt-r---bt" class="level3">
+<h3 class="anchored" data-anchor-id="série-em-pa-decrescente-rt-r---bt">Série em PA Decrescente — <span class="math inline">\(R(t) = R - bt\)</span></h3>
+<p>Para depósitos que decrescem linearmente, basta inverter o sinal do gradiente:</p>
+<p><span class="math display">\[S = R\left(\frac{e^{rn}-1}{r}\right) - \frac{b}{r}\!\left[\left(\frac{e^{rn}-1}{r}\right) - n\right]\]</span></p>
+<hr>
+</section>
+<section id="série-em-pg-contínua-rt-realpha-t" class="level3">
+<h3 class="anchored" data-anchor-id="série-em-pg-contínua-rt-realpha-t">Série em PG Contínua — <span class="math inline">\(R(t) = Re^{\alpha t}\)</span></h3>
+<p>Quando os depósitos crescem a uma taxa contínua <span class="math inline">\(\alpha\)</span> (crescimento exponencial), o valor atual dos depósitos é:</p>
+<p><span class="math display">\[P = \int_0^n Re^{\alpha t}\,e^{-rt}\,dt = R\int_0^n e^{(\alpha-r)t}\,dt = R \cdot\frac{1}{(\alpha - r)}\,e^{(\alpha-r)t}\Bigg|_0^n\]</span></p>
+<p><span class="math display">\[= R\left(\frac{e^n - e^{\alpha n}}{r - \alpha}\right)\cdot\frac{1}{e^{rn}}\cdot e^{rn} \quad\Longrightarrow\quad P = R\left(\frac{1 - e^{(\alpha-r)n}}{r - \alpha}\right)\]</span></p>
+<div class="callout callout-style-default callout-important callout-titled" title="Resultado — Série em PG Contínua">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Resultado — Série em PG Contínua
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{P = R\left(\frac{1 - e^{(\alpha-r)n}}{r - \alpha}\right)}, \qquad \boxed{S = R\left(\frac{e^{rn} - e^{\alpha n}}{r - \alpha}\right)}\]</span></p>
+<p><strong>Nota:</strong> as expressões acima são válidas apenas para <span class="math inline">\(r \neq \alpha\)</span>. Se <span class="math inline">\(r = \alpha\)</span>, o depósito cresce exatamente à taxa de desconto e <span class="math inline">\(P = Rn\)</span> (área do retângulo).</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="exemplo-3.11-série-contínua-em-pa" class="level3">
+<h3 class="anchored" data-anchor-id="exemplo-3.11-série-contínua-em-pa">Exemplo 3.11 — Série Contínua em PA</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo 3.11 — Série em PA de 50 termos">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo 3.11 — Série em PA de 50 termos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Dados:</strong> série em PA de 50 termos, com 1ª prestação <span class="math inline">\(= 100\)</span> e última <span class="math inline">\(= 500\)</span>, taxa contínua <span class="math inline">\(r = 1{,}2\%\)</span> por período.</p>
+<p><strong>Resolução:</strong></p>
+<p>① Razão (gradiente linear): <span class="math inline">\(b = \Delta/n = (500 - 100)/50 = \mathbf{8}\)</span> por período.</p>
+<p>② Decomposição e aplicação da fórmula da série em PA crescente:</p>
+<p><span class="math display">\[S = 100\left(\frac{e^{0{,}012 \times 50}-1}{0{,}012}\right) + \frac{8}{0{,}012}\left[\left(\frac{e^{0{,}012 \times 50}-1}{0{,}012}\right) - 50\right] = \mathbf{19.190{,}92}\]</span></p>
+<p>O montante acumulado ao final dos 50 períodos é <strong>R$ 19.190,92</strong>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Resumo dos casos — Séries Contínuas">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Resumo dos casos — Séries Contínuas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 29%">
+<col style="width: 48%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th><span class="math inline">\(R(t)\)</span></th>
+<th>Montante <span class="math inline">\(S\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Uniforme</td>
+<td><span class="math inline">\(Q\)</span></td>
+<td><span class="math inline">\(Q\,\dfrac{e^{rn}-1}{r}\)</span></td>
+</tr>
+<tr class="even">
+<td>PA Crescente</td>
+<td><span class="math inline">\(R + bt\)</span></td>
+<td><span class="math inline">\(R\,\dfrac{e^{rn}-1}{r} + \dfrac{b}{r}\!\left[\dfrac{e^{rn}-1}{r} - n\right]\)</span></td>
+</tr>
+<tr class="odd">
+<td>PA Decrescente</td>
+<td><span class="math inline">\(R - bt\)</span></td>
+<td><span class="math inline">\(R\,\dfrac{e^{rn}-1}{r} - \dfrac{b}{r}\!\left[\dfrac{e^{rn}-1}{r} - n\right]\)</span></td>
+</tr>
+<tr class="even">
+<td>PG (<span class="math inline">\(r\neq\alpha\)</span>)</td>
+<td><span class="math inline">\(Re^{\alpha t}\)</span></td>
+<td><span class="math inline">\(R\,\dfrac{e^{rn}-e^{\alpha n}}{r-\alpha}\)</span></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
