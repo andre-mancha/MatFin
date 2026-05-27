@@ -440,25 +440,32 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#risco-e-retorno-introdução" id="toc-risco-e-retorno-introdução" class="nav-link active" data-scroll-target="#risco-e-retorno-introdução"><span class="header-section-number">7.1</span> Risco e Retorno: Introdução</a></li>
-  <li><a href="#valor-presente-líquido-vpl" id="toc-valor-presente-líquido-vpl" class="nav-link" data-scroll-target="#valor-presente-líquido-vpl"><span class="header-section-number">7.2</span> Valor Presente Líquido (VPL)</a>
+  <li><a href="#o-que-é-avaliação-de-investimentos" id="toc-o-que-é-avaliação-de-investimentos" class="nav-link active" data-scroll-target="#o-que-é-avaliação-de-investimentos"><span class="header-section-number">7.1</span> O que é Avaliação de Investimentos?</a>
+  <ul class="collapse">
+  <li><a href="#tipos-de-valor" id="toc-tipos-de-valor" class="nav-link" data-scroll-target="#tipos-de-valor">Tipos de Valor</a></li>
+  <li><a href="#por-que-avaliar" id="toc-por-que-avaliar" class="nav-link" data-scroll-target="#por-que-avaliar">Por que Avaliar?</a></li>
+  <li><a href="#os-três-pilares-da-avaliação" id="toc-os-três-pilares-da-avaliação" class="nav-link" data-scroll-target="#os-três-pilares-da-avaliação">Os Três Pilares da Avaliação</a></li>
+  <li><a href="#principais-modelos-de-avaliação" id="toc-principais-modelos-de-avaliação" class="nav-link" data-scroll-target="#principais-modelos-de-avaliação">Principais Modelos de Avaliação</a></li>
+  </ul></li>
+  <li><a href="#risco-e-retorno-introdução" id="toc-risco-e-retorno-introdução" class="nav-link" data-scroll-target="#risco-e-retorno-introdução"><span class="header-section-number">7.2</span> Risco e Retorno: Introdução</a></li>
+  <li><a href="#valor-presente-líquido-vpl" id="toc-valor-presente-líquido-vpl" class="nav-link" data-scroll-target="#valor-presente-líquido-vpl"><span class="header-section-number">7.3</span> Valor Presente Líquido (VPL)</a>
   <ul class="collapse">
   <li><a href="#regra-de-decisão" id="toc-regra-de-decisão" class="nav-link" data-scroll-target="#regra-de-decisão">Regra de decisão</a></li>
   <li><a href="#propriedades-da-função-vpl" id="toc-propriedades-da-função-vpl" class="nav-link" data-scroll-target="#propriedades-da-função-vpl">Propriedades da função VPL</a></li>
   </ul></li>
-  <li><a href="#taxa-interna-de-retorno-tir" id="toc-taxa-interna-de-retorno-tir" class="nav-link" data-scroll-target="#taxa-interna-de-retorno-tir"><span class="header-section-number">7.3</span> Taxa Interna de Retorno (TIR)</a>
+  <li><a href="#taxa-interna-de-retorno-tir" id="toc-taxa-interna-de-retorno-tir" class="nav-link" data-scroll-target="#taxa-interna-de-retorno-tir"><span class="header-section-number">7.4</span> Taxa Interna de Retorno (TIR)</a>
   <ul class="collapse">
   <li><a href="#unicidade-da-tir-regra-de-descartes" id="toc-unicidade-da-tir-regra-de-descartes" class="nav-link" data-scroll-target="#unicidade-da-tir-regra-de-descartes">Unicidade da TIR — Regra de Descartes</a></li>
   </ul></li>
-  <li><a href="#método-de-newtonraphson-para-calcular-a-tir" id="toc-método-de-newtonraphson-para-calcular-a-tir" class="nav-link" data-scroll-target="#método-de-newtonraphson-para-calcular-a-tir"><span class="header-section-number">7.4</span> Método de Newton–Raphson para Calcular a TIR</a></li>
-  <li><a href="#vpl-vs.-tir-conflitos" id="toc-vpl-vs.-tir-conflitos" class="nav-link" data-scroll-target="#vpl-vs.-tir-conflitos"><span class="header-section-number">7.5</span> VPL vs.&nbsp;TIR: Conflitos</a>
+  <li><a href="#método-de-newtonraphson-para-calcular-a-tir" id="toc-método-de-newtonraphson-para-calcular-a-tir" class="nav-link" data-scroll-target="#método-de-newtonraphson-para-calcular-a-tir"><span class="header-section-number">7.5</span> Método de Newton–Raphson para Calcular a TIR</a></li>
+  <li><a href="#vpl-vs.-tir-conflitos" id="toc-vpl-vs.-tir-conflitos" class="nav-link" data-scroll-target="#vpl-vs.-tir-conflitos"><span class="header-section-number">7.6</span> VPL vs.&nbsp;TIR: Conflitos</a>
   <ul class="collapse">
   <li><a href="#projetos-de-escalas-diferentes" id="toc-projetos-de-escalas-diferentes" class="nav-link" data-scroll-target="#projetos-de-escalas-diferentes">Projetos de escalas diferentes</a></li>
   <li><a href="#projetos-com-ciclos-de-vida-diferentes" id="toc-projetos-com-ciclos-de-vida-diferentes" class="nav-link" data-scroll-target="#projetos-com-ciclos-de-vida-diferentes">Projetos com ciclos de vida diferentes</a></li>
   </ul></li>
-  <li><a href="#tir-modificada-tirm" id="toc-tir-modificada-tirm" class="nav-link" data-scroll-target="#tir-modificada-tirm"><span class="header-section-number">7.6</span> TIR Modificada (TIRM)</a></li>
-  <li><a href="#vpl-com-replicação-infinita-vpln-infty" id="toc-vpl-com-replicação-infinita-vpln-infty" class="nav-link" data-scroll-target="#vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.7</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></a></li>
-  <li><a href="#duração-ótima-problema-da-poda-da-árvore" id="toc-duração-ótima-problema-da-poda-da-árvore" class="nav-link" data-scroll-target="#duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.8</span> Duração Ótima: Problema da Poda da Árvore</a>
+  <li><a href="#tir-modificada-tirm" id="toc-tir-modificada-tirm" class="nav-link" data-scroll-target="#tir-modificada-tirm"><span class="header-section-number">7.7</span> TIR Modificada (TIRM)</a></li>
+  <li><a href="#vpl-com-replicação-infinita-vpln-infty" id="toc-vpl-com-replicação-infinita-vpln-infty" class="nav-link" data-scroll-target="#vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.8</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></a></li>
+  <li><a href="#duração-ótima-problema-da-poda-da-árvore" id="toc-duração-ótima-problema-da-poda-da-árvore" class="nav-link" data-scroll-target="#duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.9</span> Duração Ótima: Problema da Poda da Árvore</a>
   <ul class="collapse">
   <li><a href="#configuração-do-problema" id="toc-configuração-do-problema" class="nav-link" data-scroll-target="#configuração-do-problema">Configuração do Problema</a></li>
   <li><a href="#abordagem-1-maximização-do-vpl-projeto-único" id="toc-abordagem-1-maximização-do-vpl-projeto-único" class="nav-link" data-scroll-target="#abordagem-1-maximização-do-vpl-projeto-único">Abordagem 1: Maximização do VPL (Projeto Único)</a></li>
@@ -467,7 +474,7 @@ window.Quarto = {
   <li><a href="#comparação-dos-três-critérios" id="toc-comparação-dos-três-critérios" class="nav-link" data-scroll-target="#comparação-dos-três-critérios">Comparação dos Três Critérios</a></li>
   <li><a href="#projetos-replicáveis-vs.-não-replicáveis" id="toc-projetos-replicáveis-vs.-não-replicáveis" class="nav-link" data-scroll-target="#projetos-replicáveis-vs.-não-replicáveis">Projetos Replicáveis vs.&nbsp;Não Replicáveis</a></li>
   </ul></li>
-  <li><a href="#índice-de-sharpe-e-risco" id="toc-índice-de-sharpe-e-risco" class="nav-link" data-scroll-target="#índice-de-sharpe-e-risco"><span class="header-section-number">7.9</span> Índice de Sharpe e Risco</a></li>
+  <li><a href="#índice-de-sharpe-e-risco" id="toc-índice-de-sharpe-e-risco" class="nav-link" data-scroll-target="#índice-de-sharpe-e-risco"><span class="header-section-number">7.10</span> Índice de Sharpe e Risco</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap07.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -494,14 +501,120 @@ window.Quarto = {
 </header>
 
 
-<section id="risco-e-retorno-introdução" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="risco-e-retorno-introdução"><span class="header-section-number">7.1</span> Risco e Retorno: Introdução</h2>
+<section id="o-que-é-avaliação-de-investimentos" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="o-que-é-avaliação-de-investimentos"><span class="header-section-number">7.1</span> O que é Avaliação de Investimentos?</h2>
+<p><em>Baseado em Damodaran (2012), Capítulos 1 e 2.</em></p>
+<p><strong>Avaliação de investimentos</strong> é o processo de estimar o valor de um ativo com base em seus fundamentos econômicos. É essencial para decisões de compra, venda, fusão ou financiamento de projetos.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Valor ≠ Preço">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Valor ≠ Preço
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O preço de mercado de um ativo pode estar acima ou abaixo do seu <strong>valor intrínseco</strong> — estimado a partir de fundamentos como fluxos de caixa futuros, risco e horizonte de tempo. Essa divergência é justamente o que cria oportunidades de investimento.</p>
+</div>
+</div>
+<section id="tipos-de-valor" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="tipos-de-valor">Tipos de Valor</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 36%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Definição</th>
+<th>Quando usar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Contábil</strong></td>
+<td>Valor registrado no balanço (custo histórico)</td>
+<td>Comparações patrimoniais</td>
+</tr>
+<tr class="even">
+<td><strong>De mercado</strong></td>
+<td>Preço corrente observado em bolsa ou transações</td>
+<td>Referência de precificação</td>
+</tr>
+<tr class="odd">
+<td><strong>Intrínseco</strong></td>
+<td>Valor presente dos fluxos de caixa futuros esperados</td>
+<td>Decisões de investimento</td>
+</tr>
+</tbody>
+</table>
+<p>A diferença entre valor de mercado e valor intrínseco é o ponto de partida de toda análise fundamentalista.</p>
+</section>
+<section id="por-que-avaliar" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="por-que-avaliar">Por que Avaliar?</h3>
+<p>A avaliação de investimentos serve a diferentes agentes econômicos com objetivos distintos:</p>
+<ul>
+<li><strong>Investidores:</strong> decidir comprar ou vender ações com base em se o preço está abaixo ou acima do valor intrínseco.</li>
+<li><strong>Gestores:</strong> identificar oportunidades e riscos em projetos de expansão, aquisição ou desinvestimento.</li>
+<li><strong>Credores:</strong> analisar a solvência e a capacidade de pagamento da empresa antes de conceder crédito.</li>
+<li><strong>Analistas:</strong> emitir recomendações de investimento fundamentadas em modelos quantitativos.</li>
+</ul>
+</section>
+<section id="os-três-pilares-da-avaliação" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="os-três-pilares-da-avaliação">Os Três Pilares da Avaliação</h3>
+<div class="callout callout-style-default callout-tip callout-titled" title="Pilares fundamentais (Damodaran)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Pilares fundamentais (Damodaran)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Todo modelo de avaliação se apoia em três variáveis centrais:</p>
+<ol type="1">
+<li><strong>Fluxos de caixa</strong> — o que o ativo vai gerar de caixa no futuro (receitas, lucros, dividendos).</li>
+<li><strong>Risco</strong> — a incerteza associada a esses fluxos, que determina a taxa de desconto adequada.</li>
+<li><strong>Tempo</strong> — o horizonte de vida do ativo e o momento em que os fluxos serão recebidos.</li>
+</ol>
+<p>Diferentes modelos variam na forma como estimam e combinam esses três elementos.</p>
+</div>
+</div>
+</section>
+<section id="principais-modelos-de-avaliação" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="principais-modelos-de-avaliação">Principais Modelos de Avaliação</h3>
+<p>Os modelos se dividem em três grandes famílias:</p>
+<p><strong>1. Fluxo de Caixa Descontado (FCD / DCF)</strong> Desconta os fluxos futuros esperados a uma taxa que reflita o risco. É o modelo mais rigoroso e internamente consistente. O VPL (Valor Presente Líquido) é sua aplicação direta na avaliação de projetos.</p>
+<p><strong>2. Avaliação Relativa (Múltiplos)</strong> Compara o ativo com pares usando múltiplos de mercado como P/L (preço/lucro), EV/EBITDA ou P/VPA. É rápido e amplamente usado na prática, mas depende da qualidade dos comparáveis.</p>
+<p><strong>3. Modelos de Opções Reais</strong> Trata a flexibilidade gerencial (adiar, expandir, abandonar um projeto) como opções financeiras. É especialmente útil para projetos com alta incerteza e valor de espera significativo — como a Poda da Árvore estudada adiante.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Por que duas pessoas avaliam o mesmo ativo de forma diferente?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Por que duas pessoas avaliam o mesmo ativo de forma diferente?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A avaliação não é objetiva: diferentes analistas podem chegar a valores distintos para o mesmo ativo porque divergem em suas estimativas de fluxos de caixa futuros, na taxa de desconto usada, no horizonte considerado e nos pressupostos de crescimento. A avaliação reflete tanto a análise quanto os julgamentos de quem a realiza.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="risco-e-retorno-introdução" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="risco-e-retorno-introdução"><span class="header-section-number">7.2</span> Risco e Retorno: Introdução</h2>
 <p>Todo investimento envolve um <strong>trade-off</strong> fundamental: entre projetos com mesmo retorno, escolhe-se o de <strong>menor risco</strong>; entre projetos com mesmo risco, escolhe-se o de <strong>maior retorno</strong>.</p>
 <p>Para mensurar e comparar projetos, três ferramentas centrais são: (1) <strong>VPL</strong> (Valor Presente Líquido): maximiza o lucro absoluto; (2) <strong>TIR</strong> (Taxa Interna de Retorno): mede a rentabilidade relativa; (3) <strong>TIRM</strong> (TIR Modificada): corrige uma limitação da TIR.</p>
 <hr>
 </section>
-<section id="valor-presente-líquido-vpl" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="valor-presente-líquido-vpl"><span class="header-section-number">7.2</span> Valor Presente Líquido (VPL)</h2>
+<section id="valor-presente-líquido-vpl" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="valor-presente-líquido-vpl"><span class="header-section-number">7.3</span> Valor Presente Líquido (VPL)</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="Definição">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -536,7 +649,7 @@ window.Quarto = {
 <section id="propriedades-da-função-vpl" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="propriedades-da-função-vpl">Propriedades da função VPL</h3>
 <p>Admitindo todos os fluxos intermediários positivos (<span class="math inline">\(R_t &gt; 0\)</span>), a função <span class="math inline">\(\text{VPL}(i)\)</span> é <strong>decrescente</strong> (<span class="math inline">\(\text{VPL}'(i) &lt; 0\)</span>) e <strong>convexa</strong> (<span class="math inline">\(\text{VPL}''(i) &gt; 0\)</span>).</p>
-<div id="82974186" class="cell" data-execution_count="1">
+<div id="f147eb41" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -548,8 +661,8 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="taxa-interna-de-retorno-tir" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="taxa-interna-de-retorno-tir"><span class="header-section-number">7.3</span> Taxa Interna de Retorno (TIR)</h2>
+<section id="taxa-interna-de-retorno-tir" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="taxa-interna-de-retorno-tir"><span class="header-section-number">7.4</span> Taxa Interna de Retorno (TIR)</h2>
 <div class="callout callout-style-default callout-tip callout-titled" title="Definição">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -614,8 +727,8 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="método-de-newtonraphson-para-calcular-a-tir" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="método-de-newtonraphson-para-calcular-a-tir"><span class="header-section-number">7.4</span> Método de Newton–Raphson para Calcular a TIR</h2>
+<section id="método-de-newtonraphson-para-calcular-a-tir" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="método-de-newtonraphson-para-calcular-a-tir"><span class="header-section-number">7.5</span> Método de Newton–Raphson para Calcular a TIR</h2>
 <p>Como a TIR não tem forma fechada em geral, usa-se métodos numéricos. O método de Newton–Raphson obtém aproximações sucessivas da raiz de <span class="math inline">\(f(r) = \text{VPL}(r) = 0\)</span>:</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Resultado">
 <div class="callout-header d-flex align-content-center">
@@ -650,12 +763,12 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="vpl-vs.-tir-conflitos" class="level2" data-number="7.5">
-<h2 data-number="7.5" class="anchored" data-anchor-id="vpl-vs.-tir-conflitos"><span class="header-section-number">7.5</span> VPL vs.&nbsp;TIR: Conflitos</h2>
+<section id="vpl-vs.-tir-conflitos" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="vpl-vs.-tir-conflitos"><span class="header-section-number">7.6</span> VPL vs.&nbsp;TIR: Conflitos</h2>
 <section id="projetos-de-escalas-diferentes" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="projetos-de-escalas-diferentes">Projetos de escalas diferentes</h3>
 <p>Quando dois projetos têm a mesma TIR mas escalas de investimento distintas, a TIR pode indicar um projeto menor; o VPL a taxas baixas pode indicar o maior. <strong>O VPL prevalece</strong>: maximiza a riqueza absoluta do investidor.</p>
-<div id="552b0276" class="cell" data-execution_count="2">
+<div id="0e76d238" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -671,8 +784,8 @@ window.Quarto = {
 <hr>
 </section>
 </section>
-<section id="tir-modificada-tirm" class="level2" data-number="7.6">
-<h2 data-number="7.6" class="anchored" data-anchor-id="tir-modificada-tirm"><span class="header-section-number">7.6</span> TIR Modificada (TIRM)</h2>
+<section id="tir-modificada-tirm" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="tir-modificada-tirm"><span class="header-section-number">7.7</span> TIR Modificada (TIRM)</h2>
 <p>A <strong>premissa implícita da TIR</strong> é que as receitas intermediárias são reinvestidas à <em>própria TIR</em>. Isso é irreal em muitos contextos.</p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Definição">
 <div class="callout-header d-flex align-content-center">
@@ -705,8 +818,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="vpl-com-replicação-infinita-vpln-infty" class="level2" data-number="7.7">
-<h2 data-number="7.7" class="anchored" data-anchor-id="vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.7</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></h2>
+<section id="vpl-com-replicação-infinita-vpln-infty" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="vpl-com-replicação-infinita-vpln-infty"><span class="header-section-number">7.8</span> VPL com Replicação Infinita — <span class="math inline">\(VPL(n, \infty)\)</span></h2>
 <p>Até aqui, as ferramentas de VPL e TIR assumiam uma <strong>duração fixa</strong> do projeto. Mas e se a duração for a própria decisão? E se o projeto for <strong>replicável</strong> — ao final de cada ciclo de <span class="math inline">\(n\)</span> anos, podemos reiniciar um ciclo idêntico indefinidamente?</p>
 <p>Para projetos replicáveis, o critério correto é maximizar o <strong>VPL de um fluxo infinito de replicações</strong>:</p>
 <p><span class="math display">\[VPL(n, \infty) = VPL(n) + \frac{VPL(n)}{(1+k)^n} + \frac{VPL(n)}{(1+k)^{2n}} + \cdots\]</span></p>
@@ -730,8 +843,8 @@ window.Quarto = {
 </div>
 <hr>
 </section>
-<section id="duração-ótima-problema-da-poda-da-árvore" class="level2" data-number="7.8">
-<h2 data-number="7.8" class="anchored" data-anchor-id="duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.8</span> Duração Ótima: Problema da Poda da Árvore</h2>
+<section id="duração-ótima-problema-da-poda-da-árvore" class="level2" data-number="7.9">
+<h2 data-number="7.9" class="anchored" data-anchor-id="duração-ótima-problema-da-poda-da-árvore"><span class="header-section-number">7.9</span> Duração Ótima: Problema da Poda da Árvore</h2>
 <p>O problema clássico de <strong>timing ótimo</strong> aparece quando o valor de um ativo cresce com o tempo e precisamos decidir <em>quando colher</em>. Exemplos: plantio de árvores, envelhecimento de uísque, exploração de recursos naturais, venda de empresa em crescimento.</p>
 <section id="configuração-do-problema" class="level3">
 <h3 class="anchored" data-anchor-id="configuração-do-problema">Configuração do Problema</h3>
@@ -764,17 +877,11 @@ window.Quarto = {
 <p>Aplicando ao nosso exemplo:</p>
 <p><span class="math display">\[\frac{dV}{dt} = \frac{10.000}{2\sqrt{1+t}}, \qquad \frac{V'(t)}{V(t)} = \frac{10.000}{2\sqrt{1+t}} \cdot \frac{1}{10.000\sqrt{1+t}} = \frac{1}{2(1+t)} = k = 0{,}05\]</span></p>
 <p><span class="math display">\[\Rightarrow 1 + t = \frac{1}{2 \times 0{,}05} = 10 \quad\Rightarrow\quad \mathbf{t^* = 9 \text{ anos}}\]</span></p>
-<div id="fa6c4f0b" class="cell" data-execution_count="3">
-<div class="cell-output cell-output-stderr">
-<pre><code>&lt;&gt;:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
-&lt;&gt;:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
-C:\Users\André Mancha\AppData\Local\Temp\ipykernel_15596\1592791013.py:22: SyntaxWarning: "\$" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\$"? A raw string is also an option.
-  ax.set_ylabel('VPL (\$)', fontsize=10)</code></pre>
-</div>
+<div id="27522f05" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="cap07_files/figure-html/cell-4-output-2.png" class="quarto-figure quarto-figure-center figure-img" width="662" height="371"></p>
+<p><img src="cap07_files/figure-html/cell-4-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="662" height="371"></p>
 </figure>
 </div>
 </div>
@@ -916,8 +1023,8 @@ C:\Users\André Mancha\AppData\Local\Temp\ipykernel_15596\1592791013.py:22: Synt
 <hr>
 </section>
 </section>
-<section id="índice-de-sharpe-e-risco" class="level2" data-number="7.9">
-<h2 data-number="7.9" class="anchored" data-anchor-id="índice-de-sharpe-e-risco"><span class="header-section-number">7.9</span> Índice de Sharpe e Risco</h2>
+<section id="índice-de-sharpe-e-risco" class="level2" data-number="7.10">
+<h2 data-number="7.10" class="anchored" data-anchor-id="índice-de-sharpe-e-risco"><span class="header-section-number">7.10</span> Índice de Sharpe e Risco</h2>
 <p>Para comparar ativos com diferentes perfis de risco, define-se o retorno histórico:</p>
 <p><span class="math display">\[r_t = \frac{P_t - P_{t-1}}{P_{t-1}}, \qquad \bar{r} = \frac{1}{n}\sum_{t=1}^n r_t, \qquad \sigma = \sqrt{\frac{\sum_{t=1}^n (r_t - \bar{r})^2}{n-1}}.\]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled" title="Definição">
