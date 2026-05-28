@@ -840,5 +840,115 @@
       "Parte V — Operações de Crédito",
       "<span class='chapter-number'>10</span>  <span class='chapter-title'>Operações de Crédito</span>"
     ]
+  },
+  {
+    "objectID": "cap11.html",
+    "href": "cap11.html",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "",
+    "text": "11.1 Lucro Não É Caixa\nBaseado em Damodaran (2012), Capítulo 3.\nUma das distinções mais importantes em finanças corporativas é a diferença entre lucro contábil e geração de caixa. Empresas podem apresentar lucro no resultado e, ao mesmo tempo, quebrar por falta de caixa — o chamado profit without cash.\nIsso acontece porque a contabilidade registra eventos pelo regime de competência: receitas são reconhecidas quando a venda ocorre, não quando o dinheiro entra; despesas são registradas quando incorridas, não quando pagas.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#lucro-não-é-caixa",
+    "href": "cap11.html#lucro-não-é-caixa",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "",
+    "text": "TipExemplo — Venda a prazo\n\n\n\nVocê vende R$ 1.000 hoje, mas o cliente paga em 60 dias.\n\nLucro contábil: aumenta hoje (regime de competência).\nCaixa: só entra daqui a 60 dias.\n\nA avaliação de investimentos depende de desembolsos reais — não do lucro contábil.\n\n\n\nO que é Lucro Contábil?\nO lucro contábil inclui itens que não representam fluxos de caixa efetivos:\n\nReceita reconhecida antes do recebimento (contas a receber).\nDespesas reconhecidas antes do pagamento (contas a pagar).\nItens não caixa: depreciação, amortização, provisões para devedores duvidosos.\n\nO objetivo do lucro contábil é representar o desempenho econômico da empresa — não o seu caixa disponível.\n\n\nPor que usar Fluxo de Caixa na Avaliação?\n\n\n\n\n\n\n\nVantagem\nExplicação\n\n\n\n\nComparabilidade\nPermite comparar projetos em diferentes momentos no tempo\n\n\nSem distorções\nRemove efeitos de escolhas contábeis (política de depreciação, provisões)\n\n\nDescontável\nPode ser trazido a valor presente com uma taxa de desconto adequada\n\n\nRelevante\nConecta a teoria diretamente às decisões reais de investimento",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#capital-de-giro-e-o-ciclo-financeiro",
+    "href": "cap11.html#capital-de-giro-e-o-ciclo-financeiro",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.2 Capital de Giro e o Ciclo Financeiro",
+    "text": "11.2 Capital de Giro e o Ciclo Financeiro\nO capital de giro (NWC — Net Working Capital) é o dinheiro necessário para manter a operação da empresa. Seus componentes afetam o caixa de formas distintas:\n\nEstoques aumentam → caixa diminui (dinheiro imobilizado em produtos).\nContas a receber aumentam → caixa diminui (vendas feitas mas ainda não recebidas).\nContas a pagar aumentam → caixa aumenta (compras feitas mas ainda não pagas).\n\n\n\n\n\n\n\nNoteCapital de giro cresce com as vendas\n\n\n\nEmpresas em alto crescimento precisam financiar estoques e crédito a clientes proporcionalmente às vendas — o que reduz o fluxo de caixa livre mesmo quando os lucros estão crescendo. Por isso, empresas de crescimento acelerado frequentemente apresentam FCFF baixo ou negativo.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#fcff-free-cash-flow-to-the-firm",
+    "href": "cap11.html#fcff-free-cash-flow-to-the-firm",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.3 FCFF — Free Cash Flow to the Firm",
+    "text": "11.3 FCFF — Free Cash Flow to the Firm\nO FCFF (Free Cash Flow to the Firm) mede a geração de caixa da empresa antes dos efeitos do financiamento (juros e dívidas). É o caixa disponível para todos os provedores de capital: acionistas e credores.\n\n\n\n\n\n\nImportantDefinição — FCFF\n\n\n\n\\[\\boxed{FCFF = EBIT(1-t) + Dep - CAPEX - \\Delta NWC}\\]\nonde:\n\n\n\nComponente\nDescrição\n\n\n\n\n\\(EBIT(1-t)\\)\nLucro operacional líquido de impostos (NOPAT)\n\n\n\\(+\\,Dep\\)\nDepreciação adicionada de volta (não é desembolso)\n\n\n\\(-\\,CAPEX\\)\nInvestimentos em ativos fixos (manutenção + expansão)\n\n\n\\(-\\,\\Delta NWC\\)\nVariação na necessidade de capital de giro\n\n\n\n\n\nO FCFF é uma medida “desalavancada” — independe da estrutura de capital da empresa — e mostra a geração de caixa da firma como um todo.\n\nInterpretação Econômica\nO FCFF responde à pergunta: “Quanto dinheiro sobra após manter e expandir a operação?”\nEsse caixa pertence a todos os financiadores e pode ser usado para: - Pagar juros sobre dívidas; - Amortizar o principal das dívidas; - Pagar dividendos ou recomprar ações.\n\n\nCAPEX: Manutenção vs. Expansão\nO investimento em ativos fixos (CAPEX) tem dois componentes com naturezas distintas:\n\nCAPEX de manutenção: necessário apenas para manter a operação atual (repõe ativos depreciados).\nCAPEX de expansão: necessário para crescer (amplia a capacidade produtiva).\n\nNa avaliação de projetos, ambos reduzem o FCFF — mas o de expansão gera fluxos futuros adicionais que devem ser capturados nas projeções.\n\n\nItens Não Recorrentes\nAo calcular o FCFF para avaliação, devem ser excluídos itens extraordinários que não se repetirão:\n\nGanhos com venda de ativos.\nMultas extraordinárias.\nReestruturações.\n\nA avaliação busca o fluxo de caixa recorrente e sustentável — não eventos pontuais.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#fcfe-free-cash-flow-to-equity",
+    "href": "cap11.html#fcfe-free-cash-flow-to-equity",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.4 FCFE — Free Cash Flow to Equity",
+    "text": "11.4 FCFE — Free Cash Flow to Equity\nO FCFE (Free Cash Flow to Equity) é o caixa que sobra especificamente para os acionistas, após honrar todas as obrigações financeiras.\n\n\n\n\n\n\nImportantDefinição — FCFE (via FCFF)\n\n\n\n\\[\\boxed{FCFE = FCFF - Juros(1-t) + \\Delta D\\acute{\\imath}vida}\\]\n\n\n\n\n\n\n\n\nImportantVersão alternativa — FCFE (via Lucro Líquido)\n\n\n\n\\[\\boxed{FCFE = \\text{Lucro L\\'{i}quido} + Dep - CAPEX - \\Delta NWC + \\Delta D\\acute{\\imath}vida}\\]\nÚtil quando já se dispõe do resultado líquido da empresa.\n\n\nO FCFE considera os efeitos da estrutura de capital: subtrai o custo líquido dos juros (após benefício fiscal) e adiciona o caixa gerado por novas captações de dívida.\n\nQuando usar FCFF vs. FCFE?\n\n\n\nSituação\nRecomendação\n\n\n\n\nAlavancagem muda muito ao longo do tempo\nFCFF (mais estável)\n\n\nEstrutura de capital é estável e previsível\nFCFE (mais direto)\n\n\nEmpresa sem dívida (all-equity)\nFCFF = FCFE",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#exemplo-numérico",
+    "href": "cap11.html#exemplo-numérico",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.5 Exemplo Numérico",
+    "text": "11.5 Exemplo Numérico\n\n\n\n\n\n\nTipExemplo — Cálculo de FCFF e FCFE\n\n\n\nDados:\n\n\n\nVariável\nValor\n\n\n\n\nEBIT\n350\n\n\nAlíquota de IR (\\(t\\))\n30%\n\n\nDepreciação\n50\n\n\nCAPEX\n100\n\n\n\\(\\Delta NWC\\)\n40\n\n\nJuros\n20\n\n\n\\(\\Delta\\) Dívida\n10\n\n\n\nCálculo do FCFF:\n\\[FCFF = 350(1-0{,}3) + 50 - 100 - 40 = 245 + 50 - 100 - 40 = \\mathbf{155}\\]\nTransformando em FCFE:\n\\[FCFE = 155 - 20(1-0{,}3) + 10 = 155 - 14 + 10 = \\mathbf{151}\\]\nInterpretação: a empresa gera R$ 155 de caixa livre para todos os financiadores; desse total, R$ 151 ficam disponíveis para os acionistas após o serviço da dívida (líquido de IR) e nova captação.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#resumo-lucro-vs.-caixa",
+    "href": "cap11.html#resumo-lucro-vs.-caixa",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.6 Resumo: Lucro vs. Caixa",
+    "text": "11.6 Resumo: Lucro vs. Caixa\n\n\n\n\n\n\nNoteOs cinco princípios do fluxo de caixa para avaliação\n\n\n\n\nLucro ≠ Caixa — o regime de competência distorce a realidade financeira.\nFCFF mede a geração de caixa da firma antes da dívida — pertence a todos os financiadores.\nFCFE mede o que sobra para os acionistas — após juros, principal e novas captações.\nCAPEX e variação de NWC são essenciais: crescimento consome caixa mesmo quando lucros sobem.\nAvaliação = descontar fluxos futuros ao valor presente — por isso a qualidade das projeções de caixa é o coração de qualquer análise.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#modelo-de-dividendos-ddm",
+    "href": "cap11.html#modelo-de-dividendos-ddm",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.7 Modelo de Dividendos — DDM",
+    "text": "11.7 Modelo de Dividendos — DDM\nUma abordagem alternativa para avaliar ações é pensar no valor de uma ação como o valor presente de todos os dividendos futuros. Essa lógica é o fundamento do Dividend Discount Model (DDM).\nEssa abordagem foca no fluxo de caixa efetivamente recebido pelo acionista (dividendos pagos) e é mais adequada quando:\n\nA empresa paga dividendos estáveis e previsíveis;\nO payout (proporção do lucro distribuída) é consistente ao longo do tempo;\nA política de dividendos reflete bem o fluxo de caixa disponível ao acionista.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#modelo-de-gordon-shapiro",
+    "href": "cap11.html#modelo-de-gordon-shapiro",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.8 Modelo de Gordon-Shapiro",
+    "text": "11.8 Modelo de Gordon-Shapiro\nO modelo mais simples e mais usado do DDM é o Modelo de Gordon-Shapiro (Gordon Growth Model), que assume crescimento constante e perpétuo dos dividendos à taxa \\(g\\):\n\n\n\n\n\n\nImportantModelo de Gordon-Shapiro\n\n\n\n\\[\\boxed{P_0 = \\frac{D_1}{r - g}}\\]\nonde:\n\n\n\nVariável\nDefinição\n\n\n\n\n\\(P_0\\)\nPreço justo da ação hoje\n\n\n\\(D_1 = D_0(1+g)\\)\nDividendo esperado no próximo período\n\n\n\\(r\\)\nCusto do capital próprio (retorno exigido pelo acionista)\n\n\n\\(g\\)\nTaxa de crescimento constante e perpétua dos dividendos\n\n\n\nCondição essencial: \\(r &gt; g\\) (sem isso, o preço seria infinito ou negativo).\n\n\n\nInterpretação Econômica\n\\[\\text{Preço} = \\frac{\\text{Pagamento ao acionista no próximo ano}}{\\text{Retorno exigido} - \\text{Crescimento esperado}}\\]\nA fórmula tem a mesma estrutura de uma perpetuidade crescente (como vimos no Cap. 4), onde o “fluxo” é o dividendo e a taxa de desconto efetiva é \\((r-g)\\):\n\nQuanto maior o dividendo \\(D_1\\) → maior \\(P_0\\).\nQuanto maior o crescimento \\(g\\) → maior \\(P_0\\) (mais valor futuro descontado).\nQuanto maior o retorno exigido \\(r\\) → menor \\(P_0\\) (fluxos futuros valem menos hoje).\n\n\n\n\n\n\n\nNoteExemplo — Precificação de ação com Gordon-Shapiro\n\n\n\nDados: \\(D_0 = \\text{R\\$}\\;2{,}00\\), crescimento esperado \\(g = 4\\%\\), custo do capital próprio \\(r = 10\\%\\).\nDividendo do próximo período:\n\\[D_1 = D_0(1+g) = 2 \\times 1{,}04 = \\text{R\\$}\\;2{,}08\\]\nPreço justo da ação:\n\\[P_0 = \\frac{2{,}08}{0{,}10 - 0{,}04} = \\frac{2{,}08}{0{,}06} \\approx \\mathbf{R\\$\\;34{,}67}\\]\nSe a ação estiver sendo negociada abaixo de R$ 34,67, ela está subavaliada pelo modelo; acima, sobreavaliada.\n\n\n\n\nLimitações do Modelo de Gordon\n\n\n\n\n\n\nImportantQuando o Modelo de Gordon não funciona bem\n\n\n\nO modelo pressupõe crescimento constante e perpétuo — uma hipótese forte que falha em vários casos:\n\nEmpresas que não pagam dividendos (startups, empresas em crescimento).\nEmpresas com dividendos irregulares ou política de payout instável.\nFirmas em rápido crescimento (onde \\(g\\) pode ser temporariamente \\(&gt; r\\)) ou em declínio estrutural.\nMudanças significativas no payout ao longo do tempo.\n\nPor isso, o FCFE é frequentemente mais adequado para avaliar ações — especialmente em empresas que reinvestem grande parte dos lucros.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
+  },
+  {
+    "objectID": "cap11.html#ddm-vs.-fcfe-quando-usar-cada-um",
+    "href": "cap11.html#ddm-vs.-fcfe-quando-usar-cada-um",
+    "title": "11  Fluxos de Caixa para Avaliação de Investimentos",
+    "section": "11.9 DDM vs. FCFE: Quando Usar Cada Um?",
+    "text": "11.9 DDM vs. FCFE: Quando Usar Cada Um?\n\n\n\n\n\n\n\n\nCritério\nDDM\nFCFE\n\n\n\n\nO que mede\nDividendos efetivamente pagos\nCaixa disponível ao acionista\n\n\nCaptura\nPolítica de dividendos da empresa\nCapacidade real de gerar caixa\n\n\nMelhor para\nEmpresas maduras com dividendos estáveis\nEmpresas que reinvestem muito\n\n\nViés\nSubestima valor se dividendos &lt; FCFE\nMais completo\n\n\n\n\n\n\n\n\n\nTipRegra prática\n\n\n\n\nSe dividendos \\(\\approx\\) FCFE (empresa distribui praticamente tudo) → DDM e FCFE chegam ao mesmo resultado; use o DDM pela simplicidade.\nSe dividendos \\(&lt;\\) FCFE (empresa reinveste muito e paga pouco) → o DDM subestima o valor; prefira o FCFE.",
+    "crumbs": [
+      "Parte VI — Avaliação de Empresas",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
+    ]
   }
 ]
