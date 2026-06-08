@@ -950,5 +950,159 @@
       "Parte VI — Avaliação de Empresas",
       "<span class='chapter-number'>11</span>  <span class='chapter-title'>Fluxos de Caixa para Avaliação de Investimentos</span>"
     ]
+  },
+  {
+    "objectID": "cap12.html",
+    "href": "cap12.html",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "",
+    "text": "12.1 Por que a Estrutura de Custos Importa?\nBaseado nas notas de aula — Alavancagem, Risco do Negócio e Risco Financeiro; Custo de Capital Próprio e de Terceiros.\nA forma como uma empresa financia suas operações — e a proporção entre custos fixos e variáveis em sua estrutura produtiva — afeta diretamente o risco percebido pelos investidores.\nDois conjuntos de decisões moldam esse risco:\nA análise de alavancagem permite avaliar a capacidade de pagar dívidas, a sensibilidade dos lucros a variações nas vendas e a volatilidade do retorno ao acionista.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#por-que-a-estrutura-de-custos-importa",
+    "href": "cap12.html#por-que-a-estrutura-de-custos-importa",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "",
+    "text": "Decisões operacionais: quanto da estrutura de custos é fixa vs. variável.\nDecisões de financiamento: qual a proporção de dívida vs. capital próprio.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#dois-tipos-de-risco",
+    "href": "cap12.html#dois-tipos-de-risco",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.2 Dois Tipos de Risco",
+    "text": "12.2 Dois Tipos de Risco\n\n\n\n\n\n\nNoteRisco do Negócio (Business Risk)\n\n\n\nVolatilidade dos fluxos operacionais devido à natureza da atividade e à estrutura de custos. Nasce da operação — independe de como a empresa é financiada.\n\n\n\n\n\n\n\n\nNoteRisco Financeiro (Financial Risk)\n\n\n\nRisco adicional imposto aos acionistas pelo uso de dívida. Antes de falar de dívida, é preciso entender quão estáveis são os lucros da operação.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#alavancagem-operacional",
+    "href": "cap12.html#alavancagem-operacional",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.3 Alavancagem Operacional",
+    "text": "12.3 Alavancagem Operacional\nUma empresa com alto custo fixo e baixo custo variável tem maior alavancagem operacional. Aumentos (ou quedas) nas vendas produzem variações mais que proporcionais no lucro operacional (EBIT) — origem do risco do negócio.\n\nDOL — Grau de Alavancagem Operacional\n\n\n\n\n\n\nImportantDefinição — DOL\n\n\n\n\\[\\boxed{DOL = \\frac{Q(P - V)}{Q(P - V) - F}}\\]\nonde:\n\n\n\nSímbolo\nDescrição\n\n\n\n\n\\(Q\\)\nQuantidade vendida\n\n\n\\(P\\)\nPreço unitário\n\n\n\\(V\\)\nCusto variável unitário\n\n\n\\(F\\)\nCusto fixo total\n\n\n\nInterpretação: \\(DOL = 3\\) significa que um aumento de 10% nas vendas gera um aumento de 30% no EBIT.\n\n\n\n\n\n\n\n\nTipExemplo Numérico — DOL\n\n\n\n\\[P = 100, \\quad V = 60, \\quad F = 200{.}000, \\quad Q = 10{.}000\\]\n\\[DOL = \\frac{10{.}000(100 - 60)}{10{.}000(40) - 200{.}000} = \\frac{400{.}000}{200{.}000} = 2\\]\nInterpretação: - 10% de aumento nas vendas leva a 20% de aumento no EBIT. - Empresas com DOL elevado têm risco operacional alto.\n\n\n\n\nPonto de Equilíbrio Operacional\nO ponto de equilíbrio operacional é a quantidade mínima de vendas para que o EBIT seja zero:\n\\[\\boxed{Q_{BE} = \\frac{F}{P - V}}\\]\nQuanto maior o custo fixo, maior o \\(Q_{BE}\\) — e maior a vulnerabilidade da empresa a quedas nas vendas. O ponto de equilíbrio é útil para avaliar a margem de segurança operacional.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#alavancagem-financeira",
+    "href": "cap12.html#alavancagem-financeira",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.4 Alavancagem Financeira",
+    "text": "12.4 Alavancagem Financeira\nA dívida introduz pagamentos fixos de juros. Isso aumenta a volatilidade dos lucros por ação em resposta a mudanças na receita operacional — o risco financeiro. O acionista assume esse risco adicional em troca de uma potencial amplificação dos retornos.\n\nDFL — Grau de Alavancagem Financeira\n\n\n\n\n\n\nImportantDefinição — DFL\n\n\n\n\\[\\boxed{DFL = \\frac{EBIT}{EBIT - Juros}}\\]\nInterpretação: \\(DFL = 3\\) significa que um aumento de 10% no EBIT gera 30% de aumento no lucro do acionista.\n\n\n\n\n\n\n\n\nTipExemplo Numérico — DFL\n\n\n\n\\[EBIT = 300{.}000, \\quad Juros = 100{.}000\\]\n\\[DFL = \\frac{300{.}000}{300{.}000 - 100{.}000} = 1{,}5\\]\n\nLucro líquido é 1,5 vezes mais sensível ao EBIT.\nQuanto maior o endividamento, maior o DFL — e maior o risco financeiro.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#dtl-grau-de-alavancagem-total",
+    "href": "cap12.html#dtl-grau-de-alavancagem-total",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.5 DTL — Grau de Alavancagem Total",
+    "text": "12.5 DTL — Grau de Alavancagem Total\nO DTL combina os dois efeitos — operacional e financeiro — em uma única medida da sensibilidade total do retorno ao acionista frente a variações nas vendas:\n\\[\\boxed{DTL = DOL \\times DFL = \\frac{\\%\\Delta\\,\\text{Lucro Líquido}}{\\%\\Delta\\,\\text{Vendas}}}\\]\n\n\n\n\n\n\nTipExemplo Integrado\n\n\n\n\\[DOL = 2, \\quad DFL = 1{,}5 \\implies DTL = 2 \\times 1{,}5 = 3\\]\n\n10% de queda nas vendas reduz o lucro líquido em 30%.\nEmpresas com DTL alto são extremamente sensíveis a ciclos econômicos.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#beta-alavancado-e-beta-desalavancado",
+    "href": "cap12.html#beta-alavancado-e-beta-desalavancado",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.6 Beta Alavancado e Beta Desalavancado",
+    "text": "12.6 Beta Alavancado e Beta Desalavancado\nA dívida não apenas aumenta a volatilidade contábil dos lucros — ela eleva o risco sistemático da ação. O modelo de Hamada relaciona o beta do negócio (sem dívida) ao beta do acionista (com dívida):\n\n\n\n\n\n\nImportantFórmula de Hamada\n\n\n\n\\[\\boxed{\\beta_L = \\beta_U \\left[1 + (1-t)\\frac{D}{E}\\right]}\\]\nonde:\n\n\n\nSímbolo\nDescrição\n\n\n\n\n\\(\\beta_U\\)\nBeta do negócio — sem dívida (unlevered)\n\n\n\\(\\beta_L\\)\nBeta do acionista — com dívida (levered)\n\n\n\\(t\\)\nAlíquota do imposto de renda\n\n\n\\(D/E\\)\nRazão dívida/equity (valores de mercado)\n\n\n\n\n\n\n\n\n\n\n\nNoteIntuição\n\n\n\nMais dívida aumenta a variabilidade do lucro e do retorno ao acionista. Os acionistas exigem retorno maior — o custo do equity cresce. O mercado ajusta o valor da empresa com base nesse risco adicional.\n“Dívida é barata, mas aumenta o preço do equity.”",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#resumo-alavancagem",
+    "href": "cap12.html#resumo-alavancagem",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.7 Resumo — Alavancagem",
+    "text": "12.7 Resumo — Alavancagem\n\n\n\n\n\n\n\n\nConceito\nOrigem\nMede\n\n\n\n\nDOL\nEstrutura operacional (custo fixo vs. variável)\nSensibilidade do EBIT às vendas\n\n\nDFL\nUso de dívida (juros fixos)\nSensibilidade do lucro líquido ao EBIT\n\n\nDTL\nCombinação dos dois\nSensibilidade total do lucro às vendas\n\n\n\\(\\beta_L\\)\nEndividamento + risco do negócio\nRisco sistemático do acionista\n\n\n\n\nRisco do negócio → nasce da estrutura operacional.\nRisco financeiro → nasce do uso da dívida.\nA análise conjunta (DTL) identifica a vulnerabilidade total ao ciclo econômico.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#por-que-o-custo-de-capital-é-importante",
+    "href": "cap12.html#por-que-o-custo-de-capital-é-importante",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.8 Por que o Custo de Capital é Importante?",
+    "text": "12.8 Por que o Custo de Capital é Importante?\nNenhum recurso financeiro é “gratuito”: quem empresta ou investe exige uma compensação pelo risco. O custo de capital é o retorno mínimo exigido pelos financiadores da empresa e serve como taxa de desconto para avaliar se projetos criam ou destroem valor.\n\n\n\n\n\n\nTipExemplo\n\n\n\nSe o custo de capital é 10% ao ano, um projeto que rende apenas 8% destrói valor — mesmo que seja lucrativo em termos absolutos.\n\n\nUma empresa se financia por duas grandes fontes, cada uma com seu custo e risco:\n\nCapital de terceiros (dívida): bancos, debêntures, títulos.\nCapital próprio (equity): acionistas, lucros retidos, novas ações.\n\n\n\n\n\n\n\nNoteIntuição fundamental\n\n\n\nO custo de capital reflete o risco percebido pelos investidores: quanto maior o risco, maior o retorno exigido.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#custo-da-dívida",
+    "href": "cap12.html#custo-da-dívida",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.9 Custo da Dívida",
+    "text": "12.9 Custo da Dívida\nO custo da dívida (\\(k_d\\)) é a taxa efetiva que a empresa paga para tomar recursos de terceiros. Em geral, é observada nos juros de empréstimos, títulos ou debêntures emitidas.\nComo os juros são dedutíveis do imposto de renda, o custo efetivo da dívida após impostos é menor:\n\\[\\boxed{k_d^* = k_d(1 - t)}\\]\nonde \\(t\\) é a alíquota do imposto de renda corporativo.\n\n\n\n\n\n\nTipExemplo Numérico\n\n\n\nEmpresa com dívida de R$ 1 milhão a 10% ao ano e IR corporativo de 30%:\n\\[k_d^* = 10\\% \\times (1 - 0{,}30) = 7\\%\\]\nCada R$ 1 de juros pagos custa à empresa apenas R$ 0,70, pois o restante é abatido em impostos.\n\n\n\nComo Estimar o Custo da Dívida?\n\nEmpresas com títulos no mercado: usar o Yield to Maturity (YTM).\nEmpresas sem títulos públicos: usar a taxa de empréstimos bancários comparáveis ou o rating de crédito.\nImportante ajustar o custo para: risco de default, maturidade da dívida, e opções embutidas (ex.: convertibilidade).",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#custo-do-capital-próprio",
+    "href": "cap12.html#custo-do-capital-próprio",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.10 Custo do Capital Próprio",
+    "text": "12.10 Custo do Capital Próprio\nO custo do capital próprio (\\(k_e\\)) representa o retorno exigido pelos acionistas para investir na empresa. Diferente da dívida, não há obrigação de pagamento — o investidor assume o risco residual. Esse retorno compensa o risco de mercado e o risco específico da empresa.\nHá dois métodos principais para estimá-lo.\n\nMétodo 1: CAPM\nO Capital Asset Pricing Model (CAPM) é o modelo mais utilizado para estimar o custo do capital próprio:\n\n\n\n\n\n\nImportantCAPM\n\n\n\n\\[\\boxed{k_e = R_f + \\beta\\bigl(E(R_m) - R_f\\bigr)}\\]\n\n\n\nSímbolo\nDescrição\n\n\n\n\n\\(R_f\\)\nTaxa livre de risco (ex.: títulos públicos)\n\n\n\\(E(R_m) - R_f\\)\nPrêmio de risco de mercado\n\n\n\\(\\beta\\)\nSensibilidade do retorno da empresa ao mercado\n\n\n\nIntuição: empresas mais voláteis em relação ao mercado (\\(\\beta\\) alto) precisam oferecer retorno maior.\n\n\n\n\n\n\n\n\nTipExemplo CAPM\n\n\n\n\\[R_f = 5\\%, \\quad \\beta = 1{,}2, \\quad E(R_m) - R_f = 6\\%\\]\n\\[k_e = 5\\% + 1{,}2 \\times 6\\% = 12{,}2\\%\\]\nAcionistas exigem 12,2% de retorno ao ano para compensar o risco.\n\n\nEm mercados emergentes, adiciona-se também um prêmio de risco-país:\n\\[k_e = R_f + \\beta\\bigl(E(R_m) - R_f\\bigr) + \\text{Prêmio de risco-Brasil}\\]\n\n\nMétodo 2: Modelo de Gordon (Crescimento de Dividendos)\nQuando a empresa distribui dividendos com crescimento estável, o custo do equity pode ser extraído diretamente do preço de mercado:\n\\[\\boxed{k_e = \\frac{D_1}{P_0} + g}\\]\nonde \\(D_1\\) é o dividendo esperado, \\(P_0\\) o preço atual da ação e \\(g\\) a taxa de crescimento esperada dos dividendos.\n\n\n\n\n\n\nTipExemplo — Modelo de Gordon\n\n\n\n\\[D_1 = 2, \\quad P_0 = 40, \\quad g = 4\\% \\implies k_e = \\frac{2}{40} + 0{,}04 = 9\\%\\]",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#wacc-custo-médio-ponderado-de-capital",
+    "href": "cap12.html#wacc-custo-médio-ponderado-de-capital",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.11 WACC — Custo Médio Ponderado de Capital",
+    "text": "12.11 WACC — Custo Médio Ponderado de Capital\nO WACC (Weighted Average Cost of Capital) combina os custos de todas as fontes de financiamento, ponderados pela participação de cada uma no valor total da empresa:\n\n\n\n\n\n\nImportantDefinição — WACC\n\n\n\n\\[\\boxed{WACC = w_d\\,k_d(1-t) + w_e\\,k_e}\\]\n\n\n\nSímbolo\nDescrição\n\n\n\n\n\\(w_d\\)\nPeso da dívida (valor de mercado)\n\n\n\\(w_e\\)\nPeso do equity (valor de mercado)\n\n\n\\(k_d(1-t)\\)\nCusto da dívida após impostos\n\n\n\\(k_e\\)\nCusto do capital próprio\n\n\n\nImportante: usar valores de mercado, não contábeis.\n\n\n\n\n\n\n\n\nTipExemplo Completo\n\n\n\nEstrutura: 40% dívida, 60% equity. \\(k_d = 7\\%\\), \\(k_e = 12\\%\\), \\(t = 30\\%\\).\n\\[WACC = 0{,}4 \\times 7\\% \\times (1 - 0{,}3) + 0{,}6 \\times 12\\% = 1{,}96\\% + 7{,}2\\% = 9{,}16\\% \\approx 9{,}2\\%\\]\nA empresa deve gerar retorno de pelo menos 9,2% para criar valor.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#exercício-prático",
+    "href": "cap12.html#exercício-prático",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.12 Exercício Prático",
+    "text": "12.12 Exercício Prático\n\n\n\n\n\n\nTipExercício — Cálculo do WACC\n\n\n\nCalcule o custo médio ponderado de capital (WACC) da empresa fictícia:\n\nDívida: R$ 100 milhões, taxa 8%, IR = 25%.\nAções: valor de mercado R$ 200 milhões, \\(\\beta = 1{,}1\\), \\(R_f = 4\\%\\), \\(E(R_m) - R_f = 6\\%\\).\n\nPasso 1 — Custo da dívida após IR: \\[k_d(1-t) = 8\\% \\times (1 - 0{,}25) = 6\\%\\]\nPasso 2 — Custo do equity (CAPM): \\[k_e = 4\\% + 1{,}1 \\times 6\\% = 10{,}6\\%\\]\nPasso 3 — Pesos: \\[w_d = \\frac{100}{300} = 33{,}3\\%, \\quad w_e = \\frac{200}{300} = 66{,}7\\%\\]\nPasso 4 — WACC: \\[WACC = \\frac{100}{300} \\times 6\\% + \\frac{200}{300} \\times 10{,}6\\% = 2\\% + 7{,}07\\% = 9{,}1\\%\\]",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
+  },
+  {
+    "objectID": "cap12.html#estrutura-de-capital-e-o-trade-off-ótimo",
+    "href": "cap12.html#estrutura-de-capital-e-o-trade-off-ótimo",
+    "title": "12  Custo de Capital e Alavancagem",
+    "section": "12.13 Estrutura de Capital e o Trade-off Ótimo",
+    "text": "12.13 Estrutura de Capital e o Trade-off Ótimo\nMais dívida reduz o WACC no curto prazo (benefício fiscal), mas eleva o risco financeiro. Acima de certo ponto, o custo do equity cresce mais rápido que a economia de impostos — e o WACC volta a subir.\nO trade-off entre dívida e equity define a estrutura de capital ótima: o ponto que minimiza o WACC e, consequentemente, maximiza o valor da empresa.\n\n\n\n\n\n\nNoteResumo Final\n\n\n\n\nO custo de capital reflete o risco e define o retorno mínimo aceitável.\nDívida é mais barata, mas aumenta o risco financeiro (DFL e \\(\\beta_L\\)).\nO custo do equity depende do risco de mercado (\\(\\beta\\)) e da percepção dos investidores.\nO WACC combina os dois e serve como taxa de desconto para avaliar projetos de investimento.",
+    "crumbs": [
+      "Parte VII — Análise de Projetos",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Custo de Capital e Alavancagem</span>"
+    ]
   }
 ]

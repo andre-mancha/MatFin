@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>5&nbsp; Sistemas de Amortização – Matemática Financeira</title>
+<title>12&nbsp; Custo de Capital e Alavancagem – Matemática Financeira</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -33,8 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./cap06.html" rel="next">
-<link href="./cap04.html" rel="prev">
+<link href="./cap11.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -280,7 +279,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap05.html">Parte II — Financiamentos e Taxas</a></li><li class="breadcrumb-item"><a href="./cap05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sistemas de Amortização</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap12.html">Parte VII — Análise de Projetos</a></li><li class="breadcrumb-item"><a href="./cap12.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Custo de Capital e Alavancagem</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -361,7 +360,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap05.html" class="sidebar-item-text sidebar-link active">
+  <a href="./cap05.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sistemas de Amortização</span></span></a>
   </div>
 </li>
@@ -458,7 +457,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./cap12.html" class="sidebar-item-text sidebar-link">
+  <a href="./cap12.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Custo de Capital e Alavancagem</span></span></a>
   </div>
 </li>
@@ -474,26 +473,43 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#estrutura-geral-de-uma-prestação" id="toc-estrutura-geral-de-uma-prestação" class="nav-link active" data-scroll-target="#estrutura-geral-de-uma-prestação"><span class="header-section-number">5.1</span> Estrutura Geral de uma Prestação</a></li>
-  <li><a href="#sistema-price-francês" id="toc-sistema-price-francês" class="nav-link" data-scroll-target="#sistema-price-francês"><span class="header-section-number">5.2</span> Sistema PRICE (Francês)</a></li>
-  <li><a href="#sistema-sac-constante" id="toc-sistema-sac-constante" class="nav-link" data-scroll-target="#sistema-sac-constante"><span class="header-section-number">5.3</span> Sistema SAC (Constante)</a></li>
-  <li><a href="#sistema-americano-e-sinking-fund" id="toc-sistema-americano-e-sinking-fund" class="nav-link" data-scroll-target="#sistema-americano-e-sinking-fund"><span class="header-section-number">5.4</span> Sistema Americano e Sinking Fund</a></li>
-  <li><a href="#tabelas-de-amortização" id="toc-tabelas-de-amortização" class="nav-link" data-scroll-target="#tabelas-de-amortização"><span class="header-section-number">5.5</span> Tabelas de Amortização</a>
+  <li><a href="#por-que-a-estrutura-de-custos-importa" id="toc-por-que-a-estrutura-de-custos-importa" class="nav-link active" data-scroll-target="#por-que-a-estrutura-de-custos-importa"><span class="header-section-number">12.1</span> Por que a Estrutura de Custos Importa?</a></li>
+  <li><a href="#dois-tipos-de-risco" id="toc-dois-tipos-de-risco" class="nav-link" data-scroll-target="#dois-tipos-de-risco"><span class="header-section-number">12.2</span> Dois Tipos de Risco</a></li>
+  <li><a href="#alavancagem-operacional" id="toc-alavancagem-operacional" class="nav-link" data-scroll-target="#alavancagem-operacional"><span class="header-section-number">12.3</span> Alavancagem Operacional</a>
   <ul class="collapse">
-  <li><a href="#price" id="toc-price" class="nav-link" data-scroll-target="#price">PRICE</a></li>
-  <li><a href="#sac" id="toc-sac" class="nav-link" data-scroll-target="#sac">SAC</a></li>
+  <li><a href="#dol-grau-de-alavancagem-operacional" id="toc-dol-grau-de-alavancagem-operacional" class="nav-link" data-scroll-target="#dol-grau-de-alavancagem-operacional">DOL — Grau de Alavancagem Operacional</a></li>
+  <li><a href="#ponto-de-equilíbrio-operacional" id="toc-ponto-de-equilíbrio-operacional" class="nav-link" data-scroll-target="#ponto-de-equilíbrio-operacional">Ponto de Equilíbrio Operacional</a></li>
   </ul></li>
-  <li><a href="#comparação-sac-price" id="toc-comparação-sac-price" class="nav-link" data-scroll-target="#comparação-sac-price"><span class="header-section-number">5.6</span> Comparação SAC × PRICE</a></li>
+  <li><a href="#alavancagem-financeira" id="toc-alavancagem-financeira" class="nav-link" data-scroll-target="#alavancagem-financeira"><span class="header-section-number">12.4</span> Alavancagem Financeira</a>
+  <ul class="collapse">
+  <li><a href="#dfl-grau-de-alavancagem-financeira" id="toc-dfl-grau-de-alavancagem-financeira" class="nav-link" data-scroll-target="#dfl-grau-de-alavancagem-financeira">DFL — Grau de Alavancagem Financeira</a></li>
+  </ul></li>
+  <li><a href="#dtl-grau-de-alavancagem-total" id="toc-dtl-grau-de-alavancagem-total" class="nav-link" data-scroll-target="#dtl-grau-de-alavancagem-total"><span class="header-section-number">12.5</span> DTL — Grau de Alavancagem Total</a></li>
+  <li><a href="#beta-alavancado-e-beta-desalavancado" id="toc-beta-alavancado-e-beta-desalavancado" class="nav-link" data-scroll-target="#beta-alavancado-e-beta-desalavancado"><span class="header-section-number">12.6</span> Beta Alavancado e Beta Desalavancado</a></li>
+  <li><a href="#resumo-alavancagem" id="toc-resumo-alavancagem" class="nav-link" data-scroll-target="#resumo-alavancagem"><span class="header-section-number">12.7</span> Resumo — Alavancagem</a></li>
+  <li><a href="#por-que-o-custo-de-capital-é-importante" id="toc-por-que-o-custo-de-capital-é-importante" class="nav-link" data-scroll-target="#por-que-o-custo-de-capital-é-importante"><span class="header-section-number">12.8</span> Por que o Custo de Capital é Importante?</a></li>
+  <li><a href="#custo-da-dívida" id="toc-custo-da-dívida" class="nav-link" data-scroll-target="#custo-da-dívida"><span class="header-section-number">12.9</span> Custo da Dívida</a>
+  <ul class="collapse">
+  <li><a href="#como-estimar-o-custo-da-dívida" id="toc-como-estimar-o-custo-da-dívida" class="nav-link" data-scroll-target="#como-estimar-o-custo-da-dívida">Como Estimar o Custo da Dívida?</a></li>
+  </ul></li>
+  <li><a href="#custo-do-capital-próprio" id="toc-custo-do-capital-próprio" class="nav-link" data-scroll-target="#custo-do-capital-próprio"><span class="header-section-number">12.10</span> Custo do Capital Próprio</a>
+  <ul class="collapse">
+  <li><a href="#método-1-capm" id="toc-método-1-capm" class="nav-link" data-scroll-target="#método-1-capm">Método 1: CAPM</a></li>
+  <li><a href="#método-2-modelo-de-gordon-crescimento-de-dividendos" id="toc-método-2-modelo-de-gordon-crescimento-de-dividendos" class="nav-link" data-scroll-target="#método-2-modelo-de-gordon-crescimento-de-dividendos">Método 2: Modelo de Gordon (Crescimento de Dividendos)</a></li>
+  </ul></li>
+  <li><a href="#wacc-custo-médio-ponderado-de-capital" id="toc-wacc-custo-médio-ponderado-de-capital" class="nav-link" data-scroll-target="#wacc-custo-médio-ponderado-de-capital"><span class="header-section-number">12.11</span> WACC — Custo Médio Ponderado de Capital</a></li>
+  <li><a href="#exercício-prático" id="toc-exercício-prático" class="nav-link" data-scroll-target="#exercício-prático"><span class="header-section-number">12.12</span> Exercício Prático</a></li>
+  <li><a href="#estrutura-de-capital-e-o-trade-off-ótimo" id="toc-estrutura-de-capital-e-o-trade-off-ótimo" class="nav-link" data-scroll-target="#estrutura-de-capital-e-o-trade-off-ótimo"><span class="header-section-number">12.13</span> Estrutura de Capital e o Trade-off Ótimo</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap12.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap05.html">Parte II — Financiamentos e Taxas</a></li><li class="breadcrumb-item"><a href="./cap05.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sistemas de Amortização</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./cap12.html">Parte VII — Análise de Projetos</a></li><li class="breadcrumb-item"><a href="./cap12.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Custo de Capital e Alavancagem</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Sistemas de Amortização</span></h1>
+<h1 class="title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Custo de Capital e Alavancagem</span></h1>
 </div>
 
 
@@ -510,314 +526,539 @@ window.Quarto = {
 </header>
 
 
-<section id="estrutura-geral-de-uma-prestação" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="estrutura-geral-de-uma-prestação"><span class="header-section-number">5.1</span> Estrutura Geral de uma Prestação</h2>
-<p>Quando se toma um empréstimo de valor <span class="math inline">\(P\)</span> a uma taxa <span class="math inline">\(i\)</span> por período, cada prestação <span class="math inline">\(R_t\)</span> é composta de duas partes:</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Resultado
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[R_t = J_t + A_t,\]</span></p>
-</div>
-</div>
-<p>onde <span class="math inline">\(J_t = i \cdot P_{t-1}\)</span> são os <strong>juros do período</strong> <span class="math inline">\(t\)</span>, calculados sobre o saldo devedor <span class="math inline">\(P_{t-1}\)</span>; <span class="math inline">\(A_t\)</span> é a <strong>amortização do período</strong> <span class="math inline">\(t\)</span>; e <span class="math inline">\(P_t = P_{t-1} - A_t\)</span> é o <strong>saldo devedor</strong> ao final do período <span class="math inline">\(t\)</span>.</p>
-<p>À medida que o tempo passa e o principal é amortizado, <span class="math inline">\(J_t\)</span> diminui pois <span class="math inline">\(P_{t-1}\)</span> decresce. A forma como <span class="math inline">\(A_t\)</span> é distribuída define o <strong>sistema de amortização</strong>.</p>
-<table class="table-striped caption-top table">
-<caption>Sistemas de amortização</caption>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 37%">
-<col style="width: 42%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Sistema</th>
-<th style="text-align: center;">Prestação <span class="math inline">\(R_t\)</span></th>
-<th style="text-align: center;">Amortização <span class="math inline">\(A_t\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">PRICE</td>
-<td style="text-align: center;">Constante (<span class="math inline">\(R_t = \bar{R}\)</span>)</td>
-<td style="text-align: center;">Crescente</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">SAC</td>
-<td style="text-align: center;">Decrescente (série gradiente)</td>
-<td style="text-align: center;">Constante (<span class="math inline">\(A_t = \bar{A}\)</span>)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Americano</td>
-<td style="text-align: center;">Constante (<span class="math inline">\(i\cdot P\)</span>) + principal no final</td>
-<td style="text-align: center;">Zero até <span class="math inline">\(t=n-1\)</span></td>
-</tr>
-</tbody>
-</table>
-<hr>
-</section>
-<section id="sistema-price-francês" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="sistema-price-francês"><span class="header-section-number">5.2</span> Sistema PRICE (Francês)</h2>
-<p>No sistema PRICE, a <strong>prestação é constante</strong>: <span class="math inline">\(R_t = \bar{R}\)</span> para todo <span class="math inline">\(t\)</span>. Isso é equivalente a uma série uniforme vencida:</p>
-<p><span class="math display">\[\bar{R} = P\left[\frac{i(1+i)^n}{(1+i)^n-1}\right].\]</span></p>
-<p>As relações gerais para o período <span class="math inline">\(k\)</span> são:</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Resultado
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[\bar{R} = P\left[\frac{i}{1-(1+i)^{-n}}\right], \quad J_k = \bar{R}\left[1-(1+i)^{k-n-1}\right], \quad A_k = \bar{R}\,(1+i)^{k-n-1}, \quad P_k = \bar{R}\left[\frac{1-(1+i)^{k-n}}{i}\right].\]</span></p>
-</div>
-</div>
-<p>Os juros decrescem e a amortização cresce, mantendo <span class="math inline">\(R_t = \bar{R}\)</span> constante.</p>
-<hr>
-</section>
-<section id="sistema-sac-constante" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="sistema-sac-constante"><span class="header-section-number">5.3</span> Sistema SAC (Constante)</h2>
-<p>No sistema SAC, a <strong>amortização é constante</strong>: <span class="math inline">\(A_t = \bar{A} = P/n\)</span>, logo o saldo devedor decresce linearmente. A prestação é decrescente:</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Resultado">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Resultado
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math display">\[\bar{A} = \frac{P}{n}, \quad J_k = i\,(n-k+1)\,\bar{A}, \quad R_k = \bar{A}\left[1 + i(n-k+1)\right], \quad P_k = (n-k)\,\bar{A}.\]</span></p>
-</div>
-</div>
-<div class="callout callout-style-default callout-note callout-titled" title="Nota">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>O SAC é uma <strong>série gradiente decrescente</strong> com último termo <span class="math inline">\(\bar{A} + i\bar{A}\)</span> e série uniforme de valor <span class="math inline">\(\bar{A}\)</span>.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="sistema-americano-e-sinking-fund" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="sistema-americano-e-sinking-fund"><span class="header-section-number">5.4</span> Sistema Americano e Sinking Fund</h2>
-<p>No <strong>sistema americano</strong>, o principal não é amortizado ao longo do contrato:</p>
-<p><span class="math display">\[R_t = i\cdot P \quad (t = 1, \ldots, n-1), \qquad R_n = i\cdot P + P.\]</span></p>
-<p>Para garantir a liquidação do principal, o devedor pode constituir um <strong>Sinking Fund</strong> — um depósito periódico <span class="math inline">\(R_{\text{sf}}\)</span> que, acumulado até <span class="math inline">\(t = n\)</span>, atinge exatamente <span class="math inline">\(P\)</span>:</p>
-<p><span class="math display">\[R_{\text{sf}} = P\left[\frac{i}{(1+i)^n-1}\right].\]</span></p>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Exemplo 5.1 — Sinking Fund">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Exemplo 5.1 — Sinking Fund
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Dívida de R$ 6.000 por 7 anos com <span class="math inline">\(i = 4{,}0083\%\)</span> a.a.:</p>
-<p><span class="math display">\[R_{\text{sf}} = 6.000\left[\frac{0{,}040083}{(1{,}040083)^7-1}\right] \approx \textbf{R\$ 759,44/ano.}\]</span></p>
-</div>
-</div>
-<hr>
-</section>
-<section id="tabelas-de-amortização" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="tabelas-de-amortização"><span class="header-section-number">5.5</span> Tabelas de Amortização</h2>
-<p>Empréstimo de R$ 6.000 a <span class="math inline">\(4{,}0083\%\)</span> a.m., 7 períodos.</p>
-<section id="price" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="price">PRICE</h3>
-<p><span class="math display">\[\bar{R} = 6.000\left[\frac{0{,}040083\,(1{,}040083)^7}{(1{,}040083)^7-1}\right] \approx \text{R\$ 1.000/mês.}\]</span></p>
-<table class="table-striped caption-top table">
-<caption>Tabela PRICE</caption>
-<colgroup>
-<col style="width: 7%">
-<col style="width: 20%">
-<col style="width: 19%">
-<col style="width: 27%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(k\)</span></th>
-<th style="text-align: right;">Saldo devedor</th>
-<th style="text-align: right;">Juros <span class="math inline">\(J_k\)</span></th>
-<th style="text-align: right;">Amortização <span class="math inline">\(A_k\)</span></th>
-<th style="text-align: right;">Prestação <span class="math inline">\(R_k\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: right;">6.000,00</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">5.240,56</td>
-<td style="text-align: right;">240,56</td>
-<td style="text-align: right;">759,44</td>
-<td style="text-align: right;">1.000,00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">4.450,67</td>
-<td style="text-align: right;">210,12</td>
-<td style="text-align: right;">789,89</td>
-<td style="text-align: right;">1.000,00</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: right;">0,00</td>
-<td style="text-align: right;">38,55</td>
-<td style="text-align: right;">961,45</td>
-<td style="text-align: right;">1.000,00</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Total</strong></td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;"><strong>1.000,00</strong></td>
-<td style="text-align: right;"><strong>6.000,00</strong></td>
-<td style="text-align: right;"><strong>7.000,00</strong></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="sac" class="level3 unnumbered">
-<h3 class="unnumbered anchored" data-anchor-id="sac">SAC</h3>
-<p><span class="math display">\[\bar{A} = \frac{6.000}{7} \approx \text{R\$ 857,14/mês.}\]</span></p>
-<table class="table-striped caption-top table">
-<caption>Tabela SAC</caption>
-<colgroup>
-<col style="width: 7%">
-<col style="width: 20%">
-<col style="width: 19%">
-<col style="width: 27%">
-<col style="width: 25%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;"><span class="math inline">\(k\)</span></th>
-<th style="text-align: right;">Saldo devedor</th>
-<th style="text-align: right;">Juros <span class="math inline">\(J_k\)</span></th>
-<th style="text-align: right;">Amortização <span class="math inline">\(A_k\)</span></th>
-<th style="text-align: right;">Prestação <span class="math inline">\(R_k\)</span></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">0</td>
-<td style="text-align: right;">6.000,00</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;">—</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">1</td>
-<td style="text-align: right;">5.142,86</td>
-<td style="text-align: right;">240,50</td>
-<td style="text-align: right;">857,14</td>
-<td style="text-align: right;">1.097,64</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">2</td>
-<td style="text-align: right;">4.285,71</td>
-<td style="text-align: right;">206,20</td>
-<td style="text-align: right;">857,14</td>
-<td style="text-align: right;">1.063,34</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-<td style="text-align: right;">⋮</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: right;">0,00</td>
-<td style="text-align: right;">34,37</td>
-<td style="text-align: right;">857,14</td>
-<td style="text-align: right;">891,51</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><strong>Total</strong></td>
-<td style="text-align: right;">—</td>
-<td style="text-align: right;"><strong>962,25</strong></td>
-<td style="text-align: right;"><strong>6.000,00</strong></td>
-<td style="text-align: right;"><strong>6.962,25</strong></td>
-</tr>
-</tbody>
-</table>
-<div class="callout callout-style-default callout-note callout-titled" title="Nota">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>O SAC tem <strong>total de juros menor</strong> (R$ 962 vs.&nbsp;R$ 1.000 no PRICE) porque amortiza o saldo mais rapidamente, reduzindo a base de cálculo dos juros. A desvantagem é que as primeiras prestações são mais altas.</p>
-</div>
-</div>
-<hr>
-</section>
-</section>
-<section id="comparação-sac-price" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="comparação-sac-price"><span class="header-section-number">5.6</span> Comparação SAC × PRICE</h2>
-<div id="4d6b69d0" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="cap05_files/figure-html/cell-2-output-1.png" class="quarto-figure quarto-figure-center figure-img" width="854" height="353"></p>
-</figure>
-</div>
-</div>
-</div>
+<p><em>Baseado nas notas de aula — Alavancagem, Risco do Negócio e Risco Financeiro; Custo de Capital Próprio e de Terceiros.</em></p>
+<section id="por-que-a-estrutura-de-custos-importa" class="level2" data-number="12.1">
+<h2 data-number="12.1" class="anchored" data-anchor-id="por-que-a-estrutura-de-custos-importa"><span class="header-section-number">12.1</span> Por que a Estrutura de Custos Importa?</h2>
+<p>A forma como uma empresa financia suas operações — e a proporção entre custos fixos e variáveis em sua estrutura produtiva — afeta diretamente o <strong>risco percebido pelos investidores</strong>.</p>
+<p>Dois conjuntos de decisões moldam esse risco:</p>
 <ul>
-<li><strong>SAC</strong>: amortiza saldo mais depressa → maior parcela inicial, mas total de juros menor.</li>
-<li><strong>PRICE</strong>: parcelas iguais facilitam o orçamento; juros maiores no total, pois o saldo devedor diminui mais lentamente.</li>
-<li><strong>Qual escolher?</strong> Depende da preferência intertemporal do devedor. Para quem vai <em>pré-pagar</em>, o SAC é mais vantajoso (saldo cai mais rápido).</li>
+<li><strong>Decisões operacionais:</strong> quanto da estrutura de custos é fixa vs.&nbsp;variável.</li>
+<li><strong>Decisões de financiamento:</strong> qual a proporção de dívida vs.&nbsp;capital próprio.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo moderno — PRICE vs. SAC no Financiamento Imobiliário FGTS (2025)">
+<p>A análise de alavancagem permite avaliar a <strong>capacidade de pagar dívidas</strong>, a <strong>sensibilidade dos lucros</strong> a variações nas vendas e a <strong>volatilidade do retorno ao acionista</strong>.</p>
+<hr>
+</section>
+<section id="dois-tipos-de-risco" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="dois-tipos-de-risco"><span class="header-section-number">12.2</span> Dois Tipos de Risco</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Risco do Negócio (Business Risk)">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Exemplo moderno — PRICE vs.&nbsp;SAC no Financiamento Imobiliário FGTS (2025)
+<span class="screen-reader-only">Note</span>Risco do Negócio (Business Risk)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Financiamento de R$ 400.000 em 360 meses, taxa de <span class="math inline">\(8{,}16\%\)</span> a.a. (FGTS — referência 2025): <span class="math inline">\(i = (1{,}0816)^{1/12}-1 \approx 0{,}6559\%\)</span> a.m.</p>
-<p><strong>PRICE:</strong> <span class="math inline">\(\bar{R} \approx \text{R\$ }3.006/\text{mês}\)</span>; total pago <span class="math inline">\(\approx \text{R\$ }1.082.160\)</span>.</p>
-<p><strong>SAC:</strong> <span class="math inline">\(\bar{A} = 400.000/360 \approx \text{R\$ }1.111/\text{mês}\)</span> (amortização); 1ª prestação <span class="math inline">\(\approx \text{R\$ }3.737\)</span>; 360ª prestação <span class="math inline">\(\approx \text{R\$ }1.118\)</span>; total pago <span class="math inline">\(\approx \text{R\$ }882.000\)</span>.</p>
-<p>O SAC economiza <span class="math inline">\(\approx\)</span> R$ 200.000 em juros, mas exige capacidade de pagamento maior nos primeiros anos. Bancos no Brasil oferecem ambos os sistemas.</p>
+<p>Volatilidade dos fluxos operacionais devido à <strong>natureza da atividade</strong> e à <strong>estrutura de custos</strong>. Nasce da operação — independe de como a empresa é financiada.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Risco Financeiro (Financial Risk)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Risco Financeiro (Financial Risk)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Risco <strong>adicional</strong> imposto aos acionistas pelo uso de dívida. Antes de falar de dívida, é preciso entender quão estáveis são os lucros da operação.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="alavancagem-operacional" class="level2" data-number="12.3">
+<h2 data-number="12.3" class="anchored" data-anchor-id="alavancagem-operacional"><span class="header-section-number">12.3</span> Alavancagem Operacional</h2>
+<p>Uma empresa com <strong>alto custo fixo e baixo custo variável</strong> tem maior alavancagem operacional. Aumentos (ou quedas) nas vendas produzem variações <strong>mais que proporcionais</strong> no lucro operacional (EBIT) — origem do <strong>risco do negócio</strong>.</p>
+<section id="dol-grau-de-alavancagem-operacional" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dol-grau-de-alavancagem-operacional">DOL — Grau de Alavancagem Operacional</h3>
+<div class="callout callout-style-default callout-important callout-titled" title="Definição — DOL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Definição — DOL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{DOL = \frac{Q(P - V)}{Q(P - V) - F}}\]</span></p>
+<p>onde:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(Q\)</span></td>
+<td>Quantidade vendida</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(P\)</span></td>
+<td>Preço unitário</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(V\)</span></td>
+<td>Custo variável unitário</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(F\)</span></td>
+<td>Custo fixo total</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Interpretação:</strong> <span class="math inline">\(DOL = 3\)</span> significa que um aumento de 10% nas vendas gera um aumento de <strong>30%</strong> no EBIT.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo Numérico — DOL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo Numérico — DOL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[P = 100, \quad V = 60, \quad F = 200{.}000, \quad Q = 10{.}000\]</span></p>
+<p><span class="math display">\[DOL = \frac{10{.}000(100 - 60)}{10{.}000(40) - 200{.}000} = \frac{400{.}000}{200{.}000} = 2\]</span></p>
+<p><strong>Interpretação:</strong> - 10% de aumento nas vendas leva a 20% de aumento no EBIT. - Empresas com DOL elevado têm risco operacional alto.</p>
+</div>
+</div>
+</section>
+<section id="ponto-de-equilíbrio-operacional" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="ponto-de-equilíbrio-operacional">Ponto de Equilíbrio Operacional</h3>
+<p>O ponto de equilíbrio operacional é a quantidade mínima de vendas para que o EBIT seja zero:</p>
+<p><span class="math display">\[\boxed{Q_{BE} = \frac{F}{P - V}}\]</span></p>
+<p>Quanto maior o custo fixo, maior o <span class="math inline">\(Q_{BE}\)</span> — e maior a vulnerabilidade da empresa a quedas nas vendas. O ponto de equilíbrio é útil para avaliar a <strong>margem de segurança operacional</strong>.</p>
+<hr>
+</section>
+</section>
+<section id="alavancagem-financeira" class="level2" data-number="12.4">
+<h2 data-number="12.4" class="anchored" data-anchor-id="alavancagem-financeira"><span class="header-section-number">12.4</span> Alavancagem Financeira</h2>
+<p>A <strong>dívida introduz pagamentos fixos de juros</strong>. Isso aumenta a volatilidade dos lucros por ação em resposta a mudanças na receita operacional — o <strong>risco financeiro</strong>. O acionista assume esse risco adicional em troca de uma potencial amplificação dos retornos.</p>
+<section id="dfl-grau-de-alavancagem-financeira" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="dfl-grau-de-alavancagem-financeira">DFL — Grau de Alavancagem Financeira</h3>
+<div class="callout callout-style-default callout-important callout-titled" title="Definição — DFL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Definição — DFL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{DFL = \frac{EBIT}{EBIT - Juros}}\]</span></p>
+<p><strong>Interpretação:</strong> <span class="math inline">\(DFL = 3\)</span> significa que um aumento de 10% no EBIT gera <strong>30%</strong> de aumento no lucro do acionista.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo Numérico — DFL">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo Numérico — DFL
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[EBIT = 300{.}000, \quad Juros = 100{.}000\]</span></p>
+<p><span class="math display">\[DFL = \frac{300{.}000}{300{.}000 - 100{.}000} = 1{,}5\]</span></p>
+<ul>
+<li>Lucro líquido é 1,5 vezes mais sensível ao EBIT.</li>
+<li>Quanto maior o endividamento, maior o DFL — e maior o risco financeiro.</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="dtl-grau-de-alavancagem-total" class="level2" data-number="12.5">
+<h2 data-number="12.5" class="anchored" data-anchor-id="dtl-grau-de-alavancagem-total"><span class="header-section-number">12.5</span> DTL — Grau de Alavancagem Total</h2>
+<p>O DTL combina os dois efeitos — operacional e financeiro — em uma única medida da <strong>sensibilidade total do retorno ao acionista frente a variações nas vendas</strong>:</p>
+<p><span class="math display">\[\boxed{DTL = DOL \times DFL = \frac{\%\Delta\,\text{Lucro Líquido}}{\%\Delta\,\text{Vendas}}}\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo Integrado">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo Integrado
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[DOL = 2, \quad DFL = 1{,}5 \implies DTL = 2 \times 1{,}5 = 3\]</span></p>
+<ul>
+<li>10% de queda nas vendas reduz o lucro líquido em <strong>30%</strong>.</li>
+<li>Empresas com DTL alto são <strong>extremamente sensíveis a ciclos econômicos</strong>.</li>
+</ul>
+</div>
+</div>
+<hr>
+</section>
+<section id="beta-alavancado-e-beta-desalavancado" class="level2" data-number="12.6">
+<h2 data-number="12.6" class="anchored" data-anchor-id="beta-alavancado-e-beta-desalavancado"><span class="header-section-number">12.6</span> Beta Alavancado e Beta Desalavancado</h2>
+<p>A dívida não apenas aumenta a volatilidade contábil dos lucros — ela eleva o <strong>risco sistemático da ação</strong>. O modelo de Hamada relaciona o beta do negócio (sem dívida) ao beta do acionista (com dívida):</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Fórmula de Hamada">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Fórmula de Hamada
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{\beta_L = \beta_U \left[1 + (1-t)\frac{D}{E}\right]}\]</span></p>
+<p>onde:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\beta_U\)</span></td>
+<td>Beta do negócio — sem dívida (<em>unlevered</em>)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\beta_L\)</span></td>
+<td>Beta do acionista — com dívida (<em>levered</em>)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(t\)</span></td>
+<td>Alíquota do imposto de renda</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(D/E\)</span></td>
+<td>Razão dívida/equity (valores de mercado)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Intuição">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Intuição
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mais dívida aumenta a variabilidade do lucro e do retorno ao acionista. Os acionistas exigem retorno maior — o custo do equity cresce. O mercado ajusta o valor da empresa com base nesse risco adicional.</p>
+<p><strong>“Dívida é barata, mas aumenta o preço do equity.”</strong></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="resumo-alavancagem" class="level2" data-number="12.7">
+<h2 data-number="12.7" class="anchored" data-anchor-id="resumo-alavancagem"><span class="header-section-number">12.7</span> Resumo — Alavancagem</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 41%">
+<col style="width: 33%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Conceito</th>
+<th>Origem</th>
+<th>Mede</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>DOL</strong></td>
+<td>Estrutura operacional (custo fixo vs.&nbsp;variável)</td>
+<td>Sensibilidade do EBIT às vendas</td>
+</tr>
+<tr class="even">
+<td><strong>DFL</strong></td>
+<td>Uso de dívida (juros fixos)</td>
+<td>Sensibilidade do lucro líquido ao EBIT</td>
+</tr>
+<tr class="odd">
+<td><strong>DTL</strong></td>
+<td>Combinação dos dois</td>
+<td>Sensibilidade total do lucro às vendas</td>
+</tr>
+<tr class="even">
+<td><strong><span class="math inline">\(\beta_L\)</span></strong></td>
+<td>Endividamento + risco do negócio</td>
+<td>Risco sistemático do acionista</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Risco do negócio → nasce da estrutura operacional.</li>
+<li>Risco financeiro → nasce do uso da dívida.</li>
+<li>A análise conjunta (DTL) identifica a vulnerabilidade total ao ciclo econômico.</li>
+</ul>
+<hr>
+</section>
+<section id="por-que-o-custo-de-capital-é-importante" class="level2" data-number="12.8">
+<h2 data-number="12.8" class="anchored" data-anchor-id="por-que-o-custo-de-capital-é-importante"><span class="header-section-number">12.8</span> Por que o Custo de Capital é Importante?</h2>
+<p>Nenhum recurso financeiro é “gratuito”: quem empresta ou investe exige uma <strong>compensação pelo risco</strong>. O custo de capital é o <strong>retorno mínimo exigido</strong> pelos financiadores da empresa e serve como <strong>taxa de desconto</strong> para avaliar se projetos criam ou destroem valor.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Se o custo de capital é 10% ao ano, um projeto que rende apenas 8% <strong>destrói valor</strong> — mesmo que seja lucrativo em termos absolutos.</p>
+</div>
+</div>
+<p>Uma empresa se financia por duas grandes fontes, cada uma com seu custo e risco:</p>
+<ul>
+<li><strong>Capital de terceiros (dívida):</strong> bancos, debêntures, títulos.</li>
+<li><strong>Capital próprio (equity):</strong> acionistas, lucros retidos, novas ações.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled" title="Intuição fundamental">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Intuição fundamental
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>O custo de capital reflete o risco percebido pelos investidores: quanto maior o risco, maior o retorno exigido.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="custo-da-dívida" class="level2" data-number="12.9">
+<h2 data-number="12.9" class="anchored" data-anchor-id="custo-da-dívida"><span class="header-section-number">12.9</span> Custo da Dívida</h2>
+<p>O custo da dívida (<span class="math inline">\(k_d\)</span>) é a <strong>taxa efetiva que a empresa paga</strong> para tomar recursos de terceiros. Em geral, é observada nos juros de empréstimos, títulos ou debêntures emitidas.</p>
+<p>Como os juros são <strong>dedutíveis do imposto de renda</strong>, o custo efetivo da dívida <strong>após impostos</strong> é menor:</p>
+<p><span class="math display">\[\boxed{k_d^* = k_d(1 - t)}\]</span></p>
+<p>onde <span class="math inline">\(t\)</span> é a alíquota do imposto de renda corporativo.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo Numérico">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo Numérico
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Empresa com dívida de R$ 1 milhão a 10% ao ano e IR corporativo de 30%:</p>
+<p><span class="math display">\[k_d^* = 10\% \times (1 - 0{,}30) = 7\%\]</span></p>
+<p>Cada R$ 1 de juros pagos custa à empresa apenas R$ 0,70, pois o restante é abatido em impostos.</p>
+</div>
+</div>
+<section id="como-estimar-o-custo-da-dívida" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="como-estimar-o-custo-da-dívida">Como Estimar o Custo da Dívida?</h3>
+<ul>
+<li><strong>Empresas com títulos no mercado:</strong> usar o <em>Yield to Maturity</em> (YTM).</li>
+<li><strong>Empresas sem títulos públicos:</strong> usar a taxa de empréstimos bancários comparáveis ou o <em>rating</em> de crédito.</li>
+<li>Importante ajustar o custo para: risco de <em>default</em>, maturidade da dívida, e opções embutidas (ex.: convertibilidade).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="custo-do-capital-próprio" class="level2" data-number="12.10">
+<h2 data-number="12.10" class="anchored" data-anchor-id="custo-do-capital-próprio"><span class="header-section-number">12.10</span> Custo do Capital Próprio</h2>
+<p>O custo do capital próprio (<span class="math inline">\(k_e\)</span>) representa o <strong>retorno exigido pelos acionistas</strong> para investir na empresa. Diferente da dívida, não há obrigação de pagamento — o investidor assume o risco residual. Esse retorno compensa o <strong>risco de mercado</strong> e o <strong>risco específico</strong> da empresa.</p>
+<p>Há dois métodos principais para estimá-lo.</p>
+<section id="método-1-capm" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="método-1-capm">Método 1: CAPM</h3>
+<p>O <em>Capital Asset Pricing Model</em> (CAPM) é o modelo mais utilizado para estimar o custo do capital próprio:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="CAPM">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>CAPM
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{k_e = R_f + \beta\bigl(E(R_m) - R_f\bigr)}\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(R_f\)</span></td>
+<td>Taxa livre de risco (ex.: títulos públicos)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E(R_m) - R_f\)</span></td>
+<td>Prêmio de risco de mercado</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\beta\)</span></td>
+<td>Sensibilidade do retorno da empresa ao mercado</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Intuição:</strong> empresas mais voláteis em relação ao mercado (<span class="math inline">\(\beta\)</span> alto) precisam oferecer retorno maior.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo CAPM">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo CAPM
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[R_f = 5\%, \quad \beta = 1{,}2, \quad E(R_m) - R_f = 6\%\]</span></p>
+<p><span class="math display">\[k_e = 5\% + 1{,}2 \times 6\% = 12{,}2\%\]</span></p>
+<p>Acionistas exigem 12,2% de retorno ao ano para compensar o risco.</p>
+</div>
+</div>
+<p>Em <strong>mercados emergentes</strong>, adiciona-se também um prêmio de risco-país:</p>
+<p><span class="math display">\[k_e = R_f + \beta\bigl(E(R_m) - R_f\bigr) + \text{Prêmio de risco-Brasil}\]</span></p>
+</section>
+<section id="método-2-modelo-de-gordon-crescimento-de-dividendos" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="método-2-modelo-de-gordon-crescimento-de-dividendos">Método 2: Modelo de Gordon (Crescimento de Dividendos)</h3>
+<p>Quando a empresa distribui dividendos com crescimento estável, o custo do equity pode ser extraído diretamente do preço de mercado:</p>
+<p><span class="math display">\[\boxed{k_e = \frac{D_1}{P_0} + g}\]</span></p>
+<p>onde <span class="math inline">\(D_1\)</span> é o dividendo esperado, <span class="math inline">\(P_0\)</span> o preço atual da ação e <span class="math inline">\(g\)</span> a taxa de crescimento esperada dos dividendos.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo — Modelo de Gordon">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo — Modelo de Gordon
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[D_1 = 2, \quad P_0 = 40, \quad g = 4\% \implies k_e = \frac{2}{40} + 0{,}04 = 9\%\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="wacc-custo-médio-ponderado-de-capital" class="level2" data-number="12.11">
+<h2 data-number="12.11" class="anchored" data-anchor-id="wacc-custo-médio-ponderado-de-capital"><span class="header-section-number">12.11</span> WACC — Custo Médio Ponderado de Capital</h2>
+<p>O <strong>WACC</strong> (<em>Weighted Average Cost of Capital</em>) combina os custos de todas as fontes de financiamento, ponderados pela participação de cada uma no valor total da empresa:</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Definição — WACC">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Definição — WACC
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[\boxed{WACC = w_d\,k_d(1-t) + w_e\,k_e}\]</span></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Símbolo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(w_d\)</span></td>
+<td>Peso da dívida (valor de mercado)</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(w_e\)</span></td>
+<td>Peso do equity (valor de mercado)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(k_d(1-t)\)</span></td>
+<td>Custo da dívida após impostos</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(k_e\)</span></td>
+<td>Custo do capital próprio</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Importante:</strong> usar <strong>valores de mercado</strong>, não contábeis.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exemplo Completo">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exemplo Completo
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Estrutura: 40% dívida, 60% equity. <span class="math inline">\(k_d = 7\%\)</span>, <span class="math inline">\(k_e = 12\%\)</span>, <span class="math inline">\(t = 30\%\)</span>.</p>
+<p><span class="math display">\[WACC = 0{,}4 \times 7\% \times (1 - 0{,}3) + 0{,}6 \times 12\% = 1{,}96\% + 7{,}2\% = 9{,}16\% \approx 9{,}2\%\]</span></p>
+<p>A empresa deve gerar retorno de pelo menos <strong>9,2%</strong> para criar valor.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="exercício-prático" class="level2" data-number="12.12">
+<h2 data-number="12.12" class="anchored" data-anchor-id="exercício-prático"><span class="header-section-number">12.12</span> Exercício Prático</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Exercício — Cálculo do WACC">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Exercício — Cálculo do WACC
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Calcule o custo médio ponderado de capital (WACC) da empresa fictícia:</p>
+<ul>
+<li><strong>Dívida:</strong> R$ 100 milhões, taxa 8%, IR = 25%.</li>
+<li><strong>Ações:</strong> valor de mercado R$ 200 milhões, <span class="math inline">\(\beta = 1{,}1\)</span>, <span class="math inline">\(R_f = 4\%\)</span>, <span class="math inline">\(E(R_m) - R_f = 6\%\)</span>.</li>
+</ul>
+<p><strong>Passo 1 — Custo da dívida após IR:</strong> <span class="math display">\[k_d(1-t) = 8\% \times (1 - 0{,}25) = 6\%\]</span></p>
+<p><strong>Passo 2 — Custo do equity (CAPM):</strong> <span class="math display">\[k_e = 4\% + 1{,}1 \times 6\% = 10{,}6\%\]</span></p>
+<p><strong>Passo 3 — Pesos:</strong> <span class="math display">\[w_d = \frac{100}{300} = 33{,}3\%, \quad w_e = \frac{200}{300} = 66{,}7\%\]</span></p>
+<p><strong>Passo 4 — WACC:</strong> <span class="math display">\[WACC = \frac{100}{300} \times 6\% + \frac{200}{300} \times 10{,}6\% = 2\% + 7{,}07\% = 9{,}1\%\]</span></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="estrutura-de-capital-e-o-trade-off-ótimo" class="level2" data-number="12.13">
+<h2 data-number="12.13" class="anchored" data-anchor-id="estrutura-de-capital-e-o-trade-off-ótimo"><span class="header-section-number">12.13</span> Estrutura de Capital e o Trade-off Ótimo</h2>
+<p>Mais dívida reduz o WACC no curto prazo (benefício fiscal), mas eleva o risco financeiro. Acima de certo ponto, o custo do equity cresce mais rápido que a economia de impostos — e o WACC volta a subir.</p>
+<p>O <strong>trade-off entre dívida e equity</strong> define a <strong>estrutura de capital ótima</strong>: o ponto que minimiza o WACC e, consequentemente, maximiza o valor da empresa.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Resumo Final">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Resumo Final
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>O custo de capital reflete o risco e define o <strong>retorno mínimo aceitável</strong>.</li>
+<li>Dívida é mais barata, mas aumenta o <strong>risco financeiro</strong> (DFL e <span class="math inline">\(\beta_L\)</span>).</li>
+<li>O custo do equity depende do risco de mercado (<span class="math inline">\(\beta\)</span>) e da percepção dos investidores.</li>
+<li>O <strong>WACC</strong> combina os dois e serve como taxa de desconto para avaliar projetos de investimento.</li>
+</ul>
 </div>
 </div>
 
@@ -1240,14 +1481,11 @@ window.Quarto = {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./cap04.html" class="pagination-link" aria-label="Séries Infinitas — Perpetuidades">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Séries Infinitas — Perpetuidades</span></span>
+      <a href="./cap11.html" class="pagination-link" aria-label="Fluxos de Caixa para Avaliação de Investimentos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Fluxos de Caixa para Avaliação de Investimentos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./cap06.html" class="pagination-link" aria-label="Formas de Cotar a Taxa de Juros">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Formas de Cotar a Taxa de Juros</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
@@ -1255,4 +1493,4 @@ window.Quarto = {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap05.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/andre-mancha/MatFin/edit/main/cap12.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/andre-mancha/MatFin/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
